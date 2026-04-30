@@ -38,11 +38,20 @@
     }
 
     .feature {
+      display: block;
       margin-top: 80px;
       background: linear-gradient(135deg, #1a1a1a, #111);
       border-radius: 20px;
       padding: 40px;
       border: 1px solid #222;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-4px);
+      border-color: #444;
     }
 
     .badge {
@@ -93,18 +102,9 @@
       transition: transform 0.2s ease, border 0.2s ease;
     }
 
-    .app-card.available {
-      cursor: pointer;
-    }
-
-    .app-card.available:hover {
+    .app-card:hover {
       transform: translateY(-4px);
       border-color: #444;
-    }
-
-    .app-card.locked {
-      cursor: default;
-      opacity: 0.95;
     }
 
     .app-card h4 {
@@ -146,22 +146,22 @@
       <p>We create immersive mobile apps designed for experience, skill, and engagement.</p>
     </div>
 
-    <div class="feature">
+    <a class="feature" href="/apps/magic-atlas/">
       <span class="badge">In Development</span>
       <h2>Magic Atlas</h2>
-      <p>Our first app is currently being prepared for release.</p>
-    </div>
+      <p>Learn real magic through structured lessons, techniques, tricks, daily practice, and progression.</p>
+    </a>
 
     <div class="section">
       <h3>All Apps</h3>
 
       <div class="app-grid">
 
-        <div class="app-card locked">
+        <a class="app-card" href="/apps/magic-atlas/">
           <span class="badge">In Development</span>
           <h4>Magic Atlas</h4>
-          <p>Preparing for initial release. App information page will be added once V1 is released.</p>
-        </div>
+          <p>View app information, features, availability, and legal links.</p>
+        </a>
 
       </div>
     </div>
