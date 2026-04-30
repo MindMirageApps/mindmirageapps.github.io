@@ -19,7 +19,6 @@
       padding: 40px 20px;
     }
 
-    /* HERO */
     .hero {
       text-align: center;
       margin-top: 80px;
@@ -38,7 +37,6 @@
       margin: 0 auto;
     }
 
-    /* FEATURE CARD */
     .feature {
       margin-top: 80px;
       background: linear-gradient(135deg, #1a1a1a, #111);
@@ -47,7 +45,7 @@
       border: 1px solid #222;
     }
 
-    .feature .badge {
+    .badge {
       display: inline-block;
       margin-bottom: 12px;
       padding: 6px 12px;
@@ -68,7 +66,6 @@
       font-size: 16px;
     }
 
-    /* APPS GRID */
     .section {
       margin-top: 80px;
     }
@@ -86,26 +83,28 @@
     }
 
     .app-card {
+      display: block;
       background: #161616;
       border-radius: 16px;
       padding: 20px;
       border: 1px solid #222;
+      text-decoration: none;
+      color: inherit;
       transition: transform 0.2s ease, border 0.2s ease;
     }
 
-    .app-card:hover {
-      transform: translateY(-4px);
-      border-color: #333;
+    .app-card.available {
+      cursor: pointer;
     }
 
-    .app-card .status {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #222;
-      color: #cfcfcf;
-      font-size: 12px;
+    .app-card.available:hover {
+      transform: translateY(-4px);
+      border-color: #444;
+    }
+
+    .app-card.locked {
+      cursor: default;
+      opacity: 0.95;
     }
 
     .app-card h4 {
@@ -115,11 +114,11 @@
 
     .app-card p {
       margin-top: 8px;
+      margin-bottom: 0;
       color: #aaa;
       font-size: 14px;
     }
 
-    /* FOOTER */
     .footer {
       margin-top: 100px;
       text-align: center;
@@ -142,35 +141,31 @@
 <body>
   <div class="container">
 
-    <!-- HERO -->
     <div class="hero">
       <h1>Mind Mirage Apps</h1>
       <p>We create immersive mobile apps designed for experience, skill, and engagement.</p>
     </div>
 
-    <!-- FEATURED APP -->
     <div class="feature">
       <span class="badge">In Development</span>
       <h2>Magic Atlas</h2>
       <p>Our first app is currently being prepared for release.</p>
     </div>
 
-    <!-- APPS GRID -->
     <div class="section">
       <h3>All Apps</h3>
 
       <div class="app-grid">
 
-        <div class="app-card">
-          <span class="status">In Development</span>
+        <div class="app-card locked">
+          <span class="badge">In Development</span>
           <h4>Magic Atlas</h4>
-          <p>Preparing for initial release.</p>
+          <p>Preparing for initial release. App information page will be added once V1 is released.</p>
         </div>
 
       </div>
     </div>
 
-    <!-- FOOTER -->
     <div class="footer">
       <a href="/legal/privacy/">Privacy Policy</a>
       <a href="/legal/terms/">Terms</a>
