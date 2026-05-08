@@ -9,27 +9,49 @@
     :root {
       --bg: #050505;
       --card: rgba(18, 18, 18, 0.78);
+      --card-strong: rgba(28, 28, 28, 0.92);
       --line: rgba(255, 255, 255, 0.10);
+      --line-strong: rgba(255, 255, 255, 0.16);
       --text: #ffffff;
       --muted: #b8b8b8;
       --soft: #7a7a7a;
+      --gold: #d9b76f;
+      --gold-soft: rgba(217, 183, 111, 0.18);
       --green-bg: rgba(80, 180, 100, 0.14);
       --green: #8fff9a;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at 15% 5%, rgba(217, 183, 111, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(120, 82, 255, 0.16), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.05), transparent 34%),
+        var(--bg);
       color: var(--text);
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 1120px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 36px 20px;
+      padding: 34px 20px 50px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 34px;
     }
 
     .back {
@@ -38,80 +60,253 @@
       font-size: 14px;
     }
 
+    .mini-nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .mini-nav a {
+      color: var(--soft);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .mini-nav a:hover,
+    .back:hover {
+      color: #fff;
+    }
+
     .hero {
-      margin-top: 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 34px;
+      align-items: center;
+      overflow: hidden;
       border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: 40px;
-      background: linear-gradient(135deg, #171717, #0d0d0d);
+      border-radius: 34px;
+      padding: 48px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.025)),
+        linear-gradient(135deg, rgba(22,22,22,0.96), rgba(9,9,9,0.96));
     }
 
     .badge {
-      display: inline-block;
-      padding: 6px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 14px;
       border-radius: 999px;
       background: var(--green-bg);
       color: var(--green);
+      border: 1px solid rgba(143, 255, 154, 0.18);
       font-size: 13px;
-      margin-bottom: 10px;
+      font-weight: 700;
     }
 
     h1 {
-      font-size: 56px;
-      margin: 0;
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+      margin: 0 0 22px;
     }
 
     .subtitle {
       color: var(--muted);
-      margin-top: 10px;
+      font-size: 20px;
+      max-width: 720px;
+      margin: 0 0 26px;
+    }
+
+    .store-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
     }
 
     .store-buttons img {
-      height: 50px;
-      margin-right: 10px;
-      margin-top: 15px;
+      height: 52px;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      width: 235px;
+      height: 470px;
+      border-radius: 38px;
+      padding: 13px;
+      background: linear-gradient(145deg, #2b2b2b, #050505);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .phone-screen {
+      height: 100%;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(217,183,111,0.32), transparent 34%),
+        linear-gradient(180deg, #17120b, #090909 54%, #111);
+      padding: 22px 18px;
+    }
+
+    .phone-title {
+      margin-top: 70px;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .phone-copy {
+      margin-top: 8px;
+      color: #b8b8b8;
+      font-size: 13px;
     }
 
     .section {
-      margin-top: 60px;
+      margin-top: 74px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
     .screenshots {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       overflow-x: auto;
     }
 
     .screenshot {
-      min-width: 220px;
-      height: 440px;
-      border-radius: 30px;
+      min-width: 230px;
+      height: 460px;
+      border-radius: 34px;
       object-fit: cover;
       border: 1px solid var(--line);
     }
 
     .placeholder {
-      min-width: 220px;
-      height: 440px;
-      border-radius: 30px;
-      background: #121212;
+      min-width: 230px;
+      height: 460px;
+      border-radius: 34px;
+      background: #101010;
       border: 1px solid var(--line);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #666;
+      color: #777;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 16px;
+    }
+
+    .feature-item {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .feature-item strong {
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .platform-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .legal-section {
+      margin-top: 74px;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .legal-card {
+      display: block;
+      text-decoration: none;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      color: #fff;
+      transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+    .legal-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--line-strong);
+    }
+
+    .legal-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .legal-card span {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .footer {
-      margin-top: 80px;
+      margin-top: 100px;
       text-align: center;
       color: #666;
+      font-size: 14px;
     }
 
     .footer a {
       color: #888;
-      margin: 0 10px;
       text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-nav {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -119,32 +314,59 @@
 <body>
   <div class="container">
 
-    <a class="back" href="/">← Back</a>
+    <div class="topbar">
+      <a class="back" href="/">← Back to Mind Mirage Apps</a>
 
-    <section class="hero">
-      <span class="badge">iOS & Android v1.2 Available</span>
-      <h1>Magic Atlas</h1>
-      <p class="subtitle">Learn real magic through structured lessons and progression.</p>
+      <nav class="mini-nav">
+        <a href="#preview">Preview</a>
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="#legal">Legal</a>
+      </nav>
+    </div>
 
-      <div class="store-buttons">
-        <a href="https://apps.apple.com/gb/app/magic-atlas/id6759013198" target="_blank">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.mindmirage.magicatlas&pcampaignid=web_share" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-        </a>
+    <section class="hero" id="download">
+
+      <div>
+        <span class="badge">iOS & Android v1.2 Available</span>
+
+        <h1>Magic Atlas</h1>
+
+        <p class="subtitle">
+          A polished learning companion for real magic — built around structured lessons, technique mastery, daily practice, and progression.
+        </p>
+
+        <div class="store-buttons">
+          <a href="https://apps.apple.com/gb/app/magic-atlas/id6759013198" target="_blank" rel="noopener">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+          </a>
+
+          <a href="https://play.google.com/store/apps/details?id=com.mindmirage.magicatlas&pcampaignid=web_share" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+          </a>
+        </div>
       </div>
+
+      <div class="hero-visual">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-title">Daily Ritual</div>
+            <div class="phone-copy">
+              Build skill one focused lesson at a time.
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <section class="section">
+    <section class="section" id="preview">
       <h2>App Preview</h2>
 
       <div class="screenshots">
 
-        <!-- REAL IMAGE -->
         <img class="screenshot" src="/apps/magic-atlas/images/todayscreen.jpg" alt="Today screen">
 
-        <!-- PLACEHOLDERS -->
         <div class="placeholder">Lessons</div>
         <div class="placeholder">Technique</div>
         <div class="placeholder">Vault</div>
@@ -153,9 +375,93 @@
       </div>
     </section>
 
+    <section class="section">
+      <h2>About</h2>
+
+      <div class="content-grid">
+
+        <div class="card">
+          <p>
+            Magic Atlas helps users learn real magic through a structured system of techniques, tricks, and progression.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            Designed to make learning magic feel focused, rewarding, and consistent.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Core Features</h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-item">
+          <strong>Structured Lessons</strong>
+          Clear lesson flow for techniques and tricks.
+        </div>
+
+        <div class="feature-item">
+          <strong>Technique Mastery</strong>
+          Build strong foundations before advancing.
+        </div>
+
+        <div class="feature-item">
+          <strong>Daily Ritual</strong>
+          Daily lessons designed for consistent improvement.
+        </div>
+
+        <div class="feature-item">
+          <strong>Unlock Progression</strong>
+          Unlock more advanced content over time.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Platforms</h2>
+
+      <div class="platforms">
+
+        <div class="platform-card">
+          <strong>iPhone & iPad</strong>
+          Magic Atlas v1.2 is available on the App Store.
+        </div>
+
+        <div class="platform-card">
+          <strong>Android Phones & Tablets</strong>
+          Magic Atlas v1.2 is available on Google Play.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="legal-section" id="legal">
+      <h2>Legal</h2>
+
+      <div class="legal-grid">
+
+        <a class="legal-card" href="/apps/magic-atlas/privacy/">
+          <strong>Privacy Policy</strong>
+          <span>View the Magic Atlas privacy policy.</span>
+        </a>
+
+        <a class="legal-card" href="/legal/terms/">
+          <strong>Terms of Use</strong>
+          <span>View the Mind Mirage Apps terms of use.</span>
+        </a>
+
+      </div>
+    </section>
+
     <div class="footer">
       <a href="/about/">About</a>
-      <a href="/legal/privacy/">Privacy</a>
+      <a href="/legal/privacy/">Global Privacy Policy</a>
       <a href="/legal/terms/">Terms</a>
     </div>
 
