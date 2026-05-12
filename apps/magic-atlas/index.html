@@ -5,44 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Magic Atlas | Mind Mirage Apps</title>
 
-  <style>
-    :root {
-      --bg: #050505;
-      --card: rgba(18, 18, 18, 0.78);
-      --card-strong: rgba(28, 28, 28, 0.92);
-      --line: rgba(255, 255, 255, 0.10);
-      --line-strong: rgba(255, 255, 255, 0.16);
-      --text: #ffffff;
-      --muted: #b8b8b8;
-      --soft: #7a7a7a;
-      --gold: #d9b76f;
-      --gold-soft: rgba(217, 183, 111, 0.18);
-      --green-bg: rgba(80, 180, 100, 0.14);
-      --green: #8fff9a;
-    }
+  <link rel="stylesheet" href="/assets/css/site.css" />
 
+  <style>
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background:
-        radial-gradient(circle at 15% 5%, rgba(217, 183, 111, 0.18), transparent 28%),
-        radial-gradient(circle at 85% 10%, rgba(120, 82, 255, 0.16), transparent 30%),
-        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.05), transparent 34%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      background: var(--color-bg-atmosphere);
+      color: var(--color-text);
+      line-height: var(--line-height-base);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(5, 5, 5, 0.05), rgba(5, 5, 5, 0.82));
+      z-index: -1;
     }
 
     .container {
-      max-width: 1160px;
+      max-width: var(--container-wide);
       margin: 0 auto;
       padding: 34px 20px 50px;
     }
@@ -51,13 +39,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 24px;
       margin-bottom: 34px;
     }
 
     .back {
-      color: var(--muted);
+      color: var(--color-text-muted);
       text-decoration: none;
-      font-size: 14px;
+      font-size: var(--font-size-sm);
     }
 
     .mini-nav {
@@ -67,28 +56,29 @@
     }
 
     .mini-nav a {
-      color: var(--soft);
+      color: var(--color-text-soft);
       text-decoration: none;
-      font-size: 14px;
+      font-size: var(--font-size-sm);
     }
 
     .mini-nav a:hover,
     .back:hover {
-      color: #fff;
+      color: var(--color-text);
     }
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-      gap: 34px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      gap: 38px;
       align-items: center;
       overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      padding: 48px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-2xl);
+      padding: 50px;
       background:
-        linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.025)),
-        linear-gradient(135deg, rgba(22,22,22,0.96), rgba(9,9,9,0.96));
+        radial-gradient(circle at 83% 18%, rgba(217, 183, 111, 0.24), transparent 28%),
+        var(--color-bg-hero-gradient);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
     }
 
     .badge {
@@ -97,26 +87,33 @@
       gap: 8px;
       margin-bottom: 18px;
       padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--green-bg);
-      color: var(--green);
-      border: 1px solid rgba(143, 255, 154, 0.18);
-      font-size: 13px;
+      border-radius: var(--radius-pill);
+      background: var(--color-success-bg);
+      color: var(--color-success);
+      border: 1px solid var(--color-success-border);
+      font-size: var(--font-size-xs);
       font-weight: 700;
     }
 
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
     h1 {
-      font-size: clamp(48px, 8vw, 88px);
+      font-size: var(--font-size-hero);
       line-height: 0.92;
       letter-spacing: -0.065em;
-      margin: 0 0 22px;
+      margin-bottom: 22px;
     }
 
     .subtitle {
-      color: var(--muted);
-      font-size: 20px;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-lg);
       max-width: 720px;
-      margin: 0 0 26px;
+      margin-bottom: 28px;
     }
 
     .store-buttons {
@@ -124,6 +121,16 @@
       flex-wrap: wrap;
       gap: 12px;
       align-items: center;
+    }
+
+    .store-buttons a {
+      display: inline-flex;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .store-buttons a:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
     }
 
     .store-buttons img {
@@ -137,175 +144,527 @@
     }
 
     .phone {
-      width: 235px;
-      height: 470px;
-      border-radius: 38px;
+      width: 245px;
+      height: 490px;
+      border-radius: 40px;
       padding: 13px;
       background: linear-gradient(145deg, #2b2b2b, #050505);
-      border: 1px solid rgba(255,255,255,0.16);
+      border: 1px solid var(--color-border-strong);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
     }
 
     .phone-screen {
       height: 100%;
-      border-radius: 28px;
+      overflow: hidden;
+      border-radius: 29px;
       background:
-        radial-gradient(circle at 50% 0%, rgba(217,183,111,0.32), transparent 34%),
+        radial-gradient(circle at 50% 0%, rgba(217, 183, 111, 0.34), transparent 34%),
         linear-gradient(180deg, #17120b, #090909 54%, #111);
       padding: 22px 18px;
     }
 
-    .phone-title {
-      margin-top: 70px;
-      font-size: 28px;
+    .phone-kicker {
+      color: var(--color-gold);
+      font-size: 11px;
       font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .phone-title {
+      margin-top: 74px;
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.04em;
     }
 
     .phone-copy {
-      margin-top: 8px;
-      color: #b8b8b8;
-      font-size: 13px;
+      margin-top: 10px;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
     }
 
-    .section {
-      margin-top: 74px;
+    .phone-progress {
+      margin-top: 28px;
+      height: 8px;
+      overflow: hidden;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.08);
     }
 
-    .section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+    .phone-progress span {
+      display: block;
+      width: 68%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(217, 183, 111, 0.9), rgba(255, 230, 172, 0.86));
     }
 
-    .screenshots {
-      display: flex;
-      gap: 20px;
+    .section,
+    .legal-section {
+      margin-top: var(--space-section);
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .section h2,
+    .legal-section h2 {
+      margin-bottom: 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .section-intro {
+      margin-bottom: 0;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-base);
+    }
+
+    .preview-rail {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(210px, 1fr));
+      gap: 18px;
       overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-color: rgba(217, 183, 111, 0.42) rgba(255, 255, 255, 0.06);
     }
 
-    .screenshot {
-      min-width: 230px;
-      height: 460px;
-      border-radius: 34px;
+    .preview-panel {
+      min-width: 210px;
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: var(--radius-2xl);
+      border: 1px solid var(--color-border);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+        rgba(16, 16, 16, 0.86);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+    }
+
+    .preview-panel img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
       object-fit: cover;
-      border: 1px solid var(--line);
     }
 
-    .placeholder {
-      min-width: 230px;
-      height: 460px;
-      border-radius: 34px;
-      background: #101010;
-      border: 1px solid var(--line);
+    .mock-panel {
       display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .mock-kicker {
+      color: var(--color-gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .mock-title {
+      margin-top: 12px;
+      font-size: 25px;
+      line-height: 1;
+      letter-spacing: -0.045em;
+      font-weight: 800;
+    }
+
+    .mock-copy {
+      margin-top: 10px;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+      line-height: 1.5;
+    }
+
+    .mock-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .mock-row {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      color: #777;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--color-text-body);
+      font-size: var(--font-size-xs);
+    }
+
+    .mock-dot {
+      width: 8px;
+      height: 8px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--color-gold);
+      box-shadow: 0 0 20px rgba(217, 183, 111, 0.52);
+    }
+
+    .mock-arc {
+      display: grid;
+      place-items: center;
+      width: 145px;
+      height: 145px;
+      margin: 34px auto 0;
+      border-radius: 50%;
+      border: 1px solid rgba(217, 183, 111, 0.28);
+      background:
+        radial-gradient(circle, rgba(217, 183, 111, 0.18), transparent 56%),
+        conic-gradient(from 10deg, rgba(217, 183, 111, 0.78), rgba(217, 183, 111, 0.08), rgba(255,255,255,0.04));
+    }
+
+    .mock-arc span {
+      display: grid;
+      place-items: center;
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      background: #0d0d0d;
+      color: var(--color-gold);
+      font-weight: 800;
+    }
+
+    .content-grid,
+    .path-grid,
+    .ritual-grid,
+    .feature-grid,
+    .platforms,
+    .legal-grid {
+      display: grid;
+      gap: 18px;
     }
 
     .content-grid {
-      display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
+    }
+
+    .path-grid {
+      grid-template-columns: repeat(3, 1fr);
+      counter-reset: path;
+    }
+
+    .ritual-grid {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      align-items: stretch;
+    }
+
+    .feature-grid,
+    .platforms,
+    .legal-grid {
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    }
+
+    .card,
+    .path-card,
+    .ritual-card,
+    .feature-item,
+    .platform-card,
+    .legal-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.035);
+      color: var(--color-text);
+    }
+
+    .card,
+    .path-card,
+    .ritual-card,
+    .feature-item,
+    .platform-card {
+      padding: 24px;
     }
 
     .card {
       background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 28px;
     }
 
-    .feature-grid {
+    .card p,
+    .path-card p,
+    .ritual-card p,
+    .feature-item,
+    .platform-card {
+      color: var(--color-text-muted);
+    }
+
+    .card p:last-child,
+    .path-card p:last-child,
+    .ritual-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .path-card {
+      position: relative;
+    }
+
+    .path-card::before {
+      counter-increment: path;
+      content: "0" counter(path);
+      display: inline-flex;
+      margin-bottom: 28px;
+      color: var(--color-gold);
+      font-size: var(--font-size-xs);
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .path-card h3,
+    .ritual-card h3 {
+      margin-bottom: 10px;
+      font-size: var(--font-size-lg);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .ritual-card--spotlight {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 300px;
+      background:
+        radial-gradient(circle at 70% 0%, rgba(217, 183, 111, 0.20), transparent 34%),
+        var(--card);
+    }
+
+    .ritual-meter {
+      margin-top: 28px;
+    }
+
+    .ritual-meter-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+      font-weight: 700;
+    }
+
+    .ritual-bar {
+      height: 10px;
+      overflow: hidden;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .ritual-bar span {
+      display: block;
+      width: 72%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(217, 183, 111, 0.86), rgba(255, 230, 172, 0.9));
+    }
+
+    .ritual-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
 
-    .feature-item {
-      background: rgba(255,255,255,0.035);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 22px;
+    .ritual-step {
+      padding: 18px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.035);
     }
 
-    .feature-item strong {
+    .ritual-step strong,
+    .feature-item strong,
+    .platform-card strong {
       display: block;
       margin-bottom: 7px;
-    }
-
-    .platforms {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .platform-card {
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 22px;
-      background: rgba(255,255,255,0.035);
-    }
-
-    .legal-section {
-      margin-top: 74px;
-    }
-
-    .legal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
+      color: var(--color-text);
     }
 
     .legal-card {
       display: block;
-      text-decoration: none;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid var(--line);
-      border-radius: 20px;
       padding: 24px;
-      color: #fff;
-      transition: transform 0.2s ease, border 0.2s ease;
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
     .legal-card:hover {
       transform: translateY(-3px);
-      border-color: var(--line-strong);
+      border-color: var(--color-border-strong);
+      background: rgba(255, 255, 255, 0.052);
     }
 
     .legal-card strong {
       display: block;
       margin-bottom: 8px;
-      font-size: 18px;
+      color: var(--color-text);
+      font-size: var(--font-size-lg);
     }
 
     .legal-card span {
-      color: var(--muted);
-      font-size: 14px;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-sm);
     }
 
     .footer {
-      margin-top: 100px;
+      margin-top: var(--space-footer);
       text-align: center;
-      color: #666;
-      font-size: 14px;
+      color: var(--color-text-subtle);
+      font-size: var(--font-size-sm);
     }
 
     .footer a {
-      color: #888;
+      color: var(--color-text-muted);
       text-decoration: none;
       margin: 0 10px;
     }
 
-    @media (max-width: 850px) {
-      .hero {
+    .footer a:hover {
+      color: var(--color-text);
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .content-grid,
+      .ritual-grid {
         grid-template-columns: 1fr;
       }
 
-      .content-grid {
+      .hero {
+        padding: 38px;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .path-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        padding: 26px 16px 40px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 24px;
       }
 
       .mini-nav {
-        display: none;
+        gap: 10px;
+      }
+
+      .mini-nav a {
+        min-height: 34px;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-pill);
+        padding: 6px 10px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .hero {
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 14vw, 64px);
+        letter-spacing: -0.055em;
+      }
+
+      .subtitle {
+        font-size: var(--font-size-base);
+      }
+
+      .store-buttons img {
+        height: 48px;
+      }
+
+      .phone {
+        width: 218px;
+        height: 436px;
+      }
+
+      .preview-rail {
+        display: flex;
+        gap: 14px;
+        margin-inline: -16px;
+        padding: 0 16px 8px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .preview-panel {
+        flex: 0 0 min(78vw, 260px);
+        min-width: 0;
+        scroll-snap-align: start;
+      }
+
+      .preview-panel,
+      .preview-panel img {
+        min-height: 380px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero,
+      .preview-panel,
+      .card,
+      .path-card,
+      .ritual-card,
+      .feature-item,
+      .platform-card,
+      .legal-card {
+        border-radius: var(--radius-lg);
+      }
+
+      .container {
+        padding-inline: 14px;
+      }
+
+      .hero,
+      .card,
+      .path-card,
+      .ritual-card,
+      .feature-item,
+      .platform-card,
+      .legal-card {
+        padding: 22px;
+      }
+
+      .store-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .store-buttons a {
+        width: min(100%, 220px);
+      }
+
+      .phone {
+        width: 196px;
+        height: 392px;
+      }
+
+      .preview-rail {
+        margin-inline: -14px;
+        padding-inline: 14px;
+      }
+
+      .preview-panel {
+        flex-basis: min(82vw, 240px);
+      }
+
+      .preview-panel,
+      .preview-panel img {
+        min-height: 350px;
       }
     }
   </style>
@@ -319,7 +678,9 @@
 
       <nav class="mini-nav">
         <a href="#preview">Preview</a>
-        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#learning-path">Learning path</a>
+        <a href="#daily-ritual">Daily Ritual</a>
         <a href="#download">Download</a>
         <a href="#legal">Legal</a>
       </nav>
@@ -347,13 +708,15 @@
         </div>
       </div>
 
-      <div class="hero-visual">
+      <div class="hero-visual" aria-hidden="true">
         <div class="phone">
           <div class="phone-screen">
+            <div class="phone-kicker">Today</div>
             <div class="phone-title">Daily Ritual</div>
             <div class="phone-copy">
               Build skill one focused lesson at a time.
             </div>
+            <div class="phone-progress"><span></span></div>
           </div>
         </div>
       </div>
@@ -361,25 +724,63 @@
     </section>
 
     <section class="section" id="preview">
-      <h2>App Preview</h2>
+      <div class="section-header">
+        <h2>App Preview</h2>
+        <p class="section-intro">A focused interface for daily practice, lessons, techniques, and progress.</p>
+      </div>
 
-      <div class="screenshots">
+      <div class="preview-rail">
 
-        <img class="screenshot" src="/apps/magic-atlas/images/todayscreen.jpg" alt="Today screen">
+        <div class="preview-panel">
+          <img src="/apps/magic-atlas/images/todayscreen.jpg" alt="Magic Atlas Today screen">
+        </div>
 
-        <div class="placeholder">Lessons</div>
-        <div class="placeholder">Technique</div>
-        <div class="placeholder">Vault</div>
-        <div class="placeholder">Profile</div>
+        <div class="preview-panel mock-panel" aria-label="Lessons preview">
+          <div class="mock-kicker">Lessons</div>
+          <div class="mock-title">Learn with a clear path.</div>
+          <div class="mock-copy">Move through focused lessons without losing your place.</div>
+          <div class="mock-list">
+            <div class="mock-row"><span>Foundations</span><span class="mock-dot"></span></div>
+            <div class="mock-row"><span>Card control</span><span class="mock-dot"></span></div>
+            <div class="mock-row"><span>Performance</span><span class="mock-dot"></span></div>
+          </div>
+        </div>
+
+        <div class="preview-panel mock-panel" aria-label="Technique preview">
+          <div class="mock-kicker">Technique</div>
+          <div class="mock-title">Build reliable handling.</div>
+          <div class="mock-copy">Practice moves, refine timing, and revisit essentials.</div>
+          <div class="mock-arc"><span>72%</span></div>
+        </div>
+
+        <div class="preview-panel mock-panel" aria-label="Vault preview">
+          <div class="mock-kicker">Vault</div>
+          <div class="mock-title">Keep tricks organised.</div>
+          <div class="mock-copy">Store learned material in a simple, searchable structure.</div>
+          <div class="mock-list">
+            <div class="mock-row"><span>Openers</span><span>8</span></div>
+            <div class="mock-row"><span>Controls</span><span>12</span></div>
+            <div class="mock-row"><span>Routines</span><span>5</span></div>
+          </div>
+        </div>
+
+        <div class="preview-panel mock-panel" aria-label="Profile preview">
+          <div class="mock-kicker">Profile</div>
+          <div class="mock-title">Track your growth.</div>
+          <div class="mock-copy">See streaks, unlocks, and mastery progress over time.</div>
+          <div class="mock-arc"><span>Level 4</span></div>
+        </div>
 
       </div>
     </section>
 
-    <section class="section">
-      <h2>About</h2>
+    <section class="section" id="how-it-works">
+      <div class="section-header">
+        <h2>How it works</h2>
+        <p class="section-intro">Magic Atlas turns practice into a structured routine: learn, rehearse, unlock, and return tomorrow.</p>
+      </div>
 
       <div class="content-grid">
-
         <div class="card">
           <p>
             Magic Atlas helps users learn real magic through a structured system of techniques, tricks, and progression.
@@ -391,12 +792,77 @@
             Designed to make learning magic feel focused, rewarding, and consistent.
           </p>
         </div>
+      </div>
+    </section>
 
+    <section class="section" id="learning-path">
+      <div class="section-header">
+        <h2>Learning path</h2>
+        <p class="section-intro">A simple flow keeps each session purposeful without overwhelming the learner.</p>
+      </div>
+
+      <div class="path-grid">
+        <div class="path-card">
+          <h3>Start with foundations</h3>
+          <p>Begin with essential concepts before moving into deeper handling.</p>
+        </div>
+
+        <div class="path-card">
+          <h3>Practice techniques</h3>
+          <p>Revisit key moves until they feel controlled and repeatable.</p>
+        </div>
+
+        <div class="path-card">
+          <h3>Unlock routines</h3>
+          <p>Progress into tricks and sequences as confidence builds.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="daily-ritual">
+      <div class="section-header">
+        <h2>Daily Ritual</h2>
+        <p class="section-intro">A focused daily loop helps users return, practice, and keep building momentum.</p>
+      </div>
+
+      <div class="ritual-grid">
+        <div class="ritual-card ritual-card--spotlight">
+          <div>
+            <span class="badge">Daily practice</span>
+            <h3>One focused session at a time.</h3>
+            <p>Daily Ritual gives each visit a clear next step, so progress stays steady.</p>
+          </div>
+
+          <div class="ritual-meter" aria-hidden="true">
+            <div class="ritual-meter-label"><span>Today</span><span>72%</span></div>
+            <div class="ritual-bar"><span></span></div>
+          </div>
+        </div>
+
+        <div class="ritual-list">
+          <div class="ritual-step">
+            <strong>Open the day</strong>
+            Start with a guided prompt that keeps practice focused.
+          </div>
+
+          <div class="ritual-step">
+            <strong>Repeat the move</strong>
+            Reinforce technique through short, intentional sessions.
+          </div>
+
+          <div class="ritual-step">
+            <strong>Carry progress forward</strong>
+            Let streaks and unlocks make consistency feel rewarding.
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="features">
-      <h2>Core Features</h2>
+      <div class="section-header">
+        <h2>Techniques, tricks, and progression</h2>
+        <p class="section-intro">Core systems are designed to support skill growth from first lesson to advanced routines.</p>
+      </div>
 
       <div class="feature-grid">
 
@@ -424,7 +890,10 @@
     </section>
 
     <section class="section">
-      <h2>Platforms</h2>
+      <div class="section-header">
+        <h2>Platforms</h2>
+        <p class="section-intro">Magic Atlas is available through the official app stores.</p>
+      </div>
 
       <div class="platforms">
 
@@ -442,7 +911,9 @@
     </section>
 
     <section class="legal-section" id="legal">
-      <h2>Legal</h2>
+      <div class="section-header">
+        <h2>Legal</h2>
+      </div>
 
       <div class="legal-grid">
 

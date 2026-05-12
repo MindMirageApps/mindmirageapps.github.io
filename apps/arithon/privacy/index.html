@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arithon Privacy Policy | Mind Mirage Apps</title>
 
+  <link rel="stylesheet" href="/assets/css/site.css" />
+
   <style>
     body {
       margin: 0;
@@ -85,10 +87,40 @@
     .footer a:hover {
       color: #fff;
     }
+
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 26px 14px 36px;
+      }
+
+      .card {
+        border-radius: 18px;
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: clamp(30px, 10vw, 36px);
+        line-height: 1.08;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p, li {
+        font-size: 15px;
+      }
+
+      .footer {
+        margin-top: 48px;
+        line-height: 2;
+      }
+    }
   </style>
 </head>
 
-<body>
+<body class="legal-page legal-page--arithon">
   <div class="container">
 
     <a class="back" href="/">← Back to Mind Mirage Apps</a>
