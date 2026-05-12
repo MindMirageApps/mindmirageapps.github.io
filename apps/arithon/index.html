@@ -286,9 +286,15 @@
       }
 
       .topbar,
+      .actions,
+      .store-buttons {
       .actions {
         align-items: stretch;
         flex-direction: column;
+      }
+
+      .store-buttons a {
+        width: min(100%, 220px);
       }
 
       h1 {
@@ -333,6 +339,28 @@
 
     <section class="hero">
       <div>
+        <span class="badge">Live on iOS and Android</span>
+        <h1>Arithon Calculator</h1>
+        <p class="subtitle">A clean calculator built for simple, focused everyday calculations.</p>
+
+        <div class="meta-row" aria-label="Arithon Calculator details">
+          <span>Utility / Calculator</span>
+          <span>iOS and Android</span>
+        </div>
+
+        <div class="store-buttons">
+          <a href="https://apps.apple.com/us/app/arithon-calculator/id6767340730" target="_blank" rel="noopener" aria-label="Download Arithon Calculator on the App Store">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+          </a>
+
+          <!-- TODO: Replace this placeholder with the live Arithon Calculator Google Play URL. -->
+          <a href="#replace-arithon-google-play-url" aria-label="Get Arithon Calculator on Google Play">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+          </a>
+        </div>
+
+        <div class="actions">
+          <a class="site-button button-secondary" href="#support">Support and legal</a>
         <span class="badge">Calculator utility</span>
         <h1>Arithon</h1>
         <p class="subtitle">A clean, precise calculator utility from Mind Mirage Apps, built for focused everyday use.</p>
@@ -346,6 +374,7 @@
       <div class="calculator-visual" aria-hidden="true">
         <div class="calculator">
           <div class="display">
+            <span>Everyday calculations</span>
             <span>Precision</span>
             <strong>42.00</strong>
           </div>
@@ -375,6 +404,7 @@
     <section class="section">
       <div class="section-header">
         <h2>Focused utility</h2>
+        <p class="section-intro">Arithon Calculator is the utility-focused app in the Mind Mirage Apps portfolio: precise, clean, and practical.</p>
         <p class="section-intro">Arithon uses a simple identity within the Mind Mirage Apps portfolio: precise, clean, and practical.</p>
       </div>
 
@@ -391,6 +421,7 @@
 
         <div class="info-card">
           <strong>Support ready</strong>
+          Privacy and terms pages remain available for users.
           Privacy and terms pages are available for users.
         </div>
       </div>
@@ -399,17 +430,20 @@
     <section class="section" id="support">
       <div class="section-header">
         <h2>Support and legal</h2>
+        <p class="section-intro">Review Arithon Calculator support information and policies.</p>
         <p class="section-intro">Review Arithon support information and policies.</p>
       </div>
 
       <div class="card-grid">
         <a class="legal-card" href="/apps/arithon/privacy/">
           <strong>Privacy Policy</strong>
+          View the Arithon Calculator privacy policy.
           View the Arithon privacy policy.
         </a>
 
         <a class="legal-card" href="/apps/arithon/terms/">
           <strong>Terms of Use</strong>
+          View the Arithon Calculator terms of use.
           View the Arithon terms of use.
         </a>
       </div>
