@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arithon | Mind Mirage Apps</title>
+
+  <link rel="stylesheet" href="/assets/css/site.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --arithon-accent: #7dd8ff;
+      --arithon-accent-soft: rgba(125, 216, 255, 0.15);
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 82% 10%, rgba(125, 216, 255, 0.16), transparent 28%),
+        radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.08), transparent 30%),
+        var(--color-bg);
+      color: var(--color-text);
+      line-height: var(--line-height-base);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--container-wide);
+      margin: 0 auto;
+      padding: 34px 20px 50px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .back,
+    .topbar a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: var(--font-size-sm);
+    }
+
+    .topbar a:hover {
+      color: var(--color-text);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+      gap: 36px;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-2xl);
+      padding: 50px;
+      background:
+        radial-gradient(circle at 84% 18%, var(--arithon-accent-soft), transparent 30%),
+        var(--color-bg-hero-gradient);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      background: rgba(125, 216, 255, 0.12);
+      color: var(--arithon-accent);
+      border: 1px solid rgba(125, 216, 255, 0.22);
+      font-size: var(--font-size-xs);
+      font-weight: 800;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: var(--font-size-hero);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      margin-bottom: 28px;
+      color: var(--color-text-muted);
+      font-size: var(--font-size-lg);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button-primary {
+      min-height: 48px;
+      border-color: rgba(125, 216, 255, 0.38);
+      background: linear-gradient(135deg, var(--arithon-accent), #d8f4ff);
+      color: #061016;
+      font-weight: 800;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .button-secondary {
+      min-height: 48px;
+      border-color: var(--color-border);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--color-text);
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button-primary:hover,
+    .button-secondary:hover {
+      transform: translateY(-2px);
+    }
+
+    .calculator-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .calculator {
+      width: min(100%, 310px);
+      border: 1px solid var(--color-border-strong);
+      border-radius: 30px;
+      padding: 18px;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.32);
+    }
+
+    .display {
+      border: 1px solid rgba(125, 216, 255, 0.18);
+      border-radius: 20px;
+      padding: 18px;
+      background: rgba(5, 12, 16, 0.76);
+      text-align: right;
+    }
+
+    .display span {
+      display: block;
+      color: var(--color-text-soft);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .display strong {
+      display: block;
+      margin-top: 8px;
+      color: var(--arithon-accent);
+      font-size: 34px;
+      letter-spacing: -0.04em;
+    }
+
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .key {
+      display: grid;
+      place-items: center;
+      min-height: 48px;
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--color-text-body);
+      font-weight: 800;
+    }
+
+    .key.operator {
+      color: var(--arithon-accent);
+      background: rgba(125, 216, 255, 0.08);
+    }
+
+    .section {
+      margin-top: var(--space-section);
+    }
+
+    .section-header {
+      max-width: 680px;
+      margin-bottom: 24px;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .section-intro {
+      margin-bottom: 0;
+      color: var(--color-text-muted);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .info-card,
+    .legal-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--color-text-muted);
+      padding: 24px;
+    }
+
+    .info-card strong,
+    .legal-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--color-text);
+      font-size: var(--font-size-lg);
+    }
+
+    .legal-card {
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .legal-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(125, 216, 255, 0.28);
+      background: rgba(255, 255, 255, 0.052);
+    }
+
+    .footer {
+      margin-top: var(--space-footer);
+      text-align: center;
+      color: var(--color-text-subtle);
+      font-size: var(--font-size-sm);
+    }
+
+    .footer a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: var(--color-text);
+    }
+
+    @media (max-width: 860px) {
+      .container {
+        padding: 28px 16px 40px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 36px;
+      }
+
+      .calculator-visual {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding-inline: 14px;
+      }
+
+      .topbar,
+      .actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: clamp(40px, 14vw, 58px);
+      }
+
+      .subtitle {
+        font-size: var(--font-size-base);
+      }
+
+      .hero,
+      .info-card,
+      .legal-card {
+        border-radius: var(--radius-lg);
+      }
+
+      .hero,
+      .info-card,
+      .legal-card {
+        padding: 22px;
+      }
+
+      .calculator {
+        width: min(100%, 280px);
+        padding: 14px;
+      }
+
+      .key {
+        min-height: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="topbar">
+      <a class="back" href="/">← Back to Mind Mirage Apps</a>
+      <a href="#support">Support</a>
+    </div>
+
+    <section class="hero">
+      <div>
+        <span class="badge">Calculator utility</span>
+        <h1>Arithon</h1>
+        <p class="subtitle">A clean, precise calculator utility from Mind Mirage Apps, built for focused everyday use.</p>
+
+        <div class="actions">
+          <a class="site-button button-primary" href="#support">View support links</a>
+          <a class="site-button button-secondary" href="/apps/arithon/privacy/">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="calculator-visual" aria-hidden="true">
+        <div class="calculator">
+          <div class="display">
+            <span>Precision</span>
+            <strong>42.00</strong>
+          </div>
+
+          <div class="keypad">
+            <div class="key">7</div>
+            <div class="key">8</div>
+            <div class="key">9</div>
+            <div class="key operator">÷</div>
+            <div class="key">4</div>
+            <div class="key">5</div>
+            <div class="key">6</div>
+            <div class="key operator">×</div>
+            <div class="key">1</div>
+            <div class="key">2</div>
+            <div class="key">3</div>
+            <div class="key operator">−</div>
+            <div class="key">0</div>
+            <div class="key">.</div>
+            <div class="key operator">=</div>
+            <div class="key operator">+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Focused utility</h2>
+        <p class="section-intro">Arithon uses a simple identity within the Mind Mirage Apps portfolio: precise, clean, and practical.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="info-card">
+          <strong>Clean interface</strong>
+          Designed around fast access to calculator essentials.
+        </div>
+
+        <div class="info-card">
+          <strong>Precise purpose</strong>
+          A direct utility experience without unnecessary complexity.
+        </div>
+
+        <div class="info-card">
+          <strong>Support ready</strong>
+          Privacy and terms pages are available for users.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="support">
+      <div class="section-header">
+        <h2>Support and legal</h2>
+        <p class="section-intro">Review Arithon support information and policies.</p>
+      </div>
+
+      <div class="card-grid">
+        <a class="legal-card" href="/apps/arithon/privacy/">
+          <strong>Privacy Policy</strong>
+          View the Arithon privacy policy.
+        </a>
+
+        <a class="legal-card" href="/apps/arithon/terms/">
+          <strong>Terms of Use</strong>
+          View the Arithon terms of use.
+        </a>
+      </div>
+    </section>
+
+    <div class="footer">
+      <a href="/about/">About</a>
+      <a href="/legal/privacy/">Global Privacy Policy</a>
+      <a href="/legal/terms/">Terms</a>
+    </div>
+
+  </div>
+</body>
+</html>
