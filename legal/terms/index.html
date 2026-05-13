@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Terms of Use | Mind Mirage Apps</title>
 
+  <link rel="stylesheet" href="/assets/css/site.css" />
+
   <style>
     body {
       margin: 0;
@@ -73,10 +75,40 @@
       font-size: 13px;
       color: #666;
     }
+
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 26px 14px 36px;
+      }
+
+      .card {
+        border-radius: 18px;
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: clamp(30px, 10vw, 36px);
+        line-height: 1.08;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p, li {
+        font-size: 15px;
+      }
+
+      .footer {
+        margin-top: 48px;
+        line-height: 2;
+      }
+    }
   </style>
 </head>
 
-<body>
+<body class="legal-page page-shell">
   <div class="container">
 
     <a class="back" href="/">← Back to Mind Mirage Apps</a>
@@ -149,10 +181,13 @@
       </p>
     </div>
 
-    <div class="footer">
-      © 2026 Mind Mirage Apps
-    </div>
-
   </div>
+
+  <footer class="footer site-footer" aria-label="Site footer">
+    <span>© 2026 Mind Mirage Apps</span>
+    <a href="/about/">About</a>
+    <a href="/legal/privacy/">Privacy Policy</a>
+    <a href="/legal/terms/">Terms</a>
+  </footer>
 </body>
 </html>
