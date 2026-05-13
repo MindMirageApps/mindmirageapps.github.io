@@ -5,201 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mind Mirage Apps</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-    }
+  <link rel="stylesheet" href="assets/css/site.css" />
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .hero {
-      text-align: center;
-      margin-top: 80px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #aaa;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .feature {
-      display: block;
-      margin-top: 80px;
-      background: linear-gradient(135deg, #1a1a1a, #111);
-      border-radius: 20px;
-      padding: 40px;
-      border: 1px solid #222;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease, border 0.2s ease;
-    }
-
-    .feature:hover {
-      transform: translateY(-4px);
-      border-color: #444;
-    }
-
-    .badge {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #1f2a1f;
-      color: #8fff9a;
-      font-size: 13px;
-    }
-
-    .feature h2 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    .feature p {
-      margin-top: 10px;
-      color: #aaa;
-      font-size: 16px;
-    }
-
-    .section {
-      margin-top: 80px;
-    }
-
-    .section h3 {
-      font-size: 22px;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-
-    .app-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .app-card {
-      display: block;
-      background: #161616;
-      border-radius: 16px;
-      padding: 20px;
-      border: 1px solid #222;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease, border 0.2s ease;
-    }
-
-    .app-card:hover {
-      transform: translateY(-4px);
-      border-color: #444;
-    }
-
-    .app-card h4 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .app-card p {
-      margin-top: 8px;
-      margin-bottom: 0;
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    .legal-links {
-      margin-top: 14px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .legal-links a {
-      color: #888;
-      font-size: 13px;
-      text-decoration: none;
-    }
-
-    .legal-links a:hover {
-      color: #fff;
-    }
-
-    .footer {
-      margin-top: 100px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .footer a {
-      color: #888;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .footer a:hover {
-      color: #fff;
-    }
-  </style>
 </head>
 
-<body>
-  <div class="container">
-
+<body class="home-page page-shell">
+  <header class="site-header container">
     <div class="hero">
-      <h1>Mind Mirage Apps</h1>
-      <p>We create immersive mobile apps designed for experience, skill, and engagement.</p>
-    </div>
+      <div class="eyebrow">Independent mobile app studio</div>
+      <h1>Premium apps built for focused, memorable experiences.</h1>
+      <p>Mind Mirage Apps creates polished mobile products shaped around learning, utility, progression, and everyday engagement.</p>
 
-    <a class="feature" href="/apps/magic-atlas/">
-      <span class="badge">iOS & Android v1.2 Available</span>
-      <h2>Magic Atlas</h2>
-      <p>Learn real magic through structured lessons, techniques, tricks, daily practice, and progression.</p>
-    </a>
-
-    <div class="section">
-      <h3>All Apps</h3>
-
-      <div class="app-grid">
-
-        <a class="app-card" href="/apps/magic-atlas/">
-          <span class="badge">iOS & Android v1.2 Available</span>
-          <h4>Magic Atlas</h4>
-          <p>View app information, features, availability, and download links.</p>
-        </a>
-
-        <div class="app-card">
-          <span class="badge">Legal Pages Ready</span>
-          <h4>Arithon</h4>
-          <p>Privacy Policy and Terms of Use are now available.</p>
-
-          <div class="legal-links">
-            <a href="/apps/arithon/privacy/">Privacy Policy</a>
-            <a href="/apps/arithon/terms/">Terms of Use</a>
-          </div>
-        </div>
-
+      <div class="hero-actions">
+        <a class="site-button button-primary" href="/apps/magic-atlas/">Explore Magic Atlas</a>
+        <a class="site-button button-secondary" href="#apps">View all apps</a>
       </div>
     </div>
+  </header>
 
-    <div class="footer">
-      <a href="/about/">About</a>
-      <a href="/legal/privacy/">Privacy Policy</a>
-      <a href="/legal/terms/">Terms</a>
-    </div>
+  <main class="site-main container">
+    <a class="feature" href="/apps/magic-atlas/">
+      <div>
+        <span class="badge">iOS & Android v1.2 Available</span>
+        <h2>Magic Atlas</h2>
+        <p>Learn real magic through structured lessons, techniques, tricks, daily practice, and progression.</p>
+        <span class="feature-link">View app details →</span>
+      </div>
 
-  </div>
+      <div class="feature-visual" aria-hidden="true">
+        <div class="premium-orb"></div>
+      </div>
+    </a>
+
+    <section class="section" id="apps">
+      <div class="section-heading">
+        <h3>Apps</h3>
+        <p class="section-note">Focused releases from Mind Mirage Apps.</p>
+      </div>
+
+      <div class="app-grid">
+        <article class="app-card app-card--magic">
+          <div class="card-topline">
+            <div class="app-identity">
+              <div class="app-mark" aria-hidden="true">M</div>
+              <div>
+                <span class="app-kicker">Magic learning</span>
+                <h4>Magic Atlas</h4>
+              </div>
+            </div>
+            <span class="status-label">Available now</span>
+          </div>
+          <p>Structured magic learning for iOS and Android, with lessons, practice, and progression.</p>
+
+          <div class="app-links">
+            <a class="primary-link" href="/apps/magic-atlas/">App page</a>
+            <a href="/apps/magic-atlas/privacy/">Privacy</a>
+            <a href="/legal/terms/">Terms</a>
+          </div>
+        </article>
+
+        <article class="app-card app-card--arithon">
+          <div class="card-topline">
+            <div class="app-identity">
+              <div class="app-mark" aria-hidden="true">÷</div>
+              <div>
+                <span class="app-kicker">Utility / Calculator</span>
+                <h4>Arithon Calculator</h4>
+              </div>
+            </div>
+            <span class="status-label">Live on iOS and Android</span>
+          </div>
+          <p>A clean calculator built for simple, focused everyday calculations.</p>
+
+          <div class="app-links">
+            <a class="primary-link" href="/apps/arithon/">App page</a>
+            <a href="https://apps.apple.com/us/app/arithon-calculator/id6767340730" target="_blank" rel="noopener">App Store</a>
+            <a href="/apps/arithon/privacy/">Privacy</a>
+            <a href="/apps/arithon/terms/">Terms</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer site-footer" aria-label="Site footer">
+    <a href="/about/">About</a>
+    <a href="/legal/privacy/">Privacy Policy</a>
+    <a href="/legal/terms/">Terms</a>
+    <a href="/apps/beat-the-magician/privacy/">Beat The Magician Privacy</a>
+    <a href="/apps/beat-the-magician/terms/">Beat The Magician Terms</a>
+  </footer>
 </body>
 </html>
