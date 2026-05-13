@@ -337,6 +337,8 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
     }
 
     .app-links a {
@@ -476,9 +478,8 @@
   </style>
 </head>
 
-<body>
-  <div class="container">
-
+<body class="home-page page-shell">
+  <header class="site-header container">
     <div class="hero">
       <div class="eyebrow">Independent mobile app studio</div>
       <h1>Premium apps built for focused, memorable experiences.</h1>
@@ -489,7 +490,9 @@
         <a class="site-button button-secondary" href="#apps">View all apps</a>
       </div>
     </div>
+  </header>
 
+  <main class="site-main container">
     <a class="feature" href="/apps/magic-atlas/">
       <div>
         <span class="badge">iOS & Android v1.2 Available</span>
@@ -510,6 +513,18 @@
       </div>
 
       <div class="app-grid">
+        <article class="app-card app-card--magic">
+          <div class="card-topline">
+            <div class="app-identity">
+              <div class="app-mark" aria-hidden="true">M</div>
+              <div>
+                <span class="app-kicker">Magic learning</span>
+                <h4>Magic Atlas</h4>
+              </div>
+            </div>
+            <span class="status-label">Available now</span>
+          </div>
+          <p>Structured magic learning for iOS and Android, with lessons, practice, and progression.</p>
 
         <div class="app-card app-card--magic">
           <div class="card-topline">
@@ -568,17 +583,38 @@
             <a href="/apps/arithon/privacy/">Privacy</a>
             <a href="/apps/arithon/terms/">Terms</a>
           </div>
-        </div>
+        </article>
 
+        <article class="app-card app-card--arithon">
+          <div class="card-topline">
+            <div class="app-identity">
+              <div class="app-mark" aria-hidden="true">÷</div>
+              <div>
+                <span class="app-kicker">Utility / Calculator</span>
+                <h4>Arithon Calculator</h4>
+              </div>
+            </div>
+            <span class="status-label">Live on iOS and Android</span>
+          </div>
+          <p>A clean calculator built for simple, focused everyday calculations.</p>
+
+          <div class="app-links">
+            <a class="primary-link" href="/apps/arithon/">App page</a>
+            <a href="https://apps.apple.com/us/app/arithon-calculator/id6767340730" target="_blank" rel="noopener">App Store</a>
+            <a href="/apps/arithon/privacy/">Privacy</a>
+            <a href="/apps/arithon/terms/">Terms</a>
+          </div>
+        </article>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <div class="footer">
-      <a href="/about/">About</a>
-      <a href="/legal/privacy/">Privacy Policy</a>
-      <a href="/legal/terms/">Terms</a>
-    </div>
-
-  </div>
+  <footer class="footer site-footer" aria-label="Site footer">
+    <a href="/about/">About</a>
+    <a href="/legal/privacy/">Privacy Policy</a>
+    <a href="/legal/terms/">Terms</a>
+    <a href="/apps/beat-the-magician/privacy/">Beat The Magician Privacy</a>
+    <a href="/apps/beat-the-magician/terms/">Beat The Magician Terms</a>
+  </footer>
 </body>
 </html>
