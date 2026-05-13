@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arithon | Mind Mirage Apps</title>
+  <title>Arithon Calculator | Mind Mirage Apps</title>
 
   <link rel="stylesheet" href="/assets/css/site.css" />
 
@@ -103,10 +103,50 @@
       font-size: var(--font-size-lg);
     }
 
-    .actions {
+    .actions,
+    .store-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      align-items: center;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: -10px 0 24px;
+    }
+
+    .meta-row span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-pill);
+      padding: 6px 11px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+      font-weight: 800;
+    }
+
+    .store-buttons {
+      margin-bottom: 14px;
+    }
+
+    .store-buttons a {
+      display: inline-flex;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .store-buttons a:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .store-buttons img {
+      height: 52px;
     }
 
     .button-primary {
@@ -329,7 +369,7 @@
   </style>
 </head>
 
-<body>
+<body class="app-page page-shell">
   <div class="container">
 
     <div class="topbar">
@@ -422,7 +462,6 @@
         <div class="info-card">
           <strong>Support ready</strong>
           Privacy and terms pages remain available for users.
-          Privacy and terms pages are available for users.
         </div>
       </div>
     </section>
@@ -431,30 +470,29 @@
       <div class="section-header">
         <h2>Support and legal</h2>
         <p class="section-intro">Review Arithon Calculator support information and policies.</p>
-        <p class="section-intro">Review Arithon support information and policies.</p>
       </div>
 
       <div class="card-grid">
         <a class="legal-card" href="/apps/arithon/privacy/">
           <strong>Privacy Policy</strong>
           View the Arithon Calculator privacy policy.
-          View the Arithon privacy policy.
         </a>
 
         <a class="legal-card" href="/apps/arithon/terms/">
           <strong>Terms of Use</strong>
           View the Arithon Calculator terms of use.
-          View the Arithon terms of use.
         </a>
       </div>
     </section>
 
-    <div class="footer">
-      <a href="/about/">About</a>
-      <a href="/legal/privacy/">Global Privacy Policy</a>
-      <a href="/legal/terms/">Terms</a>
-    </div>
-
   </div>
+
+  <footer class="footer site-footer" aria-label="Site footer">
+    <a href="/about/">About</a>
+    <a href="/legal/privacy/">Privacy Policy</a>
+    <a href="/legal/terms/">Terms</a>
+    <a href="/apps/beat-the-magician/privacy/">Beat The Magician Privacy</a>
+    <a href="/apps/beat-the-magician/terms/">Beat The Magician Terms</a>
+  </footer>
 </body>
 </html>
