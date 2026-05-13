@@ -762,7 +762,7 @@ svg {
 
     .home-page .app-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       align-items: stretch;
     }
@@ -800,6 +800,11 @@ svg {
     .home-page .app-card--arithon {
       --app-accent: #7dd8ff;
       --app-accent-soft: rgba(125, 216, 255, 0.14);
+    }
+
+    .home-page .app-card--beat {
+      --app-accent: #c78cff;
+      --app-accent-soft: rgba(199, 140, 255, 0.14);
     }
 
     .home-page .app-card h4 {
