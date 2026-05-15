@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | Couple Questions Games</title>
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body class="legal-page legal-page--couples page-shell">
+  <main class="container">
+    <a class="back" href="/apps/couple-questions-games/">← Back to Couple Questions Games</a>
 
+    <article class="card">
+      <h1>Couple Questions Games Privacy Policy</h1>
+      <p class="updated">Last updated: May 15, 2026</p>
+
+      <p>Couple Questions Games is an upcoming mobile app from Mind Mirage Apps designed for relationship prompts, date-night play, and meaningful conversations.</p>
+
+      <h2>Information we collect</h2>
+      <p>We do not currently collect personal information through the Couple Questions Games website page. When the mobile app launches, this policy will be updated if the app collects information needed to operate features, provide support, improve performance, or meet legal requirements.</p>
+
+      <h2>App availability</h2>
+      <p>Couple Questions Games is coming soon on iOS and Android. Store platform features may provide their own privacy controls, diagnostics, purchase systems, or analytics. Those platform services are governed by the applicable Apple or Google policies.</p>
+
+      <h2>Support communications</h2>
+      <p>If you contact Mind Mirage Apps for support, we may use the information you provide, such as your email address and message content, to respond to your request.</p>
+
+      <h2>Children’s privacy</h2>
+      <p>Couple Questions Games is intended for users who are old enough to use relationship and date-night content appropriately. We do not knowingly collect personal information from children.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this privacy policy as Couple Questions Games develops, launches, or adds features. The updated date above will reflect the latest version.</p>
+
+      <h2>Contact</h2>
+      <p>For privacy questions, contact Mind Mirage Apps through the support information provided on this website.</p>
+    </article>
+  </main>
+
+  <footer class="footer site-footer" aria-label="Site footer">
+    <a href="/about/">About</a>
+    <a href="/apps/couple-questions-games/privacy">Privacy Policy</a>
+    <a href="/apps/couple-questions-games/terms">Terms</a>
+  </footer>
+</body>
+</html>

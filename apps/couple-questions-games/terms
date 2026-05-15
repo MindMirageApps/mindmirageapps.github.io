@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Use | Couple Questions Games</title>
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body class="legal-page legal-page--couples page-shell">
+  <main class="container">
+    <a class="back" href="/apps/couple-questions-games/">← Back to Couple Questions Games</a>
 
+    <article class="card">
+      <h1>Couple Questions Games Terms of Use</h1>
+      <p class="updated">Last updated: May 15, 2026</p>
+
+      <p>These terms apply to Couple Questions Games, an upcoming relationship question game from Mind Mirage Apps.</p>
+
+      <h2>Use of the app</h2>
+      <p>Couple Questions Games is intended to provide entertainment prompts and conversation starters. It is not professional relationship, medical, legal, financial, or counseling advice.</p>
+
+      <h2>Availability</h2>
+      <p>Couple Questions Games is coming soon on iOS and Android. Features, launch timing, store availability, and platform support may change before or after release.</p>
+
+      <h2>Responsible play</h2>
+      <p>Users are responsible for choosing prompts and conversations that are appropriate for their circumstances. Stop using any prompt or activity that feels uncomfortable, unsafe, or unsuitable.</p>
+
+      <h2>Intellectual property</h2>
+      <p>The Couple Questions Games name, website content, app concepts, visual design, and related materials are owned by Mind Mirage Apps or its licensors unless otherwise stated.</p>
+
+      <h2>Third-party services</h2>
+      <p>When the app launches, it may be distributed through Apple, Google, or other third-party services. Your use of those services may be subject to separate terms and policies.</p>
+
+      <h2>Changes to these terms</h2>
+      <p>We may update these terms as Couple Questions Games develops, launches, or adds features. Continued use after updates means you accept the revised terms.</p>
+
+      <h2>Contact</h2>
+      <p>For questions about these terms, contact Mind Mirage Apps through the support information provided on this website.</p>
+    </article>
+  </main>
+
+  <footer class="footer site-footer" aria-label="Site footer">
+    <a href="/about/">About</a>
+    <a href="/apps/couple-questions-games/privacy">Privacy Policy</a>
+    <a href="/apps/couple-questions-games/terms">Terms</a>
+  </footer>
+</body>
+</html>
