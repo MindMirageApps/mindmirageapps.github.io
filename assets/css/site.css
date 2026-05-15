@@ -854,7 +854,7 @@ svg {
         linear-gradient(145deg, rgba(255, 252, 249, 0.98), rgba(255, 234, 227, 0.94));
     }
 
-    .home-page .app-card--couples p,
+    .home-page .app-card.app-card--couples p,
     .home-page .app-card--couples .status-label,
     .home-page .app-card--couples .app-links a:not(.primary-link) {
       color: #8b6171;
