@@ -313,12 +313,26 @@
 
     .info-card,
     .legal-card {
-      border: 1px solid var(--couples-line);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(232, 79, 130, 0.18);
       border-radius: 28px;
       padding: 24px;
-      background: var(--couples-card);
-      box-shadow: 0 18px 50px rgba(177, 83, 112, 0.10);
+      background:
+        radial-gradient(circle at 92% 0%, rgba(255, 195, 143, 0.22), transparent 34%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 250, 246, 0.82));
+      box-shadow: 0 18px 48px rgba(188, 82, 99, 0.13), 0 1px 0 rgba(255, 255, 255, 0.78) inset;
       color: var(--couples-muted);
+      line-height: 1.65;
+    }
+
+    .info-card::before,
+    .legal-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      background: linear-gradient(90deg, rgba(255, 195, 143, 0.78), rgba(232, 79, 130, 0.42), transparent);
     }
 
     .info-card strong,
@@ -327,6 +341,7 @@
       margin-bottom: 8px;
       color: var(--couples-ink);
       font-size: var(--font-size-lg);
+      line-height: 1.25;
     }
 
     .legal-card {
@@ -447,7 +462,7 @@
 
         <div class="actions">
           <a class="site-button button-primary" href="#support">View legal links</a>
-          <a class="site-button button-secondary" href="/apps/couple-questions-games/privacy.html">Privacy Policy</a>
+          <a class="site-button button-secondary" href="/apps/couple-questions-games/privacy/">Privacy Policy</a>
         </div>
       </div>
 
@@ -499,12 +514,12 @@
       </div>
 
       <div class="card-grid">
-        <a class="legal-card" href="/apps/couple-questions-games/privacy.html">
+        <a class="legal-card" href="/apps/couple-questions-games/privacy/">
           <strong>Privacy Policy</strong>
           View the Couple Questions Games privacy policy.
         </a>
 
-        <a class="legal-card" href="/apps/couple-questions-games/terms.html">
+        <a class="legal-card" href="/apps/couple-questions-games/terms/">
           <strong>Terms of Use</strong>
           View the Couple Questions Games terms of use.
         </a>
@@ -514,8 +529,8 @@
 
   <footer class="footer site-footer" aria-label="Site footer">
     <a href="/about/">About</a>
-    <a href="/legal/privacy/">Privacy Policy</a>
-    <a href="/legal/terms/">Terms</a>
+    <a href="/apps/couple-questions-games/privacy/">Privacy Policy</a>
+    <a href="/apps/couple-questions-games/terms/">Terms</a>
   </footer>
 </body>
 </html>
