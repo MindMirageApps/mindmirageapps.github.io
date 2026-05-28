@@ -7,47 +7,39 @@
   <title>Mind Mirage Apps | Premium Mobile Apps</title>
   <meta
     name="description"
-    content="Mind Mirage Apps builds polished mobile products for iPhone and Android."
+    content="Mind Mirage Apps builds polished iPhone and Android products focused on quality, usability, and memorable mobile experiences."
   />
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260528-home-final" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260528-premium-home" />
 </head>
 
 <body class="home-page page-shell">
   <main>
-    <section class="home-hero" id="top">
-      <div class="hero-light hero-light-one" aria-hidden="true"></div>
-      <div class="hero-light hero-light-two" aria-hidden="true"></div>
-
-      <div class="home-hero-inner">
+    <section class="home-hero" id="top" aria-labelledby="hero-title">
+      <div class="home-hero__inner">
         <div class="hero-copy">
-          <p class="hero-kicker">Mind Mirage Apps</p>
-
-          <h1>Premium mobile apps for everyday experiences.</h1>
-
+          <p class="eyebrow">Mind Mirage Apps</p>
+          <h1 id="hero-title">Premium mobile apps for everyday experiences.</h1>
           <p class="hero-text">
-            We build polished iPhone and Android products focused on quality,
+            Mind Mirage Apps builds polished iPhone and Android products focused on quality,
             usability, and memorable mobile experiences.
           </p>
 
-          <div class="hero-actions">
-            <a href="#featured-apps" class="button button-primary">View apps</a>
-            <a href="mailto:support@mindmirageapps.com" class="button button-secondary">Support</a>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a href="#featured-apps" class="site-button site-button--primary">View apps</a>
+            <a href="mailto:support@mindmirageapps.com" class="site-button site-button--secondary">Support</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="phone phone-back">
-            <div class="phone-screen screen-couple"></div>
-          </div>
-
-          <div class="phone phone-front">
-            <div class="phone-screen screen-illusio">
-              <span class="mock-label">Illusio</span>
-              <span class="mock-title">Learn magic with atmosphere.</span>
-              <span class="mock-progress"></span>
-              <span class="mock-card"></span>
-              <span class="mock-card mock-card-small"></span>
+        <div class="hero-device" aria-hidden="true">
+          <div class="device-frame">
+            <div class="device-screen">
+              <span class="device-status">Featured release</span>
+              <span class="device-title">Illusio</span>
+              <span class="device-copy">Focused lessons, cinematic practice, and a polished mobile experience.</span>
+              <span class="device-divider"></span>
+              <span class="device-row"></span>
+              <span class="device-row device-row--short"></span>
             </div>
           </div>
         </div>
@@ -56,36 +48,42 @@
 
     <section class="featured-apps" id="featured-apps" aria-labelledby="featured-apps-title">
       <div class="section-heading">
-        <p class="section-kicker">Featured apps</p>
-        <h2 id="featured-apps-title">Current releases</h2>
+        <p class="eyebrow">Featured apps</p>
+        <h2 id="featured-apps-title">New apps and major releases.</h2>
       </div>
 
-      <div class="app-row">
-        <a href="/apps/illusio/" class="app-card">
-          <span class="app-art app-art-illusio"></span>
-          <span class="app-name">Illusio</span>
-          <span class="app-copy">Cinematic magic learning.</span>
+      <div class="featured-grid">
+        <a href="/apps/illusio/" class="featured-card featured-card--illusio">
+          <span class="featured-card__mark" aria-hidden="true">I</span>
+          <span class="featured-card__body">
+            <span class="featured-card__name">Illusio</span>
+            <span class="featured-card__copy">Interactive magic learning with focused progression and account sync.</span>
+          </span>
+          <span class="featured-card__link">View app</span>
         </a>
 
-        <a href="/apps/couple-questions-games/" class="app-card">
-          <span class="app-art app-art-couple"></span>
-          <span class="app-name">Couple Questions Games</span>
-          <span class="app-copy">Conversation games for couples.</span>
+        <a href="/apps/couple-questions-games/" class="featured-card featured-card--couple">
+          <span class="featured-card__mark" aria-hidden="true">CQ</span>
+          <span class="featured-card__body">
+            <span class="featured-card__name">Couple Questions Games</span>
+            <span class="featured-card__copy">Warm conversation games for couples, date nights, and shared moments.</span>
+          </span>
+          <span class="featured-card__link">View app</span>
         </a>
 
-        <a href="/apps/arithon/" class="app-card">
-          <span class="app-art app-art-arithon"></span>
-          <span class="app-name">Arithon Calculator</span>
-          <span class="app-copy">A clean utility with hidden performance power.</span>
+        <a href="/apps/arithon/" class="featured-card featured-card--arithon">
+          <span class="featured-card__mark" aria-hidden="true">÷</span>
+          <span class="featured-card__body">
+            <span class="featured-card__name">Arithon Calculator</span>
+            <span class="featured-card__copy">A clean everyday calculator with a focused, modern utility experience.</span>
+          </span>
+          <span class="featured-card__link">View app</span>
         </a>
       </div>
     </section>
 
-    <section class="brand-statement" aria-label="About Mind Mirage Apps">
-      <p>
-        Mind Mirage Apps builds its own polished mobile products with a focus on
-        design, atmosphere, and everyday usability.
-      </p>
+    <section class="brand-statement" aria-label="Brand statement">
+      <p>Built with care, designed for everyday use, and shaped around focused mobile experiences.</p>
     </section>
   </main>
 
@@ -95,7 +93,6 @@
       <a href="/legal/terms/">Terms</a>
       <a href="mailto:support@mindmirageapps.com">Support</a>
     </nav>
-
     <p>© 2026 Mind Mirage Apps</p>
   </footer>
 </body>
