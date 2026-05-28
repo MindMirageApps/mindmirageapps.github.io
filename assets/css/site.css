@@ -1775,3 +1775,96 @@ a {
   .home-page .hero-devices { height: 470px; margin-top: 0; }
   .home-page .preview-strip { grid-auto-columns: minmax(260px, 1fr); }
 }
+
+/* Cinematic 2026 home redesign */
+.home-page {
+  margin: 0;
+  min-height: 100vh;
+  color: #f7f8ff;
+  background:
+    radial-gradient(1200px 600px at 20% -5%, rgba(244, 193, 97, 0.22), transparent 56%),
+    radial-gradient(900px 550px at 85% 8%, rgba(125, 93, 255, 0.24), transparent 58%),
+    linear-gradient(180deg, #090b12 0%, #06070d 55%, #05060a 100%);
+}
+.home-page main { overflow: hidden; }
+
+.home-page .cinematic-hero,
+.home-page .illusio-spotlight,
+.home-page .brand-minimal {
+  width: min(1240px, 100% - 40px);
+  margin-inline: auto;
+}
+
+.home-page .cinematic-hero {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: clamp(24px, 6vw, 54px);
+  padding: clamp(24px, 7vw, 72px) 0 clamp(40px, 9vw, 90px);
+  position: relative;
+}
+.home-page .hero-kicker { letter-spacing: .24em; text-transform: uppercase; color: #b4bdd6; font-size: 12px; margin: 0 0 18px; }
+.home-page .hero-content h1 { margin: 0; font-size: clamp(44px, 11vw, 112px); line-height: .92; max-width: 11ch; letter-spacing: -.04em; }
+
+.home-page .hero-glow { position: absolute; border-radius: 999px; filter: blur(18px); opacity: .75; pointer-events: none; animation: breathe 7s ease-in-out infinite alternate; }
+.home-page .hero-glow-gold { width: 42vw; height: 42vw; min-width: 280px; min-height: 280px; left: -10vw; top: 18vh; background: radial-gradient(circle, rgba(226,176,92,.25), transparent 62%); }
+.home-page .hero-glow-violet { width: 52vw; height: 52vw; min-width: 320px; min-height: 320px; right: -14vw; top: 6vh; background: radial-gradient(circle, rgba(122,99,255,.3), transparent 64%); animation-delay: 2.4s; }
+
+.home-page .hero-device-stage { height: clamp(300px, 56vw, 630px); position: relative; }
+.home-page .iphone { position: absolute; width: clamp(152px, 26vw, 282px); aspect-ratio: 9 / 19.5; border-radius: 38px; background: linear-gradient(150deg, rgba(255,255,255,.24), rgba(255,255,255,.02) 42%, rgba(0,0,0,.55)); box-shadow: 0 35px 70px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.12) inset; }
+.home-page .iphone span { position: absolute; inset: 8px; border-radius: 31px; background: linear-gradient(160deg, rgba(157,177,255,.56), rgba(102,80,181,.36) 42%, rgba(10,13,24,.9)); }
+.home-page .iphone::before { content: ""; position: absolute; width: 34%; height: 5px; left: 50%; top: 11px; transform: translateX(-50%); border-radius: 999px; background: rgba(223,227,245,.42); }
+.home-page .i-main { left: 50%; top: 6%; transform: translateX(-50%); z-index: 4; }
+.home-page .i-left { left: 8%; top: 19%; transform: rotate(-12deg); opacity: .9; }
+.home-page .i-right { right: 8%; top: 17%; transform: rotate(12deg); opacity: .88; }
+
+.home-page .illusio-spotlight { min-height: 78vh; padding: clamp(40px, 10vw, 120px) 0; display: grid; gap: 26px; align-items: center; position: relative; }
+.home-page .illusio-spotlight::before { content: ""; position: absolute; inset: 0; background: radial-gradient(500px 220px at 60% 45%, rgba(133,88,255,.25), transparent 75%); pointer-events: none; }
+.home-page .spotlight-copy { position: relative; z-index: 2; }
+.home-page .spotlight-copy p:first-child { margin: 0; text-transform: uppercase; letter-spacing: .2em; font-size: 12px; color: #b9b2d8; }
+.home-page .spotlight-copy h2 { margin: 14px 0 10px; font-size: clamp(40px, 11vw, 108px); letter-spacing: -.045em; line-height: .9; }
+.home-page .spotlight-copy p:last-child { margin: 0; max-width: 34ch; color: #ccc6de; font-size: clamp(16px, 3.7vw, 20px); }
+.home-page .spotlight-devices { height: clamp(300px, 58vw, 600px); position: relative; z-index: 2; }
+.home-page .illusio-front { left: 50%; top: 6%; transform: translateX(-50%) rotate(8deg); }
+.home-page .illusio-front span { background: linear-gradient(170deg, rgba(137,104,255,.65), rgba(73,34,144,.45) 36%, rgba(7,8,19,.95)); }
+.home-page .illusio-back { left: 20%; top: 19%; transform: rotate(-8deg); opacity: .85; }
+.home-page .illusio-back span { background: linear-gradient(180deg, rgba(112,75,216,.47), rgba(17,18,35,.94)); }
+
+.home-page .app-strip {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(215px, 240px);
+  gap: 18px;
+  overflow-x: auto;
+  padding: clamp(10px, 2vw, 20px) 20px 8px;
+  scroll-snap-type: x mandatory;
+}
+.home-page .strip-item { scroll-snap-align: start; text-decoration: none; color: #eff2ff; }
+.home-page .app-thumb { display: block; width: 100%; aspect-ratio: 16 / 10; border-radius: 24px; box-shadow: 0 24px 50px rgba(0,0,0,.5); margin-bottom: 10px; }
+.home-page .thumb-illusio { background: linear-gradient(140deg, #2f2256, #120d24 55%, #6f40ca); }
+.home-page .thumb-couple { background: linear-gradient(140deg, #3e2333, #1a0c16 45%, #9f3e75); }
+.home-page .thumb-arithon { background: linear-gradient(140deg, #24334c, #0f1524 50%, #4f81ea); }
+.home-page .app-name { font-size: 14px; color: #c7cede; }
+
+.home-page .brand-minimal { padding: clamp(72px, 11vw, 146px) 0 clamp(40px, 7vw, 88px); }
+.home-page .brand-minimal p { margin: 0; font-size: clamp(24px, 5vw, 42px); line-height: 1.15; letter-spacing: -.02em; max-width: 24ch; color: #eef1fa; }
+
+.home-page .home-footer {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 18px 20px 36px;
+}
+.home-page .home-footer a { color: #98a0b3; text-decoration: none; font-size: 13px; }
+.home-page .home-footer a:hover { color: #f0f4ff; }
+
+@keyframes breathe {
+  from { transform: scale(1) translateY(0); opacity: .55; }
+  to { transform: scale(1.08) translateY(-8px); opacity: .88; }
+}
+
+@media (min-width: 880px) {
+  .home-page .cinematic-hero { grid-template-columns: 1.05fr .95fr; align-items: center; }
+  .home-page .illusio-spotlight { grid-template-columns: .9fr 1.1fr; }
+}
