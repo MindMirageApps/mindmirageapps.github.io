@@ -66,9 +66,9 @@ svg {
 .home-page {
   overflow-x: hidden;
   background:
-    radial-gradient(950px 520px at 72% 4%, rgba(132, 105, 255, 0.3), transparent 64%),
-    radial-gradient(720px 400px at 12% 18%, rgba(77, 151, 255, 0.18), transparent 66%),
-    radial-gradient(800px 480px at 50% 110%, rgba(255, 255, 255, 0.05), transparent 70%),
+    radial-gradient(900px 480px at 72% 4%, rgba(132, 105, 255, 0.28), transparent 64%),
+    radial-gradient(680px 380px at 12% 18%, rgba(77, 151, 255, 0.16), transparent 66%),
+    radial-gradient(760px 440px at 50% 110%, rgba(255, 255, 255, 0.045), transparent 70%),
     linear-gradient(180deg, #04050b 0%, #060712 42%, #030409 100%);
 }
 
@@ -83,20 +83,20 @@ svg {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.48), transparent 72%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 72%);
 }
 
 /* HERO */
 
 .home-hero {
   position: relative;
-  min-height: 78svh;
+  min-height: 68svh;
   display: flex;
   align-items: center;
-  padding: 36px clamp(20px, 5vw, 72px);
+  padding: 28px clamp(24px, 5vw, 72px);
   isolation: isolate;
 }
 
@@ -105,42 +105,42 @@ svg {
   border-radius: 999px;
   pointer-events: none;
   filter: blur(34px);
-  opacity: 0.72;
+  opacity: 0.68;
   z-index: -1;
 }
 
 .home-ambient-primary {
-  width: clamp(360px, 52vw, 760px);
-  height: clamp(360px, 52vw, 760px);
-  right: -18%;
-  top: -16%;
-  background: radial-gradient(circle, rgba(141, 108, 255, 0.42), transparent 68%);
+  width: clamp(340px, 48vw, 680px);
+  height: clamp(340px, 48vw, 680px);
+  right: -16%;
+  top: -20%;
+  background: radial-gradient(circle, rgba(141, 108, 255, 0.4), transparent 68%);
   animation: homeGlowOne 13s ease-in-out infinite alternate;
 }
 
 .home-ambient-secondary {
-  width: clamp(320px, 44vw, 620px);
-  height: clamp(320px, 44vw, 620px);
+  width: clamp(300px, 40vw, 560px);
+  height: clamp(300px, 40vw, 560px);
   left: -14%;
   top: 18%;
-  background: radial-gradient(circle, rgba(90, 164, 255, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(90, 164, 255, 0.2), transparent 70%);
   animation: homeGlowTwo 15s ease-in-out infinite alternate;
 }
 
 .home-ambient-soft {
-  width: 70vw;
-  height: 40vw;
+  width: 66vw;
+  height: 34vw;
   left: 18%;
-  bottom: -20%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.07), transparent 72%);
+  bottom: -22%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), transparent 72%);
 }
 
 .home-hero-inner {
-  width: min(1240px, 100%);
+  width: min(1180px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 0.96fr) minmax(360px, 1.04fr);
-  gap: clamp(34px, 6vw, 84px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.98fr);
+  gap: clamp(28px, 5vw, 68px);
   align-items: center;
 }
 
@@ -153,13 +153,13 @@ svg {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  margin: 0 0 20px;
+  margin: 0 0 18px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-pill);
-  padding: 8px 13px;
+  padding: 7px 12px;
   background: rgba(255, 255, 255, 0.055);
   color: #dbe2ff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -167,38 +167,38 @@ svg {
 }
 
 .home-hero h1 {
-  max-width: 11.5ch;
+  max-width: 12.1ch;
   margin: 0;
-  font-size: clamp(64px, 6.8vw, 96px);
-  line-height: 0.9;
-  letter-spacing: -0.07em;
+  font-size: clamp(54px, 5.7vw, 82px);
+  line-height: 0.93;
+  letter-spacing: -0.065em;
   font-weight: 860;
   text-wrap: balance;
 }
 
 .home-hero-text {
-  max-width: 31rem;
-  margin: 22px 0 0;
+  max-width: 29rem;
+  margin: 20px 0 0;
   color: var(--muted);
-  font-size: clamp(17px, 1.45vw, 20px);
-  line-height: 1.6;
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.58;
 }
 
 .home-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 26px;
 }
 
 .home-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
+  min-height: 46px;
   border-radius: var(--radius-pill);
-  padding: 0 22px;
-  font-size: 15px;
+  padding: 0 20px;
+  font-size: 14px;
   font-weight: 800;
   text-decoration: none;
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
@@ -212,7 +212,7 @@ svg {
   border: 1px solid rgba(255, 255, 255, 0.32);
   background: linear-gradient(135deg, #f4f6ff, #aebfff 46%, #8d6cff);
   color: #070811;
-  box-shadow: 0 20px 54px rgba(141, 108, 255, 0.26);
+  box-shadow: 0 18px 48px rgba(141, 108, 255, 0.24);
 }
 
 .home-button-secondary {
@@ -231,7 +231,7 @@ svg {
 
 .home-device-scene {
   position: relative;
-  height: clamp(430px, 42vw, 590px);
+  height: clamp(360px, 36vw, 500px);
   perspective: 1400px;
 }
 
@@ -246,7 +246,7 @@ svg {
   height: 70%;
   left: 0;
   top: 18%;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.055);
   transform: rotate(-14deg);
 }
 
@@ -255,7 +255,7 @@ svg {
   height: 84%;
   right: -12%;
   top: 4%;
-  border: 1px solid rgba(141, 108, 255, 0.12);
+  border: 1px solid rgba(141, 108, 255, 0.1);
   transform: rotate(10deg);
 }
 
@@ -263,14 +263,14 @@ svg {
   position: absolute;
   overflow: hidden;
   aspect-ratio: 9 / 19.5;
-  border-radius: 44px;
+  border-radius: 40px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12) 9%, rgba(21, 23, 32, 0.95) 42%, #030409 100%);
   box-shadow:
-    0 72px 100px rgba(0, 0, 0, 0.6),
-    0 30px 56px rgba(0, 0, 0, 0.45),
+    0 62px 88px rgba(0, 0, 0, 0.58),
+    0 26px 48px rgba(0, 0, 0, 0.42),
     0 0 0 1px rgba(255, 255, 255, 0.18) inset,
-    0 0 0 4px rgba(255, 255, 255, 0.035) inset;
+    0 0 0 4px rgba(255, 255, 255, 0.032) inset;
 }
 
 .device-card::after {
@@ -299,7 +299,7 @@ svg {
   position: absolute;
   inset: 9px;
   overflow: hidden;
-  border-radius: 35px;
+  border-radius: 31px;
   border: 1px solid rgba(255, 255, 255, 0.11);
 }
 
@@ -313,17 +313,17 @@ svg {
 }
 
 .device-card-front {
-  width: clamp(220px, 23vw, 318px);
-  left: 23%;
-  top: 8%;
+  width: clamp(205px, 19vw, 276px);
+  left: 24%;
+  top: 6%;
   z-index: 3;
   transform: rotate(-3deg);
   animation: floatDeviceFront 9s ease-in-out infinite;
 }
 
 .device-card-back {
-  width: clamp(198px, 20vw, 286px);
-  right: 8%;
+  width: clamp(184px, 17vw, 248px);
+  right: 12%;
   top: 20%;
   z-index: 2;
   opacity: 0.88;
@@ -332,7 +332,7 @@ svg {
 }
 
 .device-screen-illusio {
-  padding: 38px 22px 24px;
+  padding: 34px 20px 22px;
   background:
     radial-gradient(190px 120px at 74% 16%, rgba(188, 124, 255, 0.48), transparent 75%),
     radial-gradient(260px 180px at 18% 80%, rgba(84, 58, 190, 0.54), transparent 78%),
@@ -342,7 +342,7 @@ svg {
 .screen-brand {
   display: block;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -350,9 +350,9 @@ svg {
 
 .screen-headline {
   display: block;
-  margin-top: 18px;
+  margin-top: 16px;
   color: white;
-  font-size: clamp(22px, 2.2vw, 30px);
+  font-size: clamp(20px, 1.95vw, 27px);
   line-height: 1.02;
   font-weight: 850;
   letter-spacing: -0.05em;
@@ -360,8 +360,8 @@ svg {
 
 .screen-progress {
   display: block;
-  height: 10px;
-  margin-top: 28px;
+  height: 9px;
+  margin-top: 24px;
   border-radius: var(--radius-pill);
   background:
     linear-gradient(90deg, #b28cff 0 68%, rgba(255, 255, 255, 0.12) 68% 100%);
@@ -370,9 +370,9 @@ svg {
 .screen-row,
 .screen-row.short {
   display: block;
-  height: 46px;
-  margin-top: 14px;
-  border-radius: 18px;
+  height: 40px;
+  margin-top: 12px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.075);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -382,7 +382,7 @@ svg {
 }
 
 .device-screen-couple {
-  padding: 30px 18px 22px;
+  padding: 28px 16px 20px;
   background:
     radial-gradient(190px 110px at 76% 12%, rgba(255, 111, 174, 0.36), transparent 74%),
     radial-gradient(230px 150px at 22% 82%, rgba(141, 108, 255, 0.32), transparent 78%),
@@ -392,7 +392,7 @@ svg {
 .screen-pill {
   display: block;
   width: 62%;
-  height: 18px;
+  height: 16px;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.15);
 }
@@ -400,23 +400,23 @@ svg {
 .screen-title {
   display: block;
   width: 84%;
-  height: 54px;
-  margin-top: 22px;
-  border-radius: 18px;
+  height: 48px;
+  margin-top: 20px;
+  border-radius: 16px;
   background: linear-gradient(135deg, rgba(255, 111, 174, 0.48), rgba(141, 108, 255, 0.22));
 }
 
 .screen-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 18px;
+  gap: 9px;
+  margin-top: 16px;
 }
 
 .screen-grid i {
   display: block;
   aspect-ratio: 1;
-  border-radius: 18px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -424,49 +424,49 @@ svg {
 
 .home-app-feature {
   position: relative;
-  width: min(1160px, calc(100% - 40px));
+  width: min(1080px, calc(100% - 44px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: clamp(30px, 5vw, 68px);
+  grid-template-columns: 1fr 0.9fr;
+  gap: clamp(26px, 4vw, 52px);
   align-items: center;
-  padding: 34px 0 48px;
+  padding: 18px 0 34px;
 }
 
 .feature-visual {
   position: relative;
-  min-height: clamp(260px, 30vw, 380px);
+  min-height: clamp(220px, 24vw, 310px);
 }
 
 .feature-light {
   position: absolute;
   inset: 12% 10% 8%;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(141, 108, 255, 0.36), transparent 70%);
+  background: radial-gradient(circle, rgba(141, 108, 255, 0.32), transparent 70%);
   filter: blur(30px);
 }
 
 .feature-panel {
   position: absolute;
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.13);
   background:
     linear-gradient(125deg, rgba(255, 255, 255, 0.15), transparent 26%),
     radial-gradient(260px 160px at 76% 18%, rgba(197, 129, 255, 0.42), transparent 76%),
     radial-gradient(330px 200px at 18% 78%, rgba(76, 55, 178, 0.45), transparent 76%),
     linear-gradient(180deg, #1a1438, #090914);
-  box-shadow: 0 34px 78px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 30px 68px rgba(0, 0, 0, 0.44);
 }
 
 .feature-panel::after {
   content: "";
   position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 22px;
-  height: 34%;
-  border-radius: 22px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  height: 32%;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.13);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
 }
@@ -476,11 +476,11 @@ svg {
 }
 
 .feature-panel-small {
-  width: 42%;
-  height: 46%;
+  width: 40%;
+  height: 42%;
   left: 0;
   top: 0;
-  border-radius: 24px;
+  border-radius: 22px;
   transform: rotate(-7deg);
   opacity: 0.9;
 }
@@ -491,24 +491,24 @@ svg {
 
 .feature-copy h2 {
   margin: 0;
-  font-size: clamp(44px, 6vw, 76px);
-  line-height: 0.92;
-  letter-spacing: -0.065em;
+  font-size: clamp(40px, 4.8vw, 64px);
+  line-height: 0.94;
+  letter-spacing: -0.062em;
 }
 
 .feature-copy p:not(.eyebrow) {
-  max-width: 31rem;
-  margin: 18px 0 0;
+  max-width: 29rem;
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: clamp(16px, 1.35vw, 18px);
-  line-height: 1.62;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.6;
 }
 
 .text-link {
   display: inline-flex;
-  margin-top: 24px;
+  margin-top: 22px;
   color: #d7ddff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
   text-decoration: none;
 }
@@ -520,19 +520,19 @@ svg {
 /* APPS */
 
 .home-apps {
-  width: min(1160px, calc(100% - 40px));
+  width: min(1080px, calc(100% - 44px));
   margin: 0 auto;
-  padding: 34px 0 54px;
+  padding: 28px 0 42px;
 }
 
 .section-heading {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .section-heading h2 {
   max-width: 12ch;
   margin: 0;
-  font-size: clamp(34px, 4.4vw, 52px);
+  font-size: clamp(32px, 3.8vw, 46px);
   line-height: 1;
   letter-spacing: -0.055em;
 }
@@ -540,43 +540,43 @@ svg {
 .app-showcase-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .app-showcase-card {
   position: relative;
-  min-height: 300px;
+  min-height: 260px;
   overflow: hidden;
-  border-radius: 30px;
-  padding: 22px;
+  border-radius: 28px;
+  padding: 20px;
   color: white;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 28px 68px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 26px 58px rgba(0, 0, 0, 0.3);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .app-showcase-card:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 38px 88px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 34px 76px rgba(0, 0, 0, 0.42);
 }
 
 .app-showcase-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(130deg, rgba(255, 255, 255, 0.16), transparent 34%);
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.14), transparent 34%);
   pointer-events: none;
 }
 
 .app-art {
   display: block;
   position: relative;
-  height: 158px;
-  border-radius: 24px;
-  margin-bottom: 20px;
+  height: 132px;
+  border-radius: 22px;
+  margin-bottom: 18px;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
@@ -584,11 +584,11 @@ svg {
 .app-art::after {
   content: "";
   position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  height: 38%;
-  border-radius: 18px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  height: 34%;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.085);
   border: 1px solid rgba(255, 255, 255, 0.09);
 }
@@ -614,7 +614,7 @@ svg {
 .app-title {
   position: relative;
   display: block;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 850;
   letter-spacing: -0.035em;
 }
@@ -623,40 +623,40 @@ svg {
   position: relative;
   display: block;
   max-width: 24ch;
-  margin-top: 8px;
+  margin-top: 7px;
   color: rgba(240, 244, 255, 0.72);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.45;
 }
 
 /* BRAND + SUPPORT */
 
 .brand-statement {
-  width: min(1160px, calc(100% - 40px));
+  width: min(1080px, calc(100% - 44px));
   margin: 0 auto;
-  padding: 44px 0 36px;
+  padding: 34px 0 26px;
 }
 
 .brand-statement p {
-  max-width: 28ch;
+  max-width: 30ch;
   margin: 0;
   color: #f4f6ff;
-  font-size: clamp(34px, 4vw, 52px);
-  line-height: 1.08;
-  letter-spacing: -0.06em;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
   font-weight: 820;
 }
 
 .home-support {
-  width: min(1160px, calc(100% - 40px));
+  width: min(1080px, calc(100% - 44px));
   margin: 0 auto;
-  padding: 0 0 56px;
+  padding: 0 0 42px;
 }
 
 .home-support p {
-  margin: 0 0 10px;
+  margin: 0 0 9px;
   color: var(--soft);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -664,7 +664,7 @@ svg {
 
 .home-support a {
   color: #eff3ff;
-  font-size: clamp(20px, 2.4vw, 30px);
+  font-size: clamp(18px, 2vw, 25px);
   font-weight: 800;
   letter-spacing: -0.04em;
   text-decoration: none;
@@ -679,8 +679,8 @@ svg {
 .home-footer {
   display: grid;
   justify-items: center;
-  gap: 14px;
-  padding: 24px 20px 38px;
+  gap: 12px;
+  padding: 20px 20px 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(3, 4, 9, 0.46);
 }
@@ -808,24 +808,24 @@ svg {
 @keyframes homeGlowOne {
   from {
     transform: translate3d(0, 0, 0) scale(1);
-    opacity: 0.58;
+    opacity: 0.56;
   }
 
   to {
     transform: translate3d(-18px, 22px, 0) scale(1.08);
-    opacity: 0.86;
+    opacity: 0.82;
   }
 }
 
 @keyframes homeGlowTwo {
   from {
     transform: translate3d(0, 0, 0) scale(1);
-    opacity: 0.4;
+    opacity: 0.36;
   }
 
   to {
     transform: translate3d(20px, -18px, 0) scale(1.05);
-    opacity: 0.68;
+    opacity: 0.62;
   }
 }
 
@@ -836,7 +836,7 @@ svg {
   }
 
   50% {
-    transform: rotate(-1.5deg) translateY(-12px);
+    transform: rotate(-1.5deg) translateY(-10px);
   }
 }
 
@@ -847,7 +847,7 @@ svg {
   }
 
   50% {
-    transform: rotate(10deg) translateY(-10px) translateZ(-60px);
+    transform: rotate(10deg) translateY(-8px) translateZ(-60px);
   }
 }
 
@@ -876,10 +876,12 @@ svg {
   }
 
   .device-card-front {
+    width: clamp(220px, 30vw, 300px);
     left: 22%;
   }
 
   .device-card-back {
+    width: clamp(196px, 26vw, 270px);
     right: 12%;
   }
 
