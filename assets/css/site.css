@@ -66,9 +66,9 @@ svg {
 .home-page {
   overflow-x: hidden;
   background:
-    radial-gradient(1000px 560px at 72% 4%, rgba(132, 105, 255, 0.32), transparent 64%),
-    radial-gradient(760px 420px at 12% 18%, rgba(77, 151, 255, 0.2), transparent 66%),
-    radial-gradient(900px 520px at 50% 110%, rgba(255, 255, 255, 0.055), transparent 70%),
+    radial-gradient(950px 520px at 72% 4%, rgba(132, 105, 255, 0.3), transparent 64%),
+    radial-gradient(720px 400px at 12% 18%, rgba(77, 151, 255, 0.18), transparent 66%),
+    radial-gradient(800px 480px at 50% 110%, rgba(255, 255, 255, 0.05), transparent 70%),
     linear-gradient(180deg, #04050b 0%, #060712 42%, #030409 100%);
 }
 
@@ -83,20 +83,20 @@ svg {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 72%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.48), transparent 72%);
 }
 
 /* HERO */
 
 .home-hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 78svh;
   display: flex;
   align-items: center;
-  padding: clamp(34px, 6vw, 72px) clamp(20px, 5vw, 72px);
+  padding: 36px clamp(20px, 5vw, 72px);
   isolation: isolate;
 }
 
@@ -105,7 +105,7 @@ svg {
   border-radius: 999px;
   pointer-events: none;
   filter: blur(34px);
-  opacity: 0.75;
+  opacity: 0.72;
   z-index: -1;
 }
 
@@ -114,7 +114,7 @@ svg {
   height: clamp(360px, 52vw, 760px);
   right: -18%;
   top: -16%;
-  background: radial-gradient(circle, rgba(141, 108, 255, 0.44), transparent 68%);
+  background: radial-gradient(circle, rgba(141, 108, 255, 0.42), transparent 68%);
   animation: homeGlowOne 13s ease-in-out infinite alternate;
 }
 
@@ -123,7 +123,7 @@ svg {
   height: clamp(320px, 44vw, 620px);
   left: -14%;
   top: 18%;
-  background: radial-gradient(circle, rgba(90, 164, 255, 0.24), transparent 70%);
+  background: radial-gradient(circle, rgba(90, 164, 255, 0.22), transparent 70%);
   animation: homeGlowTwo 15s ease-in-out infinite alternate;
 }
 
@@ -132,7 +132,7 @@ svg {
   height: 40vw;
   left: 18%;
   bottom: -20%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 72%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.07), transparent 72%);
 }
 
 .home-hero-inner {
@@ -153,7 +153,7 @@ svg {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-pill);
   padding: 8px 13px;
@@ -167,35 +167,35 @@ svg {
 }
 
 .home-hero h1 {
-  max-width: 10.8ch;
+  max-width: 11.5ch;
   margin: 0;
-  font-size: clamp(54px, 8.8vw, 122px);
-  line-height: 0.88;
+  font-size: clamp(64px, 6.8vw, 96px);
+  line-height: 0.9;
   letter-spacing: -0.07em;
   font-weight: 860;
   text-wrap: balance;
 }
 
 .home-hero-text {
-  max-width: 35rem;
-  margin: 28px 0 0;
+  max-width: 31rem;
+  margin: 22px 0 0;
   color: var(--muted);
-  font-size: clamp(17px, 1.6vw, 22px);
-  line-height: 1.65;
+  font-size: clamp(17px, 1.45vw, 20px);
+  line-height: 1.6;
 }
 
 .home-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 34px;
+  margin-top: 28px;
 }
 
 .home-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
+  min-height: 48px;
   border-radius: var(--radius-pill);
   padding: 0 22px;
   font-size: 15px;
@@ -212,7 +212,7 @@ svg {
   border: 1px solid rgba(255, 255, 255, 0.32);
   background: linear-gradient(135deg, #f4f6ff, #aebfff 46%, #8d6cff);
   color: #070811;
-  box-shadow: 0 20px 54px rgba(141, 108, 255, 0.28);
+  box-shadow: 0 20px 54px rgba(141, 108, 255, 0.26);
 }
 
 .home-button-secondary {
@@ -231,7 +231,7 @@ svg {
 
 .home-device-scene {
   position: relative;
-  height: clamp(500px, 52vw, 690px);
+  height: clamp(430px, 42vw, 590px);
   perspective: 1400px;
 }
 
@@ -267,8 +267,8 @@ svg {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12) 9%, rgba(21, 23, 32, 0.95) 42%, #030409 100%);
   box-shadow:
-    0 80px 110px rgba(0, 0, 0, 0.62),
-    0 34px 60px rgba(0, 0, 0, 0.46),
+    0 72px 100px rgba(0, 0, 0, 0.6),
+    0 30px 56px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(255, 255, 255, 0.18) inset,
     0 0 0 4px rgba(255, 255, 255, 0.035) inset;
 }
@@ -313,7 +313,7 @@ svg {
 }
 
 .device-card-front {
-  width: clamp(238px, 25vw, 344px);
+  width: clamp(220px, 23vw, 318px);
   left: 23%;
   top: 8%;
   z-index: 3;
@@ -322,7 +322,7 @@ svg {
 }
 
 .device-card-back {
-  width: clamp(212px, 22vw, 310px);
+  width: clamp(198px, 20vw, 286px);
   right: 8%;
   top: 20%;
   z-index: 2;
@@ -352,7 +352,7 @@ svg {
   display: block;
   margin-top: 18px;
   color: white;
-  font-size: clamp(22px, 2.3vw, 32px);
+  font-size: clamp(22px, 2.2vw, 30px);
   line-height: 1.02;
   font-weight: 850;
   letter-spacing: -0.05em;
@@ -430,12 +430,12 @@ svg {
   grid-template-columns: 1.08fr 0.92fr;
   gap: clamp(30px, 5vw, 68px);
   align-items: center;
-  padding: clamp(38px, 7vw, 84px) 0;
+  padding: 34px 0 48px;
 }
 
 .feature-visual {
   position: relative;
-  min-height: clamp(280px, 36vw, 470px);
+  min-height: clamp(260px, 30vw, 380px);
 }
 
 .feature-light {
@@ -491,22 +491,22 @@ svg {
 
 .feature-copy h2 {
   margin: 0;
-  font-size: clamp(48px, 7vw, 92px);
-  line-height: 0.9;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 0.92;
   letter-spacing: -0.065em;
 }
 
 .feature-copy p:not(.eyebrow) {
-  max-width: 34rem;
-  margin: 22px 0 0;
+  max-width: 31rem;
+  margin: 18px 0 0;
   color: var(--muted);
-  font-size: clamp(16px, 1.45vw, 20px);
-  line-height: 1.65;
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.62;
 }
 
 .text-link {
   display: inline-flex;
-  margin-top: 26px;
+  margin-top: 24px;
   color: #d7ddff;
   font-size: 15px;
   font-weight: 800;
@@ -522,7 +522,7 @@ svg {
 .home-apps {
   width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(34px, 6vw, 72px) 0;
+  padding: 34px 0 54px;
 }
 
 .section-heading {
@@ -532,8 +532,8 @@ svg {
 .section-heading h2 {
   max-width: 12ch;
   margin: 0;
-  font-size: clamp(34px, 5vw, 58px);
-  line-height: 0.98;
+  font-size: clamp(34px, 4.4vw, 52px);
+  line-height: 1;
   letter-spacing: -0.055em;
 }
 
@@ -545,7 +545,7 @@ svg {
 
 .app-showcase-card {
   position: relative;
-  min-height: 330px;
+  min-height: 300px;
   overflow: hidden;
   border-radius: 30px;
   padding: 22px;
@@ -574,9 +574,9 @@ svg {
 .app-art {
   display: block;
   position: relative;
-  height: 178px;
+  height: 158px;
   border-radius: 24px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
@@ -634,15 +634,15 @@ svg {
 .brand-statement {
   width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(38px, 7vw, 92px) 0;
+  padding: 44px 0 36px;
 }
 
 .brand-statement p {
-  max-width: 24ch;
+  max-width: 28ch;
   margin: 0;
   color: #f4f6ff;
-  font-size: clamp(31px, 5.2vw, 64px);
-  line-height: 1.02;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.08;
   letter-spacing: -0.06em;
   font-weight: 820;
 }
@@ -650,7 +650,7 @@ svg {
 .home-support {
   width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 0 0 clamp(44px, 7vw, 84px);
+  padding: 0 0 56px;
 }
 
 .home-support p {
@@ -664,7 +664,7 @@ svg {
 
 .home-support a {
   color: #eff3ff;
-  font-size: clamp(20px, 3vw, 34px);
+  font-size: clamp(20px, 2.4vw, 30px);
   font-weight: 800;
   letter-spacing: -0.04em;
   text-decoration: none;
@@ -810,6 +810,7 @@ svg {
     transform: translate3d(0, 0, 0) scale(1);
     opacity: 0.58;
   }
+
   to {
     transform: translate3d(-18px, 22px, 0) scale(1.08);
     opacity: 0.86;
@@ -821,6 +822,7 @@ svg {
     transform: translate3d(0, 0, 0) scale(1);
     opacity: 0.4;
   }
+
   to {
     transform: translate3d(20px, -18px, 0) scale(1.05);
     opacity: 0.68;
@@ -832,6 +834,7 @@ svg {
   100% {
     transform: rotate(-3deg) translateY(0);
   }
+
   50% {
     transform: rotate(-1.5deg) translateY(-12px);
   }
@@ -842,6 +845,7 @@ svg {
   100% {
     transform: rotate(13deg) translateY(0) translateZ(-60px);
   }
+
   50% {
     transform: rotate(10deg) translateY(-10px) translateZ(-60px);
   }
@@ -853,6 +857,7 @@ svg {
   .home-hero {
     min-height: auto;
     padding-top: 48px;
+    padding-bottom: 32px;
   }
 
   .home-hero-inner {
@@ -862,6 +867,7 @@ svg {
 
   .home-hero h1 {
     max-width: 11ch;
+    font-size: clamp(56px, 12vw, 86px);
   }
 
   .home-device-scene {
@@ -879,6 +885,7 @@ svg {
 
   .home-app-feature {
     grid-template-columns: 1fr;
+    padding: 40px 0 48px;
   }
 
   .feature-copy {
@@ -961,6 +968,14 @@ svg {
   .section-heading h2,
   .brand-statement p {
     font-size: clamp(34px, 10.5vw, 48px);
+  }
+
+  .brand-statement {
+    padding: 36px 0 30px;
+  }
+
+  .home-support {
+    padding-bottom: 46px;
   }
 
   .app-showcase-card {
