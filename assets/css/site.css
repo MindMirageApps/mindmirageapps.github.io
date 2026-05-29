@@ -254,15 +254,15 @@ a {
 
 .device-image {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -4%;
+  top: -31%;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 168%;
+  height: 168%;
   object-fit: cover;
-  object-position: 50% 50%;
-  filter: contrast(1.08) saturate(1.06) brightness(0.9);
-  transform: scale(1.012) translateZ(0);
+  object-position: 26% 43%;
+  filter: contrast(1.12) saturate(1.1) brightness(0.88);
+  transform: translateZ(0);
 }
 
 .featured-apps {
