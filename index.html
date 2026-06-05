@@ -10,26 +10,28 @@
     content="Mind Mirage Apps creates original mobile experiences that entertain, educate, connect and simplify everyday life."
   />
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260605-cinematic-home" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260605-hero-reset" />
 </head>
 
 <body class="home-page page-shell">
   <header class="home-header" aria-label="Site header">
-    <a class="home-brand" href="#top" aria-label="Mind Mirage Apps home">
+    <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
       <span class="home-brand__sigil" aria-hidden="true">MM</span>
-      <span>Mind Mirage Apps</span>
+      <span class="home-brand__text">Mind Mirage Apps</span>
     </a>
 
     <nav class="home-nav" aria-label="Main navigation">
-      <a href="#featured-apps">Apps</a>
-      <a href="#latest-release">Latest</a>
-      <a href="#about">About</a>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/apps/">Apps</a>
+      <a href="/about/">About</a>
       <a href="mailto:support@mindmirageapps.com">Contact</a>
     </nav>
+
+    <a class="site-button site-button--primary home-header__cta" href="/apps/">Explore Apps</a>
   </header>
 
-  <main>
-    <section class="home-hero" id="top" aria-labelledby="hero-title">
+  <main id="top">
+    <section class="home-hero" aria-labelledby="hero-title">
       <div class="home-hero__inner">
         <div class="hero-copy">
           <p class="eyebrow">Independent app studio</p>
@@ -40,173 +42,27 @@
           </p>
 
           <div class="hero-actions" aria-label="Primary actions">
-            <a href="#featured-apps" class="site-button site-button--primary">Explore Our Apps</a>
-            <a href="#latest-release" class="site-button site-button--secondary">Latest Release</a>
+            <a href="/apps/" class="site-button site-button--primary">Explore Our Apps</a>
+            <a href="/apps/illusio/" class="site-button site-button--secondary">View Latest Release</a>
           </div>
         </div>
 
-        <div class="portal-stage" aria-hidden="true">
-          <div class="portal-stage__halo"></div>
-          <div class="portal-door">
-            <span class="portal-door__edge"></span>
+        <div class="portal-stage" aria-label="Cinematic glowing doorway visual">
+          <div class="portal-stage__mist" aria-hidden="true"></div>
+          <div class="portal-stage__halo" aria-hidden="true"></div>
+          <div class="portal-door" aria-hidden="true">
+            <span class="portal-door__frame"></span>
             <span class="portal-door__light"></span>
             <span class="portal-door__threshold"></span>
           </div>
-          <div class="portal-orbit portal-orbit--one"></div>
-          <div class="portal-orbit portal-orbit--two"></div>
+          <div class="portal-orbit portal-orbit--one" aria-hidden="true"></div>
+          <div class="portal-orbit portal-orbit--two" aria-hidden="true"></div>
+          <div class="portal-spark portal-spark--one" aria-hidden="true"></div>
+          <div class="portal-spark portal-spark--two" aria-hidden="true"></div>
+          <div class="portal-spark portal-spark--three" aria-hidden="true"></div>
         </div>
-      </div>
-    </section>
-
-    <section class="featured-apps" id="featured-apps" aria-labelledby="featured-apps-title">
-      <div class="section-heading section-heading--stacked">
-        <p class="eyebrow">Our apps</p>
-        <h2 id="featured-apps-title">Discover Our Worlds</h2>
-        <p>
-          A growing collection of focused mobile experiences, each with its own tone,
-          purpose and sense of discovery.
-        </p>
-      </div>
-
-      <div class="featured-grid featured-grid--premium">
-        <article class="featured-card featured-card--illusio">
-          <div class="featured-card__atmosphere" aria-hidden="true"></div>
-          <div class="featured-card__topline">
-            <div class="featured-card__icon featured-card__icon--illusio" aria-hidden="true">
-              <img src="/assets/images/illusio-home-hero.jpg" alt="" loading="lazy" />
-            </div>
-            <span class="featured-card__tag">Magic & wonder</span>
-          </div>
-          <div class="featured-card__body">
-            <p class="featured-card__kicker">Latest release</p>
-            <h3 class="featured-card__name">Illusio</h3>
-            <p class="featured-card__tagline">Learn magic with cinematic focus.</p>
-            <p class="featured-card__copy">
-              A premium training experience for discovering, practicing and progressing
-              through modern magic.
-            </p>
-          </div>
-          <a class="featured-card__link" href="/apps/illusio/">Learn More</a>
-        </article>
-
-        <article class="featured-card featured-card--couple">
-          <div class="featured-card__atmosphere" aria-hidden="true"></div>
-          <div class="featured-card__topline">
-            <div class="featured-card__icon featured-card__icon--image" aria-hidden="true">
-              <img src="/assets/css/couple_questions_games_icon_512.png" alt="" loading="lazy" />
-            </div>
-            <span class="featured-card__tag">Connection & play</span>
-          </div>
-          <div class="featured-card__body">
-            <p class="featured-card__kicker">Relationships</p>
-            <h3 class="featured-card__name">Couple Questions &amp; Games</h3>
-            <p class="featured-card__tagline">Spark better moments together.</p>
-            <p class="featured-card__copy">
-              Warm prompts and playful games built for date nights, deeper conversations
-              and shared laughter.
-            </p>
-          </div>
-          <a class="featured-card__link" href="/apps/couple-questions-games/">Learn More</a>
-        </article>
-
-        <article class="featured-card featured-card--arithon">
-          <div class="featured-card__atmosphere" aria-hidden="true"></div>
-          <div class="featured-card__topline">
-            <div class="featured-card__wordmark" aria-label="Arithon Calculator">
-              <span>Arithon</span>
-            </div>
-            <span class="featured-card__tag">Precision & utility</span>
-          </div>
-          <div class="featured-card__body">
-            <p class="featured-card__kicker">Utility</p>
-            <h3 class="featured-card__name">Arithon Calculator</h3>
-            <p class="featured-card__tagline">Clean calculations, clearly handled.</p>
-            <p class="featured-card__copy">
-              A focused everyday calculator designed for clarity, speed and practical
-              precision.
-            </p>
-          </div>
-          <a class="featured-card__link" href="/apps/arithon/">Learn More</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="latest-release" id="latest-release" aria-labelledby="latest-release-title">
-      <div class="latest-release__visual" aria-hidden="true">
-        <img src="/assets/images/illusio-home-hero.jpg" alt="" loading="lazy" />
-      </div>
-      <div class="latest-release__copy">
-        <p class="eyebrow">Latest release</p>
-        <h2 id="latest-release-title">Illusio is now open.</h2>
-        <p>
-          Step into a polished magic-learning experience with structured progression,
-          cinematic visuals and practical tools for building confidence.
-        </p>
-        <div class="latest-release__actions" aria-label="Illusio release actions">
-          <a class="site-button site-button--primary" href="/apps/illusio/">Explore Illusio</a>
-          <a
-            class="site-button site-button--secondary"
-            href="https://play.google.com/store/apps/details?id=com.mindmirageapps.illusio"
-            target="_blank"
-            rel="noopener"
-          >Google Play</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-studio" id="about" aria-labelledby="about-title">
-      <div class="about-studio__copy">
-        <p class="eyebrow">About the studio</p>
-        <h2 id="about-title">Apps with purpose. Built with passion.</h2>
-        <p>
-          We are a small independent app studio creating original mobile apps that
-          inspire, connect and simplify life.
-        </p>
-      </div>
-
-      <div class="values-grid" aria-label="Mind Mirage Apps values">
-        <article class="value-card">
-          <h3>Original Ideas</h3>
-          <p>Fresh concepts shaped around memorable mobile moments.</p>
-        </article>
-        <article class="value-card">
-          <h3>Made with Care</h3>
-          <p>Polished details, thoughtful flows and refined presentation.</p>
-        </article>
-        <article class="value-card">
-          <h3>People First</h3>
-          <p>Experiences designed to be useful, welcoming and easy to enjoy.</p>
-        </article>
-        <article class="value-card">
-          <h3>Always Improving</h3>
-          <p>Products that keep evolving through releases and real feedback.</p>
-        </article>
       </div>
     </section>
   </main>
-
-  <footer class="home-footer" aria-label="Site footer">
-    <div class="home-footer__brand">
-      <span class="home-brand__sigil" aria-hidden="true">MM</span>
-      <div>
-        <strong>Mind Mirage Apps</strong>
-        <p>© 2026 Mind Mirage Apps</p>
-      </div>
-    </div>
-
-    <nav aria-label="Company links">
-      <span>Company</span>
-      <a href="/apps/">Apps</a>
-      <a href="/about/">About</a>
-      <a href="mailto:support@mindmirageapps.com">Contact</a>
-    </nav>
-
-    <nav aria-label="Support and legal links">
-      <span>Support</span>
-      <a href="mailto:support@mindmirageapps.com">Support</a>
-      <a href="/legal/privacy/">Privacy Policy</a>
-      <a href="/legal/terms/">Terms of Use</a>
-    </nav>
-  </footer>
 </body>
 </html>
