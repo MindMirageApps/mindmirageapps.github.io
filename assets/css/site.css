@@ -65,6 +65,10 @@ a {
   color: inherit;
 }
 
+.home-page img {
+  max-width: 100%;
+}
+
 .home-page {
   min-height: 100vh;
   overflow-x: hidden;
@@ -1043,6 +1047,10 @@ a {
 
 .home-footer__nav a:hover {
   color: #fff;
+}
+
+.home-page > .home-footer ~ * {
+  display: none !important;
 }
 
 @keyframes portal-breathe {
