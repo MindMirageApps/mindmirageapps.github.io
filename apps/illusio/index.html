@@ -3,31 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Illusio | Premium Magic Training App</title>
+  <title>Illusio | Learn Magic. Amaze Everyone.</title>
   <meta
     name="description"
-    content="Illusio is a premium mobile app experience for magicians to learn, practice, and perform with structured progression."
+    content="Illusio is a premium magic learning app with step-by-step lessons, structured learning paths, and polished practice tools."
   />
 
   <link rel="stylesheet" href="/assets/css/site.css" />
 
   <style>
     :root {
-      --illusio-bg: #050410;
-      --illusio-bg-deep: #020208;
+      --illusio-bg: #04030a;
+      --illusio-bg-deep: #020106;
       --illusio-panel: rgba(255, 255, 255, 0.055);
       --illusio-panel-strong: rgba(255, 255, 255, 0.085);
-      --illusio-border: rgba(207, 190, 255, 0.16);
-      --illusio-border-strong: rgba(217, 203, 255, 0.28);
+      --illusio-border: rgba(222, 215, 255, 0.16);
+      --illusio-border-strong: rgba(242, 210, 139, 0.26);
       --illusio-purple: #9f8cff;
       --illusio-violet: #6f4dff;
+      --illusio-gold: #f0c978;
+      --illusio-gold-soft: #ffe3a3;
       --illusio-lavender: #ded7ff;
-      --illusio-pink: #ff8ad7;
-      --illusio-cyan: #98d8ff;
-      --illusio-text: #f7f4ff;
-      --illusio-muted: #b8afcf;
-      --illusio-soft: #7c728f;
-      --illusio-glow: rgba(127, 91, 255, 0.34);
+      --illusio-text: #fbf8ff;
+      --illusio-muted: #bdb4d2;
+      --illusio-soft: #817692;
     }
 
     body {
@@ -35,10 +34,10 @@
       min-height: 100vh;
       overflow-x: hidden;
       background:
-        radial-gradient(900px 580px at 78% -8%, rgba(148, 118, 255, 0.32), transparent 66%),
-        radial-gradient(720px 460px at 4% 12%, rgba(255, 138, 215, 0.12), transparent 68%),
-        radial-gradient(620px 420px at 80% 48%, rgba(105, 78, 255, 0.16), transparent 72%),
-        linear-gradient(180deg, var(--illusio-bg) 0%, #060413 44%, var(--illusio-bg-deep) 100%);
+        radial-gradient(880px 560px at 78% -8%, rgba(159, 140, 255, 0.24), transparent 66%),
+        radial-gradient(720px 460px at 8% 10%, rgba(240, 201, 120, 0.12), transparent 68%),
+        radial-gradient(620px 420px at 82% 52%, rgba(111, 77, 255, 0.14), transparent 72%),
+        linear-gradient(180deg, var(--illusio-bg) 0%, #06030e 48%, var(--illusio-bg-deep) 100%);
       color: var(--illusio-text);
       font-family: var(--font);
       line-height: 1.6;
@@ -50,654 +49,702 @@
       inset: 0;
       z-index: -1;
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-      background-size: 74px 74px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 72%);
+        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+      background-size: 76px 76px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.76), transparent 74%);
       pointer-events: none;
     }
 
-    .illusio-page {
-      width: min(var(--container-wide), calc(100% - 44px));
-      margin: 0 auto;
+    .illusio-header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: clamp(18px, 3vw, 30px) clamp(20px, 5vw, 72px);
     }
 
     .illusio-nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 28px 0 18px;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      gap: clamp(8px, 1.6vw, 18px);
+      min-width: 0;
     }
 
     .illusio-nav a {
-      color: rgba(247, 244, 255, 0.68);
+      border-radius: var(--radius-pill);
+      padding: 9px 10px;
+      color: rgba(238, 242, 255, 0.72);
       font-size: 13px;
-      font-weight: 750;
+      font-weight: 800;
       text-decoration: none;
-      transition: color 180ms ease;
+      transition:
+        color 180ms ease,
+        background 180ms ease;
     }
 
-    .illusio-nav a:hover { color: #fff; }
+    .illusio-nav a:hover,
+    .illusio-nav a[aria-current="page"] {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    .illusio-page {
+      width: min(var(--container-wide), calc(100% - clamp(40px, 10vw, 144px)));
+      margin: 0 auto;
+    }
 
     .illusio-hero {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(300px, 0.82fr);
-      gap: clamp(34px, 7vw, 86px);
+      grid-template-columns: minmax(0, 1.02fr) minmax(300px, 0.74fr);
+      gap: clamp(24px, 5vw, 56px);
       align-items: center;
-      min-height: calc(100svh - 88px);
-      padding: clamp(48px, 7vw, 90px) 0 clamp(62px, 8vw, 112px);
+      padding: clamp(42px, 6vw, 78px) 0 clamp(42px, 6vw, 74px);
     }
 
-    .illusio-hero__copy { max-width: 720px; }
+    .illusio-hero__copy {
+      min-width: 0;
+      max-width: 760px;
+    }
 
-    .illusio-eyebrow {
+    .illusio-app-mark {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       width: fit-content;
-      margin: 0 0 22px;
-      border: 1px solid rgba(218, 207, 255, 0.2);
+      margin-bottom: 18px;
+      border: 1px solid rgba(240, 201, 120, 0.22);
       border-radius: var(--radius-pill);
-      padding: 8px 13px;
-      background: rgba(255, 255, 255, 0.055);
-      color: var(--illusio-lavender);
-      font-size: 11px;
-      font-weight: 850;
-      letter-spacing: 0.16em;
+      padding: 7px 12px 7px 7px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+        rgba(159, 140, 255, 0.08);
+      box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.24),
+        0 0 34px rgba(159, 140, 255, 0.12);
+    }
+
+    .illusio-app-mark img {
+      width: clamp(38px, 4vw, 48px);
+      height: clamp(38px, 4vw, 48px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.3),
+        0 0 28px rgba(159, 140, 255, 0.24);
+    }
+
+    .illusio-app-mark span {
+      color: var(--illusio-gold);
+      font-size: clamp(13px, 1.4vw, 15px);
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      line-height: 1.25;
       text-transform: uppercase;
-      box-shadow: 0 0 32px rgba(116, 78, 255, 0.16);
     }
 
     .illusio-hero h1 {
-      max-width: 8.2ch;
-      margin: 0;
-      font-size: clamp(72px, 12vw, 154px);
-      line-height: 0.82;
-      letter-spacing: -0.085em;
-      font-weight: 900;
+      margin: 0 0 18px;
     }
 
-    .gradient-text {
-      background: linear-gradient(135deg, #fff 0%, var(--illusio-lavender) 38%, var(--illusio-purple) 78%, var(--illusio-pink) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    .illusio-hero h2 {
+      max-width: 680px;
+      margin: 0;
+      color: var(--illusio-lavender);
+      font-size: clamp(30px, 4.6vw, 52px);
+      font-weight: 900;
+      line-height: 0.98;
+      letter-spacing: 0;
     }
 
     .illusio-description {
-      max-width: 39rem;
-      margin: 28px 0 0;
+      max-width: 680px;
+      margin: 18px 0 0;
       color: var(--illusio-muted);
-      font-size: clamp(18px, 2.1vw, 24px);
-      line-height: 1.48;
+      font-size: clamp(16px, 1.7vw, 19px);
+      line-height: 1.58;
     }
 
-    .download-actions {
+    .illusio-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 34px;
+      margin-top: 24px;
     }
 
-    .store-button {
-      display: inline-flex;
-      min-width: 180px;
-      min-height: 58px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: var(--radius-pill);
-      padding: 0 24px;
-      background: linear-gradient(135deg, #ffffff 0%, #e7e1ff 48%, #a896ff 100%);
-      color: #080613;
-      font-size: 14px;
-      font-weight: 900;
-      text-decoration: none;
-      box-shadow: 0 22px 54px rgba(90, 61, 210, 0.3);
-      transition: transform 180ms ease, box-shadow 180ms ease;
+    .illusio-store-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
     }
 
-    .store-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 28px 68px rgba(90, 61, 210, 0.38);
+    .illusio-store-badges .store-badge-link img {
+      height: clamp(38px, 3.6vw, 46px);
     }
 
-    .store-button--dark {
-      background: rgba(255, 255, 255, 0.06);
-      color: #fff;
-      box-shadow: none;
-    }
-
-    .hero-phone-stage {
+    .illusio-visual {
       position: relative;
       display: grid;
-      min-height: clamp(500px, 48vw, 680px);
+      min-height: clamp(250px, 28vw, 350px);
       place-items: center;
+      overflow: hidden;
+      border: 1px solid rgba(222, 215, 255, 0.14);
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 64% 18%, rgba(240, 201, 120, 0.18), transparent 30%),
+        radial-gradient(circle at 28% 78%, rgba(159, 140, 255, 0.2), transparent 36%),
+        linear-gradient(145deg, rgba(12, 8, 24, 0.86), rgba(3, 2, 8, 0.78));
+      box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.36),
+        0 0 90px rgba(159, 140, 255, 0.1) inset;
     }
 
-    .hero-phone-stage::before {
+    .illusio-visual::before {
       content: "";
       position: absolute;
-      width: min(82%, 430px);
-      aspect-ratio: 1;
-      border-radius: 999px;
+      inset: 10%;
+      border-radius: 34px;
       background:
-        radial-gradient(circle, rgba(205, 191, 255, 0.32), transparent 58%),
-        conic-gradient(from 180deg, rgba(111, 77, 255, 0), rgba(255, 138, 215, 0.36), rgba(152, 216, 255, 0.22), rgba(111, 77, 255, 0));
-      filter: blur(4px);
+        radial-gradient(circle at 50% 0%, rgba(255, 227, 163, 0.18), transparent 34%),
+        radial-gradient(circle at 52% 58%, rgba(159, 140, 255, 0.28), transparent 52%);
+      filter: blur(20px);
       opacity: 0.86;
     }
 
-    .illusio-phone {
+    .illusio-frame-stack {
       position: relative;
-      width: clamp(250px, 27vw, 350px);
-      aspect-ratio: 9 / 19.3;
-      overflow: hidden;
-      border-radius: 46px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.11) 12%, #1b1429 36%, #05040b 100%);
-      box-shadow:
-        0 62px 110px rgba(0, 0, 0, 0.6),
-        0 18px 42px rgba(92, 59, 215, 0.28),
-        0 0 0 1px rgba(255, 255, 255, 0.22) inset,
-        0 0 0 6px rgba(255, 255, 255, 0.04) inset;
-      transform: rotate(3deg);
+      z-index: 1;
+      width: min(56%, 210px);
+      aspect-ratio: 4 / 5;
     }
 
-    .illusio-phone::before {
+    .illusio-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.035)),
+        rgba(6, 4, 14, 0.74);
+      box-shadow:
+        0 32px 78px rgba(0, 0, 0, 0.48),
+        0 0 46px rgba(159, 140, 255, 0.16),
+        0 1px 0 rgba(255, 255, 255, 0.16) inset;
+    }
+
+    .illusio-frame--back,
+    .illusio-frame--middle {
+      position: absolute;
+      inset: 0;
+    }
+
+    .illusio-frame--back {
+      opacity: 0.42;
+      transform: translate(18px, 14px) scale(0.88) rotate(3deg);
+    }
+
+    .illusio-frame--middle {
+      opacity: 0.62;
+      transform: translate(-16px, 8px) scale(0.93) rotate(-4deg);
+    }
+
+    .illusio-frame::before {
       content: "";
       position: absolute;
-      z-index: 5;
-      top: 15px;
-      left: 50%;
-      width: 34%;
-      height: 6px;
-      border-radius: 999px;
-      background: rgba(244, 240, 255, 0.52);
-      transform: translateX(-50%);
+      inset: 12px;
+      z-index: 1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      pointer-events: none;
     }
 
-    .illusio-phone__screen {
-      position: absolute;
-      inset: 10px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 36px;
-      background: linear-gradient(180deg, #170f28 0%, #060713 100%);
-    }
-
-    .illusio-phone__screen::after {
+    .illusio-frame::after {
       content: "";
       position: absolute;
       inset: 0;
       z-index: 2;
       background:
-        radial-gradient(190px 230px at 48% 2%, rgba(205, 184, 255, 0.28), transparent 62%),
-        linear-gradient(126deg, rgba(255, 255, 255, 0.17), transparent 27%, rgba(255, 255, 255, 0.035) 62%, transparent 82%);
+        linear-gradient(120deg, rgba(255, 255, 255, 0.16), transparent 28%, transparent 64%, rgba(255, 255, 255, 0.05)),
+        linear-gradient(180deg, transparent 68%, rgba(0, 0, 0, 0.2));
       pointer-events: none;
     }
 
-    .illusio-phone img,
-    .screen-card img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .illusio-frame__surface {
+      position: absolute;
+      inset: 12px;
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 30%, rgba(255, 255, 255, 0.03) 70%, transparent),
+        radial-gradient(circle at 64% 18%, rgba(240, 201, 120, 0.18), transparent 34%),
+        radial-gradient(circle at 18% 86%, rgba(159, 140, 255, 0.16), transparent 36%),
+        linear-gradient(145deg, rgba(10, 7, 22, 0.96), rgba(3, 2, 8, 0.92));
     }
 
-    .illusio-phone img {
-      width: 168%;
-      height: 168%;
-      object-position: 26% 43%;
-      filter: contrast(1.12) saturate(1.08) brightness(0.88);
-      transform: translate(-4%, -31%);
+    .illusio-section {
+      padding: clamp(40px, 6vw, 72px) 0;
     }
 
-    .section {
-      padding: clamp(58px, 8vw, 112px) 0;
+    .illusio-section__heading {
+      max-width: 780px;
+      margin-bottom: clamp(20px, 3vw, 30px);
     }
 
-    .section-header {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 26px;
-      margin-bottom: 24px;
-    }
-
-    .section-header h2 {
-      max-width: 12ch;
+    .illusio-section__heading h2 {
       margin: 0;
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: 0.92;
-      letter-spacing: -0.075em;
+      color: #fff;
+      font-size: clamp(32px, 4.8vw, 54px);
+      font-weight: 900;
+      line-height: 0.98;
+      letter-spacing: 0;
     }
 
-    .section-header p {
-      max-width: 28rem;
-      margin: 0;
+    .illusio-section__heading p,
+    .illusio-intro p,
+    .learning-copy p,
+      .download-panel p {
       color: var(--illusio-muted);
-      font-size: clamp(16px, 1.7vw, 19px);
+      font-size: clamp(15px, 1.6vw, 18px);
+      line-height: 1.62;
     }
 
-    .path-grid,
-    .steps-grid {
+    .illusio-intro {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.72fr);
+      gap: clamp(22px, 4vw, 42px);
+      align-items: center;
+      border: 1px solid var(--illusio-border);
+      border-radius: 26px;
+      padding: clamp(24px, 3.4vw, 36px);
+      background:
+        radial-gradient(520px 320px at 100% 0%, rgba(240, 201, 120, 0.1), transparent 72%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.032));
+      box-shadow: 0 32px 90px rgba(0, 0, 0, 0.3);
     }
 
-    .path-card,
-    .step-card,
-    .screen-card {
+    .illusio-intro h2 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(30px, 4.4vw, 46px);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .illusio-intro p {
+      margin: 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(12px, 1.8vw, 16px);
+    }
+
+    .feature-card {
       position: relative;
+      min-width: 0;
       overflow: hidden;
       border: 1px solid var(--illusio-border);
-      border-radius: 32px;
-      background:
-        radial-gradient(270px 190px at 90% 0%, rgba(159, 140, 255, 0.22), transparent 68%),
-        var(--illusio-panel);
-      box-shadow: 0 28px 78px rgba(0, 0, 0, 0.28);
-    }
-
-    .path-card {
-      min-height: 332px;
-      padding: 26px;
-    }
-
-    .path-card::before,
-    .step-card::before,
-    .screen-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 36%);
-      pointer-events: none;
-    }
-
-    .path-card__level {
-      position: relative;
-      z-index: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      border: 1px solid rgba(218, 207, 255, 0.24);
       border-radius: 18px;
-      background: rgba(159, 140, 255, 0.16);
-      color: #fff;
-      font-size: 18px;
-      font-weight: 900;
-    }
-
-    .path-card h3,
-    .step-card h3 {
-      position: relative;
-      z-index: 1;
-      margin: 88px 0 10px;
-      font-size: clamp(26px, 3vw, 34px);
-      line-height: 1;
-      letter-spacing: -0.055em;
-    }
-
-    .path-card p,
-    .step-card p {
-      position: relative;
-      z-index: 1;
-      max-width: 25ch;
-      margin: 0;
-      color: var(--illusio-muted);
-      font-size: 15px;
-    }
-
-    .steps-grid { counter-reset: steps; }
-
-    .step-card {
-      min-height: 290px;
-      padding: 26px;
+      padding: 18px;
       background:
-        radial-gradient(250px 170px at 85% 10%, rgba(255, 138, 215, 0.13), transparent 70%),
-        var(--illusio-panel);
-      counter-increment: steps;
+        radial-gradient(220px 160px at 92% 0%, rgba(159, 140, 255, 0.18), transparent 72%),
+        rgba(255, 255, 255, 0.05);
+      box-shadow: 0 22px 62px rgba(0, 0, 0, 0.24);
     }
 
-    .step-card::after {
-      content: "0" counter(steps);
-      position: absolute;
-      top: 18px;
-      right: 22px;
-      color: rgba(255, 255, 255, 0.16);
-      font-size: 58px;
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: -0.08em;
+    .feature-card::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin-bottom: 34px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(90deg, var(--illusio-gold), var(--illusio-purple));
     }
 
-    .step-card h3 { margin-top: 124px; }
+    .feature-card h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.08;
+    }
 
-    .screens-section .section-header h2 { max-width: 13ch; }
+    .feature-card p {
+      margin: 12px 0 0;
+      color: var(--illusio-muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
 
-    .screens-grid {
+    .learning-panel {
       display: grid;
-      grid-template-columns: 1.06fr 0.94fr 1.06fr;
-      gap: 16px;
+      grid-template-columns: minmax(0, 0.82fr) minmax(320px, 1fr);
+      gap: clamp(22px, 4vw, 46px);
       align-items: center;
     }
 
-    .screen-card {
-      aspect-ratio: 9 / 16;
+    .learning-copy h2 {
       margin: 0;
-      border-radius: 34px;
-      background: rgba(255, 255, 255, 0.045);
-    }
-
-    .screen-card--tall {
-      aspect-ratio: 9 / 18.5;
-      box-shadow: 0 36px 98px rgba(94, 61, 226, 0.24), 0 28px 78px rgba(0, 0, 0, 0.34);
-    }
-
-    .screen-card img {
-      width: 154%;
-      height: 154%;
-      filter: contrast(1.12) saturate(1.08) brightness(0.86);
-    }
-
-    .screen-card:nth-child(1) img { object-position: 16% 24%; }
-    .screen-card:nth-child(2) img { object-position: 48% 42%; }
-    .screen-card:nth-child(3) img { object-position: 82% 63%; }
-
-    .statement-section {
-      padding: clamp(72px, 10vw, 140px) 0;
-      text-align: center;
-    }
-
-    .statement-section p {
-      max-width: 12ch;
-      margin: 0 auto;
-      font-size: clamp(52px, 8vw, 112px);
-      line-height: 0.9;
-      letter-spacing: -0.085em;
+      color: #fff;
+      font-size: clamp(32px, 5vw, 58px);
       font-weight: 900;
+      line-height: 0.96;
     }
 
-    .final-cta {
-      margin: clamp(36px, 6vw, 74px) 0 clamp(54px, 7vw, 90px);
+    .learning-copy p {
+      margin: 16px 0 0;
+    }
+
+    .learning-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .learning-list li {
+      border: 1px solid rgba(222, 215, 255, 0.14);
+      border-radius: 16px;
+      padding: 15px 18px;
+      background: rgba(255, 255, 255, 0.045);
+      color: rgba(251, 248, 255, 0.88);
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .download-panel {
+      margin: clamp(20px, 4vw, 40px) 0 clamp(42px, 6vw, 68px);
       border: 1px solid var(--illusio-border-strong);
-      border-radius: 38px;
-      padding: clamp(34px, 6vw, 70px);
+      border-radius: 28px;
+      padding: clamp(26px, 4vw, 44px);
       background:
-        radial-gradient(480px 260px at 76% 0%, rgba(159, 140, 255, 0.3), transparent 70%),
-        radial-gradient(420px 260px at 0% 100%, rgba(255, 138, 215, 0.13), transparent 72%),
+        radial-gradient(520px 300px at 76% 0%, rgba(159, 140, 255, 0.28), transparent 70%),
+        radial-gradient(420px 260px at 0% 100%, rgba(240, 201, 120, 0.12), transparent 72%),
         rgba(255, 255, 255, 0.055);
       text-align: center;
       box-shadow: 0 36px 110px rgba(0, 0, 0, 0.36);
     }
 
-    .final-cta h2 {
+    .download-panel h2 {
       max-width: 12ch;
       margin: 0 auto;
-      font-size: clamp(42px, 6.5vw, 82px);
-      line-height: 0.92;
-      letter-spacing: -0.075em;
+      color: #fff;
+      font-size: clamp(32px, 5.4vw, 58px);
+      font-weight: 900;
+      line-height: 0.94;
     }
 
-    .final-cta p {
-      max-width: 32rem;
-      margin: 18px auto 0;
-      color: var(--illusio-muted);
-      font-size: 18px;
+    .download-panel p {
+      max-width: 36rem;
+      margin: 14px auto 0;
     }
 
-    .final-cta .download-actions { justify-content: center; }
+    .download-panel .illusio-store-badges {
+      justify-content: center;
+    }
 
     .illusio-footer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px 22px;
-      padding: 0 0 32px;
-      color: rgba(247, 244, 255, 0.46);
-      font-size: 13px;
+      margin-top: 0;
     }
 
-    .illusio-footer a {
-      color: rgba(247, 244, 255, 0.6);
-      text-decoration: none;
-    }
-
-    .illusio-footer a:hover { color: #fff; }
-
-    @media (max-width: 920px) {
+    @media (max-width: 960px) {
       .illusio-hero,
-      .section-header {
+      .illusio-intro,
+      .learning-panel {
         grid-template-columns: 1fr;
       }
 
-      .illusio-hero {
-        min-height: auto;
+      .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .hero-phone-stage {
-        min-height: 480px;
-        justify-content: start;
-      }
-
-      .illusio-phone {
-        margin-left: clamp(18px, 14vw, 150px);
-      }
-
-      .section-header {
-        display: block;
-      }
-
-      .section-header p {
-        margin-top: 18px;
-      }
-
-      .path-grid,
-      .steps-grid,
-      .screens-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .path-card,
-      .step-card {
-        min-height: 240px;
-      }
-
-      .path-card h3,
-      .step-card h3 {
-        margin-top: 72px;
-      }
-
-      .screen-card,
-      .screen-card--tall {
-        aspect-ratio: 16 / 10;
+      .illusio-visual {
+        min-height: 320px;
       }
     }
 
-    @media (max-width: 640px) {
-      .illusio-page {
-        width: min(100% - 32px, var(--container-wide));
+    @media (max-width: 680px) {
+      .illusio-header {
+        flex-wrap: wrap;
+        padding: 16px 16px 0;
       }
 
       .illusio-nav {
-        padding-top: 22px;
-      }
-
-      .illusio-hero {
-        padding-top: 32px;
-      }
-
-      .illusio-hero h1 {
-        font-size: clamp(64px, 24vw, 112px);
-      }
-
-      .download-actions {
+        order: 3;
         display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .store-button {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        flex-basis: 100%;
+        gap: 6px;
         width: 100%;
       }
 
-      .hero-phone-stage {
-        min-height: 390px;
+      .illusio-nav a {
+        padding: 9px 4px;
+        text-align: center;
+        font-size: 12px;
       }
 
-      .illusio-phone {
-        width: 220px;
-        border-radius: 38px;
-        margin-left: 7vw;
+      .illusio-page {
+        width: calc(100% - 32px);
       }
 
-      .illusio-phone__screen {
-        border-radius: 30px;
+      .illusio-hero {
+        padding: 30px 0 36px;
       }
 
-      .section {
-        padding: 48px 0;
+      .illusio-hero h1 {
+        font-size: clamp(44px, 13vw, 64px);
       }
 
-      .path-card,
-      .step-card {
-        border-radius: 26px;
+      .illusio-hero h2 {
+        font-size: clamp(28px, 8vw, 38px);
       }
 
-      .statement-section p {
-        max-width: 9.5ch;
+      .illusio-actions {
+        display: flex;
+        justify-items: start;
       }
 
-      .final-cta {
-        border-radius: 30px;
+      .illusio-store-badges {
+        display: flex;
+      }
+
+      .illusio-actions .site-button {
+        width: auto;
+      }
+
+      .illusio-visual {
+        min-height: 170px;
+        border-radius: 24px;
+      }
+
+      .illusio-frame-stack {
+        width: min(44%, 125px);
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .illusio-section {
+        padding: 34px 0;
+      }
+
+      .illusio-section__heading {
+        margin-bottom: 18px;
+      }
+
+      .feature-card::before {
+        margin-bottom: 28px;
+      }
+
+      .download-panel {
+        border-radius: 24px;
       }
     }
   </style>
 </head>
+
 <body>
-  <div class="illusio-page">
-    <header class="illusio-nav" aria-label="Top navigation">
-      <a href="/apps/">← All apps</a>
-      <a href="/">Mind Mirage Apps</a>
-    </header>
+  <header class="illusio-header" aria-label="Site header">
+    <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
+      <img
+        class="site-logo"
+        src="/assets/images/mindmirageapps-logo.png"
+        alt="Mind Mirage Apps"
+        width="1254"
+        height="1254"
+      />
+    </a>
 
-    <main>
-      <section class="illusio-hero" aria-labelledby="illusio-title">
-        <div class="illusio-hero__copy">
-          <p class="illusio-eyebrow">Illusio for iOS & Android</p>
-          <h1 id="illusio-title"><span class="gradient-text">Illusio</span></h1>
-          <p class="illusio-description">
-            A premium magic learning experience designed to help you move from first sleight to confident performance with focused paths, intentional practice, and visible progress.
+    <nav class="illusio-nav" aria-label="Illusio navigation">
+      <a href="/">Home</a>
+      <a href="/apps/">Apps</a>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
+
+  <main class="illusio-page">
+    <section class="illusio-hero" aria-labelledby="illusio-title">
+      <div class="illusio-hero__copy">
+        <h1 class="illusio-app-mark" id="illusio-title">
+          <img src="/assets/images/app-icons/illusio-icon.jpg" alt="Illusio app icon" />
+          <span>ILLUSIO</span>
+        </h1>
+        <h2>Learn Magic. Amaze Everyone.</h2>
+        <p class="illusio-description">
+          Step-by-step magic lessons, structured learning paths and polished
+          practice tools designed to help you build real performance confidence.
+        </p>
+
+        <div class="illusio-actions" aria-label="Illusio calls to action">
+          <a class="site-button site-button--secondary" href="#features">Explore Features</a>
+        </div>
+
+        <div class="illusio-store-badges" aria-label="Illusio store links">
+          <a
+            class="store-badge-link"
+            href="https://apps.apple.com/gb/app/illusio/id6771068807"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/images/store-badges/app-store-badge.svg"
+              alt="Download on the App Store"
+            />
+          </a>
+          <a
+            class="store-badge-link"
+            href="https://play.google.com/store/apps/details?id=com.mindmirageapps.illusio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/images/store-badges/google-play-badge.png"
+              alt="Get it on Google Play"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="illusio-visual" aria-label="Illusio screenshot showcase">
+        <div class="illusio-frame-stack" aria-hidden="true">
+          <div class="illusio-frame illusio-frame--back"></div>
+          <div class="illusio-frame illusio-frame--middle"></div>
+          <div class="illusio-frame">
+            <!-- Insert real approved Illusio screenshots here when ready. -->
+            <div class="illusio-frame__surface"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="illusio-section" aria-labelledby="what-is-illusio">
+      <div class="illusio-intro">
+        <h2 id="what-is-illusio">What Is Illusio?</h2>
+        <p>
+          Illusio is a premium magic learning app built for structured practice.
+          It guides learners through focused lessons, progression paths and
+          repeatable routines so each session feels purposeful, polished and easy
+          to return to.
+        </p>
+      </div>
+    </section>
+
+    <section class="illusio-section" id="features" aria-labelledby="step-by-step">
+      <div class="illusio-section__heading">
+        <h2 id="step-by-step">Learn Step By Step</h2>
+        <p>
+          A focused set of learning tools helps each technique move from first
+          explanation to confident performance.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Structured Lessons</h3>
+          <p>Follow clear lesson flow designed to make every practice session understandable.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Progression Paths</h3>
+          <p>Move through material with a sense of direction instead of scattered browsing.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Practice Tools</h3>
+          <p>Return to the right techniques and build repetition into your learning routine.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Pro Tips</h3>
+          <p>Sharpen details around timing, clarity and confidence as you improve.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="illusio-section" aria-labelledby="real-learning">
+      <div class="learning-panel">
+        <div class="learning-copy">
+          <h2 id="real-learning">Built For Real Learning</h2>
+          <p>
+            Illusio is designed for steady progress: learn at your own pace,
+            build confidence, revisit lessons and improve over time.
           </p>
-
-          <div class="download-actions" aria-label="Download Illusio">
-            <a class="store-button" href="https://apps.apple.com/gb/app/illusio/id6771068807" target="_blank" rel="noopener">App Store</a>
-            <a class="store-button store-button--dark" href="https://play.google.com/store/apps/details?id=com.mindmirageapps.illusio" target="_blank" rel="noopener">Google Play</a>
-          </div>
         </div>
 
-        <div class="hero-phone-stage" aria-label="Illusio app preview">
-          <div class="illusio-phone">
-            <div class="illusio-phone__screen">
-              <img src="/assets/images/illusio-home-hero.jpg" alt="Illusio app interface shown on a phone" loading="eager" />
-            </div>
-          </div>
-        </div>
-      </section>
+        <ul class="learning-list">
+          <li>Learn at your own pace.</li>
+          <li>Build confidence.</li>
+          <li>Revisit lessons.</li>
+          <li>Improve over time.</li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="section" aria-labelledby="learning-paths-title">
-        <div class="section-header">
-          <h2 id="learning-paths-title">Learning paths.</h2>
-          <p>Choose the pace that fits your current magic practice, then build skill with a clear progression from foundations to performance polish.</p>
-        </div>
+    <section class="download-panel" id="download" aria-labelledby="download-title">
+      <h2 id="download-title">Start learning with Illusio.</h2>
+      <p>
+        Build a focused practice routine around lessons, repetition and
+        performance confidence.
+      </p>
+      <div class="illusio-store-badges" aria-label="Illusio store links">
+        <a
+          class="store-badge-link"
+          href="https://apps.apple.com/gb/app/illusio/id6771068807"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/assets/images/store-badges/app-store-badge.svg"
+            alt="Download on the App Store"
+          />
+        </a>
+        <a
+          class="store-badge-link"
+          href="https://play.google.com/store/apps/details?id=com.mindmirageapps.illusio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/assets/images/store-badges/google-play-badge.png"
+            alt="Get it on Google Play"
+          />
+        </a>
+      </div>
+    </section>
+  </main>
 
-        <div class="path-grid">
-          <article class="path-card">
-            <span class="path-card__level">01</span>
-            <h3>Beginner</h3>
-            <p>Start with approachable foundations and simple routines that make practice feel clear from day one.</p>
-          </article>
-          <article class="path-card">
-            <span class="path-card__level">02</span>
-            <h3>Intermediate</h3>
-            <p>Refine technique, connect methods, and turn individual skills into smoother magical moments.</p>
-          </article>
-          <article class="path-card">
-            <span class="path-card__level">03</span>
-            <h3>Advanced</h3>
-            <p>Sharpen timing, misdirection, and presentation details for routines that are ready to perform.</p>
-          </article>
-        </div>
-      </section>
+  <footer class="home-footer illusio-footer" aria-label="Site footer">
+    <div class="home-footer__inner">
+      <a class="home-footer__brand" href="/" aria-label="Mind Mirage Apps home">
+        <img
+          class="site-logo"
+          src="/assets/images/mindmirageapps-logo.png"
+          alt="Mind Mirage Apps"
+          width="1254"
+          height="1254"
+        />
+      </a>
 
-      <section class="section" aria-labelledby="how-it-works-title">
-        <div class="section-header">
-          <h2 id="how-it-works-title">How Illusio works.</h2>
-          <p>A simple rhythm for every magician: understand the move, rehearse it with purpose, then bring it into performance.</p>
-        </div>
-
-        <div class="steps-grid">
-          <article class="step-card">
-            <h3>Learn</h3>
-            <p>Follow focused lessons and structured guidance without digging through unnecessary clutter.</p>
-          </article>
-          <article class="step-card">
-            <h3>Practice</h3>
-            <p>Return to the right material, repeat intentionally, and keep your progress moving forward.</p>
-          </article>
-          <article class="step-card">
-            <h3>Perform</h3>
-            <p>Build confidence by turning practiced technique into routines that feel natural in your hands.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section screens-section" aria-labelledby="screenshots-title">
-        <div class="section-header">
-          <h2 id="screenshots-title">App screenshots.</h2>
-          <p>A responsive look at the Illusio experience, using the app imagery that defines its purple, cinematic interface.</p>
-        </div>
-
-        <div class="screens-grid" aria-label="Illusio app screenshots">
-          <figure class="screen-card">
-            <img src="/assets/images/illusio-home-hero.jpg" alt="Illusio learning content preview" loading="lazy" />
-          </figure>
-          <figure class="screen-card screen-card--tall">
-            <img src="/assets/images/illusio-home-hero.jpg" alt="Illusio mobile app preview" loading="lazy" />
-          </figure>
-          <figure class="screen-card">
-            <img src="/assets/images/illusio-home-hero.jpg" alt="Illusio practice experience preview" loading="lazy" />
-          </figure>
-        </div>
-      </section>
-
-      <section class="statement-section" aria-label="Built for magicians">
-        <p><span class="gradient-text">Built for magicians who practice with intent.</span></p>
-      </section>
-
-      <section class="final-cta" aria-labelledby="download-title">
-        <h2 id="download-title">Start learning magic with Illusio.</h2>
-        <p>Download Illusio and build a focused practice routine around learning, repetition, and performance.</p>
-        <div class="download-actions" aria-label="Download Illusio again">
-          <a class="store-button" href="https://apps.apple.com/gb/app/illusio/id6771068807" target="_blank" rel="noopener">App Store</a>
-          <a class="store-button store-button--dark" href="https://play.google.com/store/apps/details?id=com.mindmirageapps.illusio" target="_blank" rel="noopener">Google Play</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="illusio-footer" aria-label="Illusio footer">
-      <a href="/apps/illusio/privacy.html">Privacy</a>
-      <a href="/apps/illusio/terms.html">Terms</a>
-      <a href="/apps/illusio/delete-account.html">Delete account</a>
-      <span>© <span id="year"></span> Mind Mirage Apps</span>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+      <nav class="home-footer__nav" aria-label="Footer navigation">
+        <a href="/apps/">Apps</a>
+        <a href="/about/">About</a>
+        <a href="mailto:support@mindmirageapps.com">Contact</a>
+        <a href="/apps/illusio/privacy.html">Privacy Policy</a>
+        <a href="/apps/illusio/terms.html">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

@@ -18,8 +18,13 @@
     <section class="home-hero" aria-labelledby="hero-title">
       <header class="home-header" aria-label="Site header">
         <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
-          <span class="home-brand__sigil" aria-hidden="true">MM</span>
-          <span class="home-brand__text">Mind Mirage Apps</span>
+          <img
+            class="site-logo"
+            src="/assets/images/mindmirageapps-logo.png"
+            alt="Mind Mirage Apps"
+            width="1254"
+            height="1254"
+          />
         </a>
 
         <nav class="home-nav" aria-label="Main navigation">
@@ -64,39 +69,163 @@
     <section class="worlds-section" aria-labelledby="worlds-title">
       <div class="worlds-section__inner">
         <div class="worlds-section__heading">
-          <p class="eyebrow">Explore the portfolio</p>
           <h2 id="worlds-title">Discover Our Worlds</h2>
+          <p>
+            Original apps built to entertain, educate, connect and simplify
+            everyday life.
+          </p>
         </div>
 
         <div class="worlds-grid">
-          <a class="world-card world-card--illusio" href="/apps/illusio/">
-            <span class="world-card__icon product-icon product-icon--large product-icon--illusio" aria-hidden="true">I</span>
-            <span class="world-card__content">
-              <span class="world-card__title">Illusio</span>
-              <span class="world-card__text">Magic training and learning for modern magicians.</span>
-            </span>
-          </a>
+          <article class="world-card world-card--illusio">
+            <div class="world-card__shine" aria-hidden="true"></div>
+            <img
+              class="world-card__icon"
+              src="/assets/images/app-icons/illusio-icon.jpg"
+              alt="Illusio app icon"
+            />
+            <div class="world-card__content">
+              <p class="world-card__tagline">Premium magic training</p>
+              <h3>Illusio</h3>
+              <p>
+                Structured lessons, progression paths and polished practice
+                tools for learning real magic techniques.
+              </p>
+            </div>
+            <a class="world-card__link" href="/apps/illusio/">Learn More</a>
+          </article>
 
-          <a class="world-card world-card--couple" href="/apps/couple-questions-games/">
-            <span class="world-card__icon product-icon product-icon--large product-icon--image" aria-hidden="true">
-              <img src="/assets/css/couple_questions_games_icon_512.png" alt="" />
-            </span>
-            <span class="world-card__content">
-              <span class="world-card__title">Couple Questions &amp; Games</span>
-              <span class="world-card__text">Conversation starters and playful games for couples.</span>
-            </span>
-          </a>
+          <article class="world-card world-card--couple">
+            <div class="world-card__shine" aria-hidden="true"></div>
+            <img
+              class="world-card__icon"
+              src="/assets/images/app-icons/couple-questions-games-icon.png"
+              alt="Couple Questions &amp; Games app icon"
+            />
+            <div class="world-card__content">
+              <p class="world-card__tagline">Warm games for two</p>
+              <h3>Couple Questions &amp; Games</h3>
+              <p>
+                Conversation starters, playful prompts and relationship games
+                made to help couples feel closer.
+              </p>
+            </div>
+            <a class="world-card__link" href="/apps/couple-questions-games/"
+              >Learn More</a
+            >
+          </article>
 
-          <a class="world-card world-card--arithon" href="/apps/arithon/">
-            <span class="world-card__icon product-icon product-icon--large product-icon--arithon" aria-hidden="true">÷</span>
-            <span class="world-card__content">
-              <span class="world-card__title">Arithon Calculator</span>
-              <span class="world-card__text">A clean and powerful calculator designed for everyday use.</span>
-            </span>
-          </a>
+          <article class="world-card world-card--arithon">
+            <div class="world-card__shine" aria-hidden="true"></div>
+            <img
+              class="world-card__icon"
+              src="/assets/images/app-icons/arithon-icon.jpg"
+              alt="Arithon Calculator app icon"
+            />
+            <div class="world-card__content">
+              <p class="world-card__tagline">Precise everyday utility</p>
+              <h3>Arithon Calculator</h3>
+              <p>
+                A focused calculator with a clean dark interface, responsive
+                controls and distraction-free precision.
+              </p>
+            </div>
+            <a class="world-card__link" href="/apps/arithon/">Learn More</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-release" aria-labelledby="featured-release-title">
+      <div class="featured-release__inner">
+        <div class="featured-release__copy">
+          <p class="featured-release__label">FEATURED RELEASE</p>
+          <h2 id="featured-release-title">Illusio</h2>
+          <p class="featured-release__description">
+            Learn magic step by step with structured lessons, progression paths
+            and polished practice tools.
+          </p>
+
+          <div class="featured-release__stores" aria-label="Store availability">
+            <a
+              class="store-badge-link"
+              href="https://apps.apple.com/gb/app/illusio/id6771068807"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/assets/images/store-badges/app-store-badge.svg"
+                alt="Download on the App Store"
+              />
+            </a>
+            <a
+              class="store-badge-link"
+              href="https://play.google.com/store/apps/details?id=com.mindmirageapps.illusio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/assets/images/store-badges/google-play-badge.png"
+                alt="Get it on Google Play"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="featured-release__visual" aria-label="Illusio screenshot showcase">
+          <div class="featured-release__screenshot-stack" aria-hidden="true">
+            <div class="featured-release__screenshot-frame featured-release__screenshot-frame--back"></div>
+            <div class="featured-release__screenshot-frame featured-release__screenshot-frame--middle"></div>
+            <div class="featured-release__screenshot-frame featured-release__screenshot-frame--front">
+              <!-- Insert the primary real Illusio screenshot image here when the asset is ready. -->
+              <div class="featured-release__screenshot-surface"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="purpose-section" aria-labelledby="purpose-title">
+      <div class="purpose-section__inner">
+        <div class="purpose-section__copy">
+          <h2 id="purpose-title">Apps with purpose. Built with passion.</h2>
+          <p>
+            Mind Mirage Apps is an independent app studio creating original
+            mobile experiences that inspire curiosity, strengthen connection
+            and simplify everyday life.
+          </p>
+        </div>
+
+        <div class="purpose-values" aria-label="Studio values">
+          <div class="purpose-value">Original Ideas</div>
+          <div class="purpose-value">Made with Care</div>
+          <div class="purpose-value">People First</div>
+          <div class="purpose-value">Always Improving</div>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="home-footer" aria-label="Site footer">
+    <div class="home-footer__inner">
+      <a class="home-footer__brand" href="/" aria-label="Mind Mirage Apps home">
+        <img
+          class="site-logo"
+          src="/assets/images/mindmirageapps-logo.png"
+          alt="Mind Mirage Apps"
+          width="1254"
+          height="1254"
+        />
+      </a>
+
+      <nav class="home-footer__nav" aria-label="Footer navigation">
+        <a href="/apps/">Apps</a>
+        <a href="/about/">About</a>
+        <a href="mailto:support@mindmirageapps.com">Contact</a>
+        <a href="/legal/privacy/">Privacy Policy</a>
+        <a href="/legal/terms/">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
