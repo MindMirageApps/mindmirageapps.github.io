@@ -157,7 +157,7 @@ a {
   position: relative;
   display: flex;
   width: 100%;
-  min-height: min(52vh, 560px);
+  min-height: min(58vh, 640px);
   flex-direction: column;
   background:
     linear-gradient(90deg, rgba(5, 6, 13, 0.98), rgba(5, 6, 13, 0.82)),
@@ -179,7 +179,7 @@ a {
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 690px;
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -200,17 +200,17 @@ a {
 }
 
 .home-hero h1 {
-  max-width: 12.2ch;
+  max-width: 13.8ch;
   margin: 0;
-  font-size: clamp(40px, 6.2vw, 72px);
-  line-height: 0.96;
+  font-size: clamp(44px, 6.4vw, 76px);
+  line-height: 0.95;
   letter-spacing: -0.06em;
   font-weight: 900;
 }
 
 .hero-text {
-  max-width: 35rem;
-  margin: 12px 0 0;
+  max-width: 41rem;
+  margin: 16px 0 0;
   color: var(--color-text-muted);
   font-size: clamp(16px, 1.65vw, 20px);
   line-height: 1.62;
@@ -241,8 +241,29 @@ a {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hero-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.hero-pillars span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(236, 240, 255, 0.82);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .site-button {
@@ -533,6 +554,15 @@ a {
   max-width: 720px;
   margin: 0 auto clamp(12px, 1.8vw, 18px);
   text-align: center;
+}
+
+.section-kicker {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .worlds-section__heading h2 {
@@ -1170,7 +1200,7 @@ a {
   }
 
   .home-hero {
-    min-height: min(52vh, 560px);
+    min-height: auto;
     text-align: center;
   }
 
@@ -1190,7 +1220,8 @@ a {
   }
 
   .hero-copy,
-  .hero-text {
+  .hero-text,
+  .hero-pillars {
     margin-right: auto;
     margin-left: auto;
   }
@@ -1201,7 +1232,7 @@ a {
   }
 
   .home-hero h1 {
-    max-width: 10.8ch;
+    max-width: 12ch;
     margin-right: auto;
     margin-left: auto;
     font-size: clamp(46px, 14.8vw, 70px);
@@ -1220,6 +1251,10 @@ a {
 
   .site-button {
     width: 100%;
+  }
+
+  .hero-pillars {
+    justify-content: center;
   }
 
   .worlds-section__inner {
