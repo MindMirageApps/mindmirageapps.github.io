@@ -1582,11 +1582,6 @@ a {
   --portfolio-accent-rgb: 136, 201, 255;
 }
 
-.portfolio-app-card--magic {
-  --portfolio-accent: #f0c978;
-  --portfolio-accent-rgb: 240, 201, 120;
-}
-
 .portfolio-app-card--beat {
   --portfolio-accent: #c78cff;
   --portfolio-accent-rgb: 199, 140, 255;
@@ -1820,14 +1815,6 @@ a {
   --app-accent-soft: rgba(255, 133, 183, 0.12);
   --app-border: rgba(255, 133, 183, 0.22);
   --app-muted: #c9a8b8;
-}
-
-.app-product-page--magic {
-  --app-accent: #f0c978;
-  --app-accent-rgb: 240, 201, 120;
-  --app-accent-soft: rgba(240, 201, 120, 0.12);
-  --app-border: rgba(240, 201, 120, 0.22);
-  --app-muted: #c9baa0;
 }
 
 .app-product-page::before {
