@@ -2320,6 +2320,65 @@ button:focus-visible {
   line-height: 1.58;
 }
 
+
+.platform-status-badges {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.platform-status-badges--center {
+  justify-content: center;
+}
+
+.platform-status-badge {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  border: 1px solid rgba(var(--app-accent-rgb, 159, 140, 255), 0.3);
+  border-radius: var(--radius-pill);
+  padding: 0 12px;
+  background: rgba(var(--app-accent-rgb, 159, 140, 255), 0.12);
+  color: rgba(247, 248, 255, 0.88);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.platform-status-badge--available {
+  border-color: rgba(95, 255, 191, 0.34);
+  background: rgba(95, 255, 191, 0.12);
+  color: #cfffee;
+}
+
+.platform-status-badge--soon {
+  border-color: rgba(255, 214, 102, 0.34);
+  background: rgba(255, 214, 102, 0.12);
+  color: #ffe8a8;
+}
+
+.platform-status-badge--development {
+  border-color: rgba(136, 201, 255, 0.34);
+  background: rgba(136, 201, 255, 0.12);
+  color: #d9efff;
+}
+
+.cta-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.cta-row .portfolio-detail-link {
+  margin-top: 0;
+}
+
 .app-product-actions {
   display: flex;
   flex-wrap: wrap;
@@ -3251,7 +3310,8 @@ button:focus-visible {
   }
 
   .app-product-actions,
-  .app-product-store-badges {
+  .app-product-store-badges,
+  .cta-row {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: start;
