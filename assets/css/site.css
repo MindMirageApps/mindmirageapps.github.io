@@ -1809,12 +1809,29 @@ a {
   --app-muted: #a8bdd4;
 }
 
+.app-product-page--illusio {
+  --app-accent: #f0c978;
+  --app-accent-rgb: 240, 201, 120;
+  --app-accent-soft: rgba(159, 140, 255, 0.12);
+  --app-border: rgba(240, 201, 120, 0.24);
+  --app-muted: #bdb4d2;
+}
+
 .app-product-page--couple {
   --app-accent: #ff85b7;
   --app-accent-rgb: 255, 133, 183;
   --app-accent-soft: rgba(255, 133, 183, 0.12);
   --app-border: rgba(255, 133, 183, 0.22);
   --app-muted: #c9a8b8;
+}
+
+.app-product-page--relics,
+.app-product-page--beat {
+  --app-accent: #c78cff;
+  --app-accent-rgb: 199, 140, 255;
+  --app-accent-soft: rgba(199, 140, 255, 0.13);
+  --app-border: rgba(199, 140, 255, 0.24);
+  --app-muted: #c9bbd8;
 }
 
 .app-product-page::before {
@@ -2317,6 +2334,41 @@ a {
   background: rgba(var(--app-accent-rgb), 0.1);
 }
 
+
+.app-product-device__card em {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.app-product-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  border: 1px solid var(--app-border);
+  border-radius: var(--radius-pill);
+  padding: 9px 13px;
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(251, 248, 255, 0.82);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.app-product-availability::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--app-accent);
+  box-shadow: 0 0 18px rgba(var(--app-accent-rgb), 0.72);
+}
+
 @media (max-width: 960px) {
   .app-product-hero,
   .app-product-intro,
@@ -2387,4 +2439,18 @@ a {
   .app-product-download .app-product-store-badges {
     justify-content: flex-start;
   }
+}
+
+.app-product-mark__placeholder {
+  display: grid;
+  width: clamp(38px, 4vw, 48px);
+  height: clamp(38px, 4vw, 48px);
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  background: rgba(var(--app-accent-rgb), 0.13);
+  color: var(--app-accent);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.3),
+    0 0 28px rgba(var(--app-accent-rgb), 0.22);
 }
