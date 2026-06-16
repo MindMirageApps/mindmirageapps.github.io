@@ -2,536 +2,205 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Couple Questions Games | Mind Mirage Apps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couple Questions &amp; Games | Mind Mirage Apps</title>
+  <meta
+    name="description"
+    content="Couple Questions &amp; Games is a warm mobile experience for couples — playful prompts, conversation starters and date-night connection."
+  />
 
-  <link rel="stylesheet" href="/assets/css/site.css" />
-
-  <style>
-    :root {
-      --couples-ink: #3f2431;
-      --couples-text: #533344;
-      --couples-muted: #8b6171;
-      --couples-cream: #fff7ed;
-      --couples-card: rgba(255, 255, 255, 0.74);
-      --couples-line: rgba(177, 83, 112, 0.18);
-      --couples-coral: #ff7f73;
-      --couples-rose: #e84f82;
-      --couples-peach: #ffc38f;
-      --couples-lavender: #c790ff;
-      --couples-shadow: rgba(188, 82, 99, 0.18);
-    }
-
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at 12% 0%, rgba(255, 195, 143, 0.58), transparent 30%),
-        radial-gradient(circle at 88% 8%, rgba(232, 79, 130, 0.28), transparent 28%),
-        radial-gradient(circle at 52% 100%, rgba(199, 144, 255, 0.18), transparent 34%),
-        linear-gradient(180deg, #fff7ed 0%, #fff1f5 54%, #fffaf6 100%);
-      color: var(--couples-text);
-      line-height: var(--line-height-base);
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image: radial-gradient(circle, rgba(232, 79, 130, 0.13) 1px, transparent 1.5px);
-      background-size: 30px 30px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 72%);
-      z-index: -1;
-    }
-
-    .container {
-      max-width: var(--container-wide);
-      margin: 0 auto;
-      padding: 34px 20px 50px;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 34px;
-    }
-
-    .back,
-    .mini-nav a {
-      color: var(--couples-muted);
-      text-decoration: none;
-      font-size: var(--font-size-sm);
-      font-weight: 800;
-    }
-
-    .mini-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: flex-end;
-    }
-
-    .back:hover,
-    .mini-nav a:hover {
-      color: var(--couples-rose);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(280px, 0.98fr);
-      gap: clamp(28px, 5vw, 52px);
-      align-items: center;
-      overflow: hidden;
-      border: 1px solid var(--couples-line);
-      border-radius: 38px;
-      padding: clamp(30px, 6vw, 58px);
-      background:
-        radial-gradient(circle at 82% 14%, rgba(255, 195, 143, 0.58), transparent 29%),
-        linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 244, 236, 0.68));
-      box-shadow: 0 30px 90px var(--couples-shadow);
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(232, 79, 130, 0.18);
-      border-radius: var(--radius-pill);
-      padding: 8px 14px;
-      background: rgba(255, 255, 255, 0.64);
-      color: var(--couples-rose);
-      font-size: var(--font-size-xs);
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    h1 {
-      max-width: 720px;
-      margin-bottom: 20px;
-      color: var(--couples-ink);
-      font-size: clamp(46px, 8vw, 86px);
-      line-height: 0.95;
-      letter-spacing: -0.065em;
-    }
-
-    h2 {
-      margin-bottom: 10px;
-      color: var(--couples-ink);
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-    }
-
-    .subtitle,
-    .section-intro {
-      color: var(--couples-muted);
-      font-size: var(--font-size-lg);
-    }
-
-    .subtitle {
-      max-width: 650px;
-      margin-bottom: 24px;
-    }
-
-    .meta-row,
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .meta-row {
-      margin-bottom: 26px;
-    }
-
-    .meta-row span {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      border: 1px solid var(--couples-line);
-      border-radius: var(--radius-pill);
-      padding: 7px 12px;
-      background: rgba(255, 255, 255, 0.58);
-      color: var(--couples-muted);
-      font-size: var(--font-size-xs);
-      font-weight: 900;
-    }
-
-    .button-primary,
-    .button-secondary {
-      min-height: 48px;
-      font-weight: 900;
-    }
-
-    .button-primary {
-      border-color: rgba(232, 79, 130, 0.28);
-      background: linear-gradient(135deg, var(--couples-rose), var(--couples-coral) 52%, var(--couples-peach));
-      color: #fffaf7;
-      box-shadow: 0 16px 42px rgba(232, 79, 130, 0.24);
-    }
-
-    .button-secondary {
-      border-color: var(--couples-line);
-      background: rgba(255, 255, 255, 0.62);
-      color: var(--couples-ink);
-    }
-
-    .button-primary:hover,
-    .button-secondary:hover {
-      transform: translateY(-2px);
-    }
-
-    .phone-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-width: 0;
-    }
-
-    .phone {
-      position: relative;
-      width: min(100%, 300px);
-      border: 1px solid rgba(177, 83, 112, 0.22);
-      border-radius: 42px;
-      padding: 14px;
-      background: linear-gradient(145deg, #fffaf7, #ffe2d6);
-      box-shadow: 0 26px 76px rgba(177, 83, 112, 0.24);
-    }
-
-    .phone::before,
-    .phone::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      background: rgba(232, 79, 130, 0.18);
-      filter: blur(1px);
-    }
-
-    .phone::before {
-      width: 84px;
-      height: 84px;
-      right: -26px;
-      top: 44px;
-    }
-
-    .phone::after {
-      width: 54px;
-      height: 54px;
-      left: -16px;
-      bottom: 72px;
-      background: rgba(255, 195, 143, 0.42);
-    }
-
-    .screen {
-      position: relative;
-      overflow: hidden;
-      min-height: 540px;
-      border-radius: 31px;
-      padding: 24px 20px;
-      background:
-        radial-gradient(circle at 20% 6%, rgba(255, 255, 255, 0.76), transparent 24%),
-        linear-gradient(180deg, #ff8f84, #e84f82 58%, #9f6ae5);
-      color: white;
-    }
-
-    .screen-kicker {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.14em;
-      opacity: 0.82;
-      text-transform: uppercase;
-    }
-
-    .prompt-card {
-      margin-top: 78px;
-      border: 1px solid rgba(255, 255, 255, 0.34);
-      border-radius: 28px;
-      padding: 24px;
-      background: rgba(255, 255, 255, 0.18);
-      box-shadow: 0 18px 45px rgba(84, 29, 71, 0.18);
-      backdrop-filter: blur(14px);
-    }
-
-    .prompt-card strong {
-      display: block;
-      font-size: 25px;
-      line-height: 1.08;
-      letter-spacing: -0.04em;
-    }
-
-    .prompt-card span {
-      display: block;
-      margin-top: 18px;
-      color: rgba(255, 255, 255, 0.78);
-      font-size: var(--font-size-sm);
-      line-height: 1.55;
-    }
-
-    .choice-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .choice-row div {
-      border-radius: 18px;
-      padding: 12px 10px;
-      background: rgba(255, 255, 255, 0.21);
-      text-align: center;
-      font-size: var(--font-size-xs);
-      font-weight: 900;
-    }
-
-    .section {
-      margin-top: var(--space-section);
-    }
-
-    .section-header {
-      max-width: 720px;
-      margin-bottom: 24px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
-
-    .info-card,
-    .legal-card {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(232, 79, 130, 0.18);
-      border-radius: 28px;
-      padding: 24px;
-      background:
-        radial-gradient(circle at 92% 0%, rgba(255, 195, 143, 0.22), transparent 34%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 250, 246, 0.82));
-      box-shadow: 0 18px 48px rgba(188, 82, 99, 0.13), 0 1px 0 rgba(255, 255, 255, 0.78) inset;
-      color: var(--couples-muted);
-      line-height: 1.65;
-    }
-
-    .info-card::before,
-    .legal-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto;
-      height: 4px;
-      background: linear-gradient(90deg, rgba(255, 195, 143, 0.78), rgba(232, 79, 130, 0.42), transparent);
-    }
-
-    .info-card strong,
-    .legal-card strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--couples-ink);
-      font-size: var(--font-size-lg);
-      line-height: 1.25;
-    }
-
-    .legal-card {
-      text-decoration: none;
-    }
-
-    .legal-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(232, 79, 130, 0.38);
-      background: rgba(255, 255, 255, 0.86);
-    }
-
-    .site-footer {
-      --color-border: var(--couples-line);
-      --color-text-muted: var(--couples-muted);
-      --color-text: var(--couples-ink);
-      background: rgba(255, 255, 255, 0.52);
-    }
-
-    @media (max-width: 860px) {
-      .container {
-        padding: 28px 16px 42px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .phone-wrap {
-        order: -1;
-      }
-
-      .screen {
-        min-height: 480px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        padding-inline: 14px;
-      }
-
-      .topbar,
-      .actions {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .mini-nav {
-        justify-content: flex-start;
-      }
-
-      .actions .site-button {
-        width: 100%;
-      }
-
-      .hero,
-      .info-card,
-      .legal-card {
-        border-radius: 22px;
-      }
-
-      .hero,
-      .info-card,
-      .legal-card {
-        padding: 22px;
-      }
-
-      h1 {
-        font-size: clamp(40px, 14vw, 58px);
-      }
-
-      .subtitle,
-      .section-intro {
-        font-size: var(--font-size-base);
-      }
-
-      .phone {
-        width: min(100%, 272px);
-        border-radius: 34px;
-      }
-
-      .screen {
-        min-height: 430px;
-        border-radius: 24px;
-        padding: 20px 16px;
-      }
-
-      .prompt-card {
-        margin-top: 56px;
-        padding: 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260616-premium" />
 </head>
 
-<body class="app-page page-shell">
-  <div class="container">
-    <div class="topbar">
-      <a class="back" href="/">← Back to Mind Mirage Apps</a>
-      <nav class="mini-nav" aria-label="Couple Questions Games links">
-        <a href="#features">Features</a>
-        <a href="#support">Support</a>
-      </nav>
-    </div>
+<body class="app-product-page app-product-page--couple">
+  <header class="app-product-header" aria-label="Site header">
+    <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
+      <img
+        class="site-logo"
+        src="/assets/images/mindmirageapps-logo.png"
+        alt="Mind Mirage Apps"
+        width="1254"
+        height="1254"
+      />
+    </a>
 
-    <section class="hero">
-      <div>
-        <span class="badge">Now available on iOS and Android</span>
-        <h1>Couple Questions Games</h1>
-        <p class="subtitle">A soft, modern mobile game for couples who want playful prompts, deeper conversations, and easy date-night connection.</p>
+    <nav class="app-product-nav" aria-label="Couple Questions navigation">
+      <a href="/">Home</a>
+      <a href="/apps/">Apps</a>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
 
-        <div class="meta-row" aria-label="Couple Questions Games details">
-          <span>Relationship game</span>
-          <span>Date-night prompts</span>
-          <span>Available on iOS and Android</span>
+  <main class="app-product-main">
+    <section class="app-product-hero" aria-labelledby="couple-title">
+      <div class="app-product-hero__copy">
+        <h1 class="app-product-mark" id="couple-title">
+          <img src="/assets/images/app-icons/couple-questions-games-icon.png" alt="" />
+          <span>Couple Questions &amp; Games</span>
+        </h1>
+        <h2>Playful prompts for two.</h2>
+        <p class="app-product-description">
+          Conversation starters, playful prompts and relationship games made
+          to help couples feel closer — perfect for cozy evenings and date
+          nights.
+        </p>
+
+        <div class="app-product-actions" aria-label="Couple Questions calls to action">
+          <a class="site-button site-button--secondary" href="#features">Explore Features</a>
         </div>
 
-        <div class="actions">
-          <a class="site-button button-primary" href="https://apps.apple.com/gb/app/couple-questions-games/id6769894574" target="_blank" rel="noopener">Download on the App Store</a>
-          <a class="site-button button-secondary" href="https://play.google.com/store/apps/details?id=com.mindmirageapps.couplequestionsgames&pcampaignid=web_share" target="_blank" rel="noopener">Get it on Google Play</a>
-          <a class="site-button button-secondary" href="/apps/couple-questions-games/privacy/">Privacy Policy</a>
+        <div class="app-product-store-badges" aria-label="Couple Questions store links">
+          <a
+            class="store-badge-link"
+            href="https://apps.apple.com/gb/app/couple-questions-games/id6769894574"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/images/store-badges/app-store-badge.svg"
+              alt="Download on the App Store"
+            />
+          </a>
+          <a
+            class="store-badge-link"
+            href="https://play.google.com/store/apps/details?id=com.mindmirageapps.couplequestionsgames&amp;pcampaignid=web_share"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/assets/images/store-badges/google-play-badge.png"
+              alt="Get it on Google Play"
+            />
+          </a>
         </div>
       </div>
 
-      <div class="phone-wrap" aria-hidden="true">
-        <div class="phone">
-          <div class="screen">
-            <div class="screen-kicker">Date night deck</div>
-            <div class="prompt-card">
+      <div class="app-product-visual" aria-label="Couple Questions app preview">
+        <div class="app-product-device" aria-hidden="true">
+          <div class="app-product-device__screen">
+            <div class="app-product-device__kicker">Date night deck</div>
+            <div class="app-product-device__card">
               <strong>What tiny moment made you feel loved this week?</strong>
               <span>Pick a cozy prompt, take turns, and discover something new together.</span>
-              <div class="choice-row">
-                <div>Sweet</div>
-                <div>Deep</div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="features">
-      <div class="section-header">
-        <h2>Built for meaningful play</h2>
-        <p class="section-intro">Couple Questions Games brings a relationship-focused tone to the Mind Mirage Apps portfolio with warm visuals and simple mobile-first interactions.</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="info-card">
-          <strong>Date-night ready</strong>
-          Prompt categories are designed for cozy, playful, and reflective conversations.
-        </div>
-
-        <div class="info-card">
-          <strong>Soft mobile UI</strong>
-          Warm gradients, rounded cards, and tactile controls create a friendly game feel.
-        </div>
-
-        <div class="info-card">
-          <strong>Now available</strong>
-          Couple Questions Games is now available on iOS and Android.
-        </div>
+    <section class="app-product-section" aria-labelledby="what-is-couple">
+      <div class="app-product-intro">
+        <h2 id="what-is-couple">Overview</h2>
+        <p>
+          Couple Questions &amp; Games brings a warm, relationship-focused
+          experience to the Mind Mirage Apps portfolio — designed to spark
+          meaningful conversations through simple, playful mobile interactions.
+        </p>
       </div>
     </section>
 
-    <section class="section" id="support">
-      <div class="section-header">
-        <h2>Support and legal</h2>
-        <p class="section-intro">Review the Couple Questions Games privacy policy and terms of use.</p>
+    <section class="app-product-section" id="features" aria-labelledby="couple-features">
+      <div class="app-product-section__heading">
+        <h2 id="couple-features">Built for meaningful play</h2>
+        <p>
+          Soft visuals and simple interactions make it easy to connect, laugh
+          and learn something new about each other.
+        </p>
       </div>
 
-      <div class="card-grid">
-        <a class="legal-card" href="/apps/couple-questions-games/privacy/">
-          <strong>Privacy Policy</strong>
-          View the Couple Questions Games privacy policy.
-        </a>
+      <div class="app-feature-grid">
+        <article class="app-feature-card">
+          <h3>Date-night ready</h3>
+          <p>Prompt categories designed for cozy, playful and reflective conversations.</p>
+        </article>
+        <article class="app-feature-card">
+          <h3>Warm mobile UI</h3>
+          <p>Gradients, rounded cards and tactile controls create a friendly game feel.</p>
+        </article>
+        <article class="app-feature-card">
+          <h3>Play together</h3>
+          <p>Take turns, pick categories and keep the mood light or go deeper.</p>
+        </article>
+        <article class="app-feature-card">
+          <h3>Now available</h3>
+          <p>Download on iOS and Android and start your next conversation tonight.</p>
+        </article>
+      </div>
+    </section>
 
-        <a class="legal-card" href="/apps/couple-questions-games/terms/">
-          <strong>Terms of Use</strong>
-          View the Couple Questions Games terms of use.
+    <section class="app-product-section" aria-labelledby="couple-connection">
+      <div class="app-product-split">
+        <div>
+          <h2 id="couple-connection">Connection made simple</h2>
+          <p>
+            Whether you have five minutes or a full evening, Couple Questions
+            &amp; Games gives you a gentle nudge toward closeness.
+          </p>
+        </div>
+
+        <ul class="app-product-list">
+          <li>Conversation starters for two.</li>
+          <li>Playful relationship games.</li>
+          <li>Cozy date-night prompts.</li>
+          <li>Available on iOS and Android.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="app-product-download" id="download" aria-labelledby="download-title">
+      <h2 id="download-title">Start connecting tonight.</h2>
+      <p>
+        Download Couple Questions &amp; Games and turn everyday moments into
+        something memorable.
+      </p>
+      <div class="app-product-store-badges" aria-label="Couple Questions store links">
+        <a
+          class="store-badge-link"
+          href="https://apps.apple.com/gb/app/couple-questions-games/id6769894574"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/assets/images/store-badges/app-store-badge.svg"
+            alt="Download on the App Store"
+          />
+        </a>
+        <a
+          class="store-badge-link"
+          href="https://play.google.com/store/apps/details?id=com.mindmirageapps.couplequestionsgames&amp;pcampaignid=web_share"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/assets/images/store-badges/google-play-badge.png"
+            alt="Get it on Google Play"
+          />
         </a>
       </div>
     </section>
-  </div>
+  </main>
 
-  <footer class="footer site-footer" aria-label="Site footer">
-    <a href="/about/">About</a>
-    <a href="/apps/couple-questions-games/privacy/">Privacy Policy</a>
-    <a href="/apps/couple-questions-games/terms/">Terms</a>
+  <footer class="home-footer" aria-label="Site footer">
+    <div class="home-footer__inner">
+      <a class="home-footer__brand" href="/" aria-label="Mind Mirage Apps home">
+        <img
+          class="site-logo"
+          src="/assets/images/mindmirageapps-logo.png"
+          alt="Mind Mirage Apps"
+          width="1254"
+          height="1254"
+        />
+      </a>
+
+      <nav class="home-footer__nav" aria-label="Footer navigation">
+        <a href="/apps/">Apps</a>
+        <a href="/about/">About</a>
+        <a href="mailto:support@mindmirageapps.com">Contact</a>
+        <a href="/apps/couple-questions-games/privacy/">Privacy Policy</a>
+        <a href="/apps/couple-questions-games/terms/">Terms of Use</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
