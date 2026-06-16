@@ -3090,3 +3090,259 @@ button:focus-visible {
     margin: 0 auto;
   }
 }
+
+/* Mobile-first responsive refinement pass */
+@media (hover: none) and (pointer: coarse) {
+  .world-card:hover,
+  .portfolio-app-card:hover,
+  .app-feature-card:hover,
+  .app-shot-card:hover,
+  .purpose-value:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --space-section: clamp(18px, 6vw, 28px);
+    --font-size-section: clamp(25px, 7.4vw, 34px);
+    --font-size-app-title: clamp(21px, 6vw, 27px);
+  }
+
+  .home-nav a,
+  .portfolio-header .portfolio-nav a,
+  .app-product-nav a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.15;
+  }
+
+  .home-nav a[aria-current="page"]::after,
+  .portfolio-header .portfolio-nav a[aria-current="page"]::after,
+  .app-product-nav a[aria-current="page"]::after {
+    bottom: 7px;
+  }
+
+  .site-button,
+  .button-primary,
+  .button-secondary,
+  .portfolio-detail-link,
+  .world-card__link,
+  .portfolio-discovery a {
+    min-height: 48px;
+  }
+
+  .store-badge-link {
+    min-height: 48px;
+    padding: 4px;
+  }
+
+  .home-hero__inner,
+  .portfolio-main,
+  .app-product-main,
+  .worlds-section__inner,
+  .featured-release__inner,
+  .purpose-section__inner {
+    width: calc(100% - 28px);
+  }
+
+  .home-hero__inner {
+    gap: 18px;
+    padding: 24px 0 30px;
+  }
+
+  .portal-stage {
+    order: 0;
+    min-height: clamp(220px, 64vw, 300px);
+  }
+
+  .home-hero h1 {
+    font-size: clamp(39px, 12vw, 56px);
+    line-height: 0.98;
+    letter-spacing: -0.052em;
+  }
+
+  .hero-text,
+  .worlds-section__heading p,
+  .featured-release__description,
+  .purpose-section__copy p,
+  .portfolio-hero__text,
+  .app-product-description {
+    font-size: 16px;
+    line-height: 1.56;
+  }
+
+  .hero-actions {
+    max-width: none;
+    gap: 10px;
+  }
+
+  .hero-pillars {
+    gap: 7px;
+    margin-top: 14px;
+  }
+
+  .hero-pillars span {
+    min-height: 32px;
+    padding-inline: 10px;
+    font-size: 11px;
+  }
+
+  .worlds-section,
+  .purpose-section {
+    padding: 22px 0;
+  }
+
+  .world-card,
+  .portfolio-app-card {
+    border-radius: 22px;
+    padding: 16px;
+  }
+
+  .world-card__content,
+  .portfolio-app-card__description,
+  .portfolio-store-links,
+  .portfolio-app-card__platforms {
+    margin-top: 12px;
+  }
+
+  .portfolio-hero {
+    padding: 28px 0 22px;
+  }
+
+  .portfolio-hero h1 {
+    font-size: clamp(40px, 12vw, 58px);
+    line-height: 0.98;
+  }
+
+  .portfolio-discovery {
+    margin-top: 16px;
+  }
+
+  .portfolio-app-grid {
+    gap: 14px;
+  }
+
+  .portfolio-store-links .store-badge-link img,
+  .app-product-store-badges .store-badge-link img {
+    height: 42px;
+  }
+
+  .portfolio-status-note {
+    min-height: 38px;
+    line-height: 1.25;
+  }
+
+  .app-product-hero {
+    gap: 18px;
+    padding: 22px 0 18px;
+  }
+
+  .app-product-mark {
+    max-width: 100%;
+    padding-right: 11px;
+  }
+
+  .app-product-mark span {
+    letter-spacing: 0.09em;
+    overflow-wrap: anywhere;
+  }
+
+  .app-product-actions,
+  .app-product-store-badges {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .app-product-actions .site-button {
+    width: min(100%, 360px);
+  }
+
+  .app-product-section {
+    padding: 18px 0;
+  }
+
+  .app-product-intro,
+  .app-product-download,
+  .app-screenshot-showcase {
+    padding: 16px;
+  }
+
+  .app-product-split {
+    gap: 16px;
+  }
+
+  .app-product-list li {
+    padding: 13px 14px;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-screenshot-showcase__heading {
+    margin-bottom: 16px;
+  }
+
+  .app-shot-frame {
+    max-width: min(100%, 260px);
+    border-radius: 26px;
+    padding: 8px;
+  }
+
+  .app-shot-screen {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-header,
+  .portfolio-header,
+  .app-product-header {
+    padding-inline: 12px;
+  }
+
+  .home-nav,
+  .portfolio-header .portfolio-nav,
+  .app-product-nav {
+    gap: 4px;
+  }
+
+  .home-nav a,
+  .portfolio-header .portfolio-nav a,
+  .app-product-nav a {
+    padding-inline: 2px;
+    font-size: 11px;
+  }
+
+  .home-hero__inner,
+  .portfolio-main,
+  .app-product-main,
+  .worlds-section__inner,
+  .featured-release__inner,
+  .purpose-section__inner,
+  .home-footer__inner {
+    width: calc(100% - 24px);
+  }
+
+  .home-hero h1 {
+    font-size: clamp(36px, 11.5vw, 44px);
+  }
+
+  .portal-stage {
+    min-height: 210px;
+  }
+
+  .portfolio-app-card__top {
+    gap: 12px;
+  }
+
+  .portfolio-app-card__icon,
+  .world-card__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+  }
+}
