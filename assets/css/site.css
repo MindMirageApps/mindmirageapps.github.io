@@ -31,18 +31,18 @@
   --font-size-sm: 14px;
   --font-size-base: 16px;
   --font-size-lg: clamp(17px, 1.8vw, 20px);
-  --font-size-xl: clamp(22px, 2.6vw, 30px);
-  --font-size-hero: clamp(42px, 7vw, 76px);
-  --font-size-section: clamp(26px, 3.5vw, 40px);
-  --font-size-app-title: clamp(24px, 2.6vw, 32px);
+  --font-size-xl: clamp(21px, 2.4vw, 28px);
+  --font-size-hero: clamp(40px, 6.4vw, 70px);
+  --font-size-section: clamp(24px, 3.1vw, 36px);
+  --font-size-app-title: clamp(22px, 2.35vw, 29px);
   --radius-md: 16px;
   --radius-lg: 22px;
   --radius-xl: 28px;
   --radius-2xl: 34px;
   --radius-pill: 999px;
-  --space-section: clamp(30px, 4.5vw, 50px);
-  --space-footer: clamp(36px, 5vw, 64px);
-  --space-block: clamp(16px, 2.4vw, 24px);
+  --space-section: clamp(22px, 3.2vw, 36px);
+  --space-footer: clamp(26px, 3.8vw, 46px);
+  --space-block: clamp(12px, 1.8vw, 18px);
 }
 
 *,
@@ -157,7 +157,7 @@ a {
   position: relative;
   display: flex;
   width: 100%;
-  min-height: min(62vh, 660px);
+  min-height: min(52vh, 560px);
   flex-direction: column;
   background:
     linear-gradient(90deg, rgba(5, 6, 13, 0.98), rgba(5, 6, 13, 0.82)),
@@ -171,9 +171,9 @@ a {
   flex: 1;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.8fr);
   align-items: center;
-  gap: clamp(22px, 4vw, 46px);
+  gap: clamp(18px, 3vw, 34px);
   margin: 0 auto;
-  padding: clamp(26px, 4.5vw, 52px) 0;
+  padding: clamp(18px, 3.2vw, 36px) 0;
 }
 
 .hero-copy {
@@ -186,7 +186,7 @@ a {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: var(--radius-pill);
   padding: 7px 12px;
@@ -202,7 +202,7 @@ a {
 .home-hero h1 {
   max-width: 12.2ch;
   margin: 0;
-  font-size: clamp(44px, 7vw, 82px);
+  font-size: clamp(40px, 6.2vw, 72px);
   line-height: 0.96;
   letter-spacing: -0.06em;
   font-weight: 900;
@@ -210,7 +210,7 @@ a {
 
 .hero-text {
   max-width: 35rem;
-  margin: 18px 0 0;
+  margin: 12px 0 0;
   color: var(--color-text-muted);
   font-size: clamp(16px, 1.65vw, 20px);
   line-height: 1.62;
@@ -221,7 +221,7 @@ a {
   align-items: end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .section-heading .eyebrow {
@@ -233,7 +233,7 @@ a {
   max-width: 14ch;
   margin: 0;
   text-align: right;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(27px, 3.5vw, 42px);
   line-height: 1.02;
   letter-spacing: -0.055em;
 }
@@ -242,7 +242,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .site-button {
@@ -502,7 +502,7 @@ a {
 
 .worlds-section {
   position: relative;
-  padding: clamp(34px, 4.4vw, 56px) 0;
+  padding: clamp(24px, 3.2vw, 40px) 0;
   background:
     radial-gradient(780px 420px at 14% 8%, rgba(159, 140, 255, 0.12), transparent 68%),
     radial-gradient(720px 380px at 86% 6%, rgba(136, 201, 255, 0.1), transparent 72%),
@@ -531,7 +531,7 @@ a {
 
 .worlds-section__heading {
   max-width: 720px;
-  margin: 0 auto clamp(18px, 2.6vw, 26px);
+  margin: 0 auto clamp(12px, 1.8vw, 18px);
   text-align: center;
 }
 
@@ -544,7 +544,7 @@ a {
 
 .worlds-section__heading p {
   max-width: 620px;
-  margin: 12px auto 0;
+  margin: 8px auto 0;
   color: rgba(220, 226, 239, 0.78);
   font-size: clamp(16px, 1.7vw, 19px);
   line-height: 1.6;
@@ -553,7 +553,7 @@ a {
 .worlds-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: clamp(16px, 2.2vw, 24px);
+  gap: clamp(12px, 1.6vw, 18px);
   align-items: stretch;
 }
 
@@ -567,7 +567,7 @@ a {
   overflow: hidden;
   border: 1px solid rgba(var(--world-accent-rgb), 0.28);
   border-radius: 24px;
-  padding: clamp(16px, 1.9vw, 21px);
+  padding: clamp(13px, 1.5vw, 17px);
   background:
     radial-gradient(360px 240px at 88% -8%, rgba(var(--world-accent-rgb), 0.28), transparent 72%),
     radial-gradient(320px 220px at -8% 102%, rgba(var(--world-accent-rgb), 0.14), transparent 74%),
@@ -646,7 +646,7 @@ a {
   display: grid;
   gap: 10px;
   min-width: 0;
-  margin-top: 18px;
+  margin-top: 12px;
   padding-top: 0;
 }
 
@@ -706,7 +706,7 @@ a {
 
 .featured-release {
   position: relative;
-  padding: clamp(18px, 3vw, 30px) 0 clamp(32px, 4.4vw, 50px);
+  padding: clamp(12px, 2.1vw, 22px) 0 clamp(24px, 3.2vw, 36px);
   background:
     radial-gradient(760px 420px at 86% 16%, rgba(159, 140, 255, 0.12), transparent 70%),
     radial-gradient(620px 360px at 18% 84%, rgba(136, 201, 255, 0.08), transparent 72%),
@@ -718,13 +718,13 @@ a {
   display: grid;
   width: min(var(--container-wide), calc(100% - clamp(40px, 10vw, 144px)));
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.68fr);
-  gap: clamp(22px, 4vw, 46px);
+  gap: clamp(18px, 3vw, 34px);
   align-items: center;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(159, 140, 255, 0.24);
   border-radius: var(--radius-2xl);
-  padding: clamp(18px, 2.8vw, 30px);
+  padding: clamp(14px, 2vw, 22px);
   background:
     linear-gradient(116deg, rgba(255, 255, 255, 0.14), transparent 32%, transparent 72%, rgba(255, 255, 255, 0.05)),
     radial-gradient(520px 340px at 88% 8%, rgba(159, 140, 255, 0.28), transparent 72%),
@@ -780,7 +780,7 @@ a {
 
 .featured-release__description {
   max-width: 620px;
-  margin: 16px 0 0;
+  margin: 10px 0 0;
   color: rgba(238, 242, 255, 0.78);
   font-size: clamp(16px, 1.8vw, 20px);
   line-height: 1.6;
@@ -790,7 +790,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: clamp(16px, 2.2vw, 22px);
+  margin-top: clamp(12px, 1.6vw, 16px);
 }
 
 .store-badge-link {
@@ -938,7 +938,7 @@ a {
 
 .purpose-section {
   position: relative;
-  padding: clamp(34px, 4.4vw, 56px) 0;
+  padding: clamp(24px, 3.2vw, 40px) 0;
   background:
     radial-gradient(760px 420px at 12% 18%, rgba(136, 201, 255, 0.08), transparent 70%),
     radial-gradient(680px 380px at 88% 74%, rgba(159, 140, 255, 0.1), transparent 72%),
@@ -950,7 +950,7 @@ a {
   display: grid;
   width: min(var(--container-wide), calc(100% - clamp(40px, 10vw, 144px)));
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
-  gap: clamp(24px, 4.5vw, 54px);
+  gap: clamp(18px, 3.2vw, 38px);
   align-items: center;
   margin: 0 auto;
 }
@@ -971,7 +971,7 @@ a {
 
 .purpose-section__copy p {
   max-width: 650px;
-  margin: 16px 0 0;
+  margin: 10px 0 0;
   color: rgba(220, 226, 239, 0.78);
   font-size: clamp(16px, 1.75vw, 20px);
   line-height: 1.62;
@@ -1170,7 +1170,7 @@ a {
   }
 
   .home-hero {
-    min-height: min(62vh, 660px);
+    min-height: min(52vh, 560px);
     text-align: center;
   }
 
@@ -1178,8 +1178,8 @@ a {
     width: calc(100% - 32px);
     grid-template-columns: 1fr;
     justify-content: center;
-    gap: 34px;
-    padding: 48px 0 72px;
+    gap: 22px;
+    padding: 30px 0 44px;
   }
 
   .portal-stage {
@@ -1208,14 +1208,14 @@ a {
   }
 
   .hero-text {
-    margin-top: 20px;
+    margin-top: 12px;
   }
 
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 360px;
-    margin: 26px auto 0;
+    margin: 16px auto 0;
   }
 
   .site-button {
@@ -1241,13 +1241,13 @@ a {
   }
 
   .world-card__link {
-    margin-top: 18px;
+    margin-top: 12px;
   }
 
   .featured-release__inner {
     width: calc(100% - 32px);
     border-radius: 26px;
-    padding: 22px;
+    padding: 18px;
   }
 
   .featured-release__stores {
@@ -1265,7 +1265,7 @@ a {
 
   .purpose-section__inner {
     width: calc(100% - 32px);
-    gap: 26px;
+    gap: 18px;
   }
 
   .purpose-values {
@@ -1321,7 +1321,7 @@ a {
 .legal-page .container {
   width: min(860px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 34px 0 46px;
+  padding: 24px 0 34px;
 }
 
 .content-page .back,
@@ -1329,7 +1329,7 @@ a {
   display: inline-flex;
   align-items: center;
   min-height: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
   padding: 0 14px;
@@ -1343,14 +1343,14 @@ a {
 .legal-page .card {
   border: 1px solid var(--color-border);
   border-radius: 30px;
-  padding: clamp(20px, 3.6vw, 32px);
+  padding: clamp(16px, 2.6vw, 24px);
   background: rgba(255, 255, 255, 0.035);
   box-shadow: 0 28px 88px rgba(0, 0, 0, 0.34);
 }
 
 .content-page h1,
 .legal-page h1 {
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   font-size: clamp(36px, 6vw, 58px);
   line-height: 1;
   letter-spacing: -0.06em;
@@ -1358,7 +1358,7 @@ a {
 
 .legal-page h2,
 .content-page h2 {
-  margin: 24px 0 8px;
+  margin: 18px 0 6px;
   font-size: 22px;
   letter-spacing: -0.03em;
 }
@@ -1436,7 +1436,7 @@ a {
 .portfolio-main {
   width: min(var(--container-wide), calc(100% - clamp(40px, 10vw, 144px)));
   margin: 0 auto;
-  padding-bottom: clamp(40px, 5vw, 68px);
+  padding-bottom: clamp(28px, 3.8vw, 48px);
 }
 
 .portfolio-hero,
@@ -1447,7 +1447,7 @@ a {
 
 .portfolio-hero {
   position: relative;
-  padding: clamp(34px, 5vw, 62px) 0 clamp(24px, 3.6vw, 40px);
+  padding: clamp(24px, 3.5vw, 42px) 0 clamp(16px, 2.5vw, 28px);
 }
 
 .portfolio-hero::after {
@@ -1472,7 +1472,7 @@ a {
 
 .portfolio-eyebrow {
   width: fit-content;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   border: 1px solid rgba(159, 140, 255, 0.3);
   border-radius: var(--radius-pill);
   padding: 8px 12px;
@@ -1488,7 +1488,7 @@ a {
 .portfolio-hero h1 {
   margin: 0;
   color: #fff;
-  font-size: clamp(48px, 8vw, 88px);
+  font-size: clamp(42px, 7vw, 76px);
   font-weight: 900;
   line-height: 0.92;
   letter-spacing: -0.04em;
@@ -1496,22 +1496,22 @@ a {
 
 .portfolio-hero__text {
   max-width: 720px;
-  margin: 18px 0 0;
+  margin: 12px 0 0;
   color: rgba(238, 242, 255, 0.82);
-  font-size: clamp(18px, 2.2vw, 24px);
+  font-size: clamp(17px, 1.9vw, 21px);
   line-height: 1.48;
 }
 
 .portfolio-hero__intro {
   max-width: 660px;
-  margin: 18px 0 0;
+  margin: 12px 0 0;
   color: rgba(220, 226, 239, 0.66);
   font-size: clamp(15px, 1.6vw, 18px);
   line-height: 1.62;
 }
 
 .portfolio-section {
-  padding: clamp(16px, 3vw, 32px) 0 0;
+  padding: clamp(10px, 2vw, 22px) 0 0;
 }
 
 .portfolio-section__heading {
@@ -1519,7 +1519,7 @@ a {
   align-items: end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: clamp(16px, 2.2vw, 24px);
+  margin-bottom: clamp(10px, 1.6vw, 16px);
 }
 
 .portfolio-section__heading h2 {
@@ -1549,7 +1549,7 @@ a {
   overflow: hidden;
   border: 1px solid rgba(var(--portfolio-accent-rgb), 0.28);
   border-radius: 24px;
-  padding: clamp(16px, 1.9vw, 21px);
+  padding: clamp(13px, 1.5vw, 17px);
   background:
     radial-gradient(420px 280px at 90% -8%, rgba(var(--portfolio-accent-rgb), 0.28), transparent 72%),
     radial-gradient(340px 240px at -8% 108%, rgba(var(--portfolio-accent-rgb), 0.13), transparent 74%),
@@ -1671,7 +1671,7 @@ a {
 }
 
 .portfolio-app-card__description {
-  margin: 18px 0 0;
+  margin: 12px 0 0;
   color: rgba(238, 242, 255, 0.75);
   font-size: 15px;
   line-height: 1.6;
@@ -1681,7 +1681,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .portfolio-store-links .store-badge-link img {
@@ -1694,7 +1694,7 @@ a {
   min-height: 44px;
   align-items: center;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 12px;
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius-pill);
   padding: 0 17px;
@@ -1717,7 +1717,7 @@ a {
   display: inline-flex;
   min-height: 34px;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 12px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-pill);
   padding: 0 12px;
@@ -1752,11 +1752,11 @@ a {
 
   .portfolio-main {
     width: calc(100% - 32px);
-    padding-bottom: 72px;
+    padding-bottom: 48px;
   }
 
   .portfolio-hero {
-    padding: 54px 0 42px;
+    padding: 34px 0 28px;
   }
 
   .portfolio-hero h1 {
@@ -1879,7 +1879,7 @@ a {
   grid-template-columns: minmax(0, 1.02fr) minmax(280px, 0.74fr);
   gap: clamp(18px, 3vw, 36px);
   align-items: center;
-  padding: clamp(24px, 3.8vw, 44px) 0 clamp(24px, 3.8vw, 40px);
+  padding: clamp(18px, 2.8vw, 32px) 0 clamp(16px, 2.8vw, 28px);
 }
 
 .app-product-hero__copy {
@@ -1892,7 +1892,7 @@ a {
   align-items: center;
   gap: 10px;
   width: fit-content;
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   border: 1px solid var(--app-border);
   border-radius: var(--radius-pill);
   padding: 7px 12px 7px 7px;
@@ -1928,7 +1928,7 @@ a {
   max-width: 680px;
   margin: 0;
   color: #fff;
-  font-size: clamp(26px, 3.6vw, 40px);
+  font-size: clamp(24px, 3.1vw, 36px);
   font-weight: 900;
   line-height: 0.98;
   letter-spacing: -0.03em;
@@ -1936,7 +1936,7 @@ a {
 
 .app-product-description {
   max-width: 680px;
-  margin: 16px 0 0;
+  margin: 10px 0 0;
   color: var(--app-muted);
   font-size: clamp(16px, 1.7vw, 19px);
   line-height: 1.58;
@@ -1946,14 +1946,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 16px;
 }
 
 .app-product-store-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .app-product-store-badges .store-badge-link img {
@@ -1990,12 +1990,12 @@ a {
 }
 
 .app-product-section {
-  padding: clamp(24px, 3.8vw, 40px) 0;
+  padding: clamp(16px, 2.8vw, 28px) 0;
 }
 
 .app-product-section__heading {
   max-width: 780px;
-  margin-bottom: clamp(14px, 2vw, 20px);
+  margin-bottom: clamp(10px, 1.4vw, 14px);
 }
 
 .app-product-section__heading h2 {
@@ -2022,7 +2022,7 @@ a {
   align-items: center;
   border: 1px solid var(--app-border);
   border-radius: 24px;
-  padding: clamp(17px, 2.3vw, 24px);
+  padding: clamp(14px, 1.8vw, 18px);
   background:
     radial-gradient(520px 320px at 100% 0%, rgba(var(--app-accent-rgb), 0.1), transparent 72%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.032));
@@ -2066,7 +2066,7 @@ a {
   display: block;
   width: 30px;
   height: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   border-radius: var(--radius-pill);
   background: linear-gradient(90deg, var(--app-accent), rgba(var(--app-accent-rgb), 0.5));
 }
@@ -2102,7 +2102,7 @@ a {
 }
 
 .app-product-split p {
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   color: var(--app-muted);
   font-size: clamp(15px, 1.6vw, 18px);
   line-height: 1.62;
@@ -2127,10 +2127,10 @@ a {
 }
 
 .app-product-download {
-  margin: clamp(10px, 2vw, 22px) 0 clamp(26px, 3.8vw, 40px);
+  margin: clamp(6px, 1.4vw, 14px) 0 clamp(18px, 2.8vw, 28px);
   border: 1px solid var(--app-border);
   border-radius: 26px;
-  padding: clamp(18px, 2.6vw, 28px);
+  padding: clamp(14px, 2vw, 20px);
   background:
     radial-gradient(520px 300px at 76% 0%, rgba(var(--app-accent-rgb), 0.24), transparent 70%),
     rgba(255, 255, 255, 0.055);
@@ -2150,7 +2150,7 @@ a {
 
 .app-product-download p {
   max-width: 36rem;
-  margin: 12px auto 0;
+  margin: 8px auto 0;
 }
 
 .app-product-download .app-product-store-badges {
@@ -2359,7 +2359,7 @@ a {
   }
 
   .app-product-hero {
-    padding: 28px 0 32px;
+    padding: 22px 0 24px;
   }
 
   .app-product-hero h2 {
