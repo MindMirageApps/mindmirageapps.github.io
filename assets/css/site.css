@@ -33,14 +33,14 @@
   --font-size-lg: clamp(17px, 1.8vw, 20px);
   --font-size-xl: clamp(22px, 2.6vw, 30px);
   --font-size-hero: clamp(42px, 7vw, 76px);
-  --font-size-section: clamp(28px, 4vw, 46px);
+  --font-size-section: clamp(26px, 3.5vw, 40px);
   --font-size-app-title: clamp(24px, 2.6vw, 32px);
   --radius-md: 16px;
   --radius-lg: 22px;
   --radius-xl: 28px;
   --radius-2xl: 34px;
   --radius-pill: 999px;
-  --space-section: clamp(40px, 6vw, 72px);
+  --space-section: clamp(30px, 4.5vw, 50px);
   --space-footer: clamp(36px, 5vw, 64px);
   --space-block: clamp(16px, 2.4vw, 24px);
 }
@@ -102,7 +102,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: clamp(18px, 3vw, 30px) clamp(20px, 5vw, 72px);
+  padding: clamp(14px, 2.2vw, 22px) clamp(20px, 5vw, 72px);
 }
 
 .home-brand {
@@ -157,7 +157,7 @@ a {
   position: relative;
   display: flex;
   width: 100%;
-  min-height: min(72vh, 760px);
+  min-height: min(62vh, 660px);
   flex-direction: column;
   background:
     linear-gradient(90deg, rgba(5, 6, 13, 0.98), rgba(5, 6, 13, 0.82)),
@@ -171,9 +171,9 @@ a {
   flex: 1;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.8fr);
   align-items: center;
-  gap: clamp(28px, 5vw, 64px);
+  gap: clamp(22px, 4vw, 46px);
   margin: 0 auto;
-  padding: clamp(36px, 6vw, 72px) 0;
+  padding: clamp(26px, 4.5vw, 52px) 0;
 }
 
 .hero-copy {
@@ -210,7 +210,7 @@ a {
 
 .hero-text {
   max-width: 35rem;
-  margin: 24px 0 0;
+  margin: 18px 0 0;
   color: var(--color-text-muted);
   font-size: clamp(16px, 1.65vw, 20px);
   line-height: 1.62;
@@ -241,8 +241,8 @@ a {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 31px;
+  gap: 10px;
+  margin-top: 18px;
 }
 
 .site-button {
@@ -502,7 +502,7 @@ a {
 
 .worlds-section {
   position: relative;
-  padding: clamp(48px, 6vw, 80px) 0;
+  padding: clamp(34px, 4.4vw, 56px) 0;
   background:
     radial-gradient(780px 420px at 14% 8%, rgba(159, 140, 255, 0.12), transparent 68%),
     radial-gradient(720px 380px at 86% 6%, rgba(136, 201, 255, 0.1), transparent 72%),
@@ -531,7 +531,7 @@ a {
 
 .worlds-section__heading {
   max-width: 720px;
-  margin: 0 auto clamp(24px, 3.5vw, 36px);
+  margin: 0 auto clamp(18px, 2.6vw, 26px);
   text-align: center;
 }
 
@@ -544,7 +544,7 @@ a {
 
 .worlds-section__heading p {
   max-width: 620px;
-  margin: 18px auto 0;
+  margin: 12px auto 0;
   color: rgba(220, 226, 239, 0.78);
   font-size: clamp(16px, 1.7vw, 19px);
   line-height: 1.6;
@@ -567,7 +567,7 @@ a {
   overflow: hidden;
   border: 1px solid rgba(var(--world-accent-rgb), 0.28);
   border-radius: 24px;
-  padding: clamp(20px, 2.4vw, 26px);
+  padding: clamp(16px, 1.9vw, 21px);
   background:
     radial-gradient(360px 240px at 88% -8%, rgba(var(--world-accent-rgb), 0.28), transparent 72%),
     radial-gradient(320px 220px at -8% 102%, rgba(var(--world-accent-rgb), 0.14), transparent 74%),
@@ -644,9 +644,9 @@ a {
 
 .world-card__content {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
-  margin-top: 24px;
+  margin-top: 18px;
   padding-top: 0;
 }
 
@@ -706,7 +706,7 @@ a {
 
 .featured-release {
   position: relative;
-  padding: clamp(24px, 4vw, 40px) 0 clamp(44px, 6vw, 72px);
+  padding: clamp(18px, 3vw, 30px) 0 clamp(32px, 4.4vw, 50px);
   background:
     radial-gradient(760px 420px at 86% 16%, rgba(159, 140, 255, 0.12), transparent 70%),
     radial-gradient(620px 360px at 18% 84%, rgba(136, 201, 255, 0.08), transparent 72%),
@@ -724,7 +724,7 @@ a {
   overflow: hidden;
   border: 1px solid rgba(159, 140, 255, 0.24);
   border-radius: var(--radius-2xl);
-  padding: clamp(24px, 3.6vw, 42px);
+  padding: clamp(18px, 2.8vw, 30px);
   background:
     linear-gradient(116deg, rgba(255, 255, 255, 0.14), transparent 32%, transparent 72%, rgba(255, 255, 255, 0.05)),
     radial-gradient(520px 340px at 88% 8%, rgba(159, 140, 255, 0.28), transparent 72%),
@@ -789,8 +789,8 @@ a {
 .featured-release__stores {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: clamp(22px, 3vw, 30px);
+  gap: 10px;
+  margin-top: clamp(16px, 2.2vw, 22px);
 }
 
 .store-badge-link {
@@ -814,7 +814,7 @@ a {
 .featured-release__visual {
   position: relative;
   display: grid;
-  min-height: clamp(220px, 25vw, 310px);
+  min-height: clamp(190px, 21vw, 260px);
   place-items: center;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -938,7 +938,7 @@ a {
 
 .purpose-section {
   position: relative;
-  padding: clamp(48px, 6vw, 80px) 0;
+  padding: clamp(34px, 4.4vw, 56px) 0;
   background:
     radial-gradient(760px 420px at 12% 18%, rgba(136, 201, 255, 0.08), transparent 70%),
     radial-gradient(680px 380px at 88% 74%, rgba(159, 140, 255, 0.1), transparent 72%),
@@ -950,7 +950,7 @@ a {
   display: grid;
   width: min(var(--container-wide), calc(100% - clamp(40px, 10vw, 144px)));
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
-  gap: clamp(32px, 6vw, 78px);
+  gap: clamp(24px, 4.5vw, 54px);
   align-items: center;
   margin: 0 auto;
 }
@@ -971,7 +971,7 @@ a {
 
 .purpose-section__copy p {
   max-width: 650px;
-  margin: 22px 0 0;
+  margin: 16px 0 0;
   color: rgba(220, 226, 239, 0.78);
   font-size: clamp(16px, 1.75vw, 20px);
   line-height: 1.62;
@@ -981,19 +981,19 @@ a {
   display: grid;
   min-width: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .purpose-value {
   position: relative;
   display: flex;
-  min-height: 112px;
+  min-height: 92px;
   min-width: 0;
   align-items: end;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
-  padding: 18px;
+  padding: 14px;
   background:
     radial-gradient(180px 140px at 92% 0%, rgba(159, 140, 255, 0.18), transparent 72%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.032));
@@ -1034,7 +1034,7 @@ a {
   justify-content: space-between;
   gap: 28px;
   margin: 0 auto;
-  padding: clamp(30px, 5vw, 54px) 0;
+  padding: clamp(22px, 3.6vw, 38px) 0;
 }
 
 .home-footer__brand {
@@ -1152,7 +1152,7 @@ a {
 
 @media (max-width: 680px) {
   .home-header {
-    gap: 12px;
+    gap: 10px;
     padding: 16px 16px 0;
   }
 
@@ -1170,7 +1170,7 @@ a {
   }
 
   .home-hero {
-    min-height: min(72vh, 760px);
+    min-height: min(62vh, 660px);
     text-align: center;
   }
 
@@ -1241,7 +1241,7 @@ a {
   }
 
   .world-card__link {
-    margin-top: 24px;
+    margin-top: 18px;
   }
 
   .featured-release__inner {
@@ -1321,7 +1321,7 @@ a {
 .legal-page .container {
   width: min(860px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 46px 0 64px;
+  padding: 34px 0 46px;
 }
 
 .content-page .back,
@@ -1343,7 +1343,7 @@ a {
 .legal-page .card {
   border: 1px solid var(--color-border);
   border-radius: 30px;
-  padding: clamp(26px, 5vw, 46px);
+  padding: clamp(20px, 3.6vw, 32px);
   background: rgba(255, 255, 255, 0.035);
   box-shadow: 0 28px 88px rgba(0, 0, 0, 0.34);
 }
@@ -1358,8 +1358,8 @@ a {
 
 .legal-page h2,
 .content-page h2 {
-  margin: 34px 0 10px;
-  font-size: 24px;
+  margin: 24px 0 8px;
+  font-size: 22px;
   letter-spacing: -0.03em;
 }
 
@@ -1402,7 +1402,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: clamp(18px, 3vw, 30px) clamp(20px, 5vw, 72px);
+  padding: clamp(14px, 2.2vw, 22px) clamp(20px, 5vw, 72px);
 }
 
 .portfolio-header .portfolio-nav {
@@ -1436,7 +1436,7 @@ a {
 .portfolio-main {
   width: min(var(--container-wide), calc(100% - clamp(40px, 10vw, 144px)));
   margin: 0 auto;
-  padding-bottom: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(40px, 5vw, 68px);
 }
 
 .portfolio-hero,
@@ -1447,7 +1447,7 @@ a {
 
 .portfolio-hero {
   position: relative;
-  padding: clamp(48px, 7vw, 88px) 0 clamp(36px, 5vw, 56px);
+  padding: clamp(34px, 5vw, 62px) 0 clamp(24px, 3.6vw, 40px);
 }
 
 .portfolio-hero::after {
@@ -1496,7 +1496,7 @@ a {
 
 .portfolio-hero__text {
   max-width: 720px;
-  margin: 26px 0 0;
+  margin: 18px 0 0;
   color: rgba(238, 242, 255, 0.82);
   font-size: clamp(18px, 2.2vw, 24px);
   line-height: 1.48;
@@ -1511,7 +1511,7 @@ a {
 }
 
 .portfolio-section {
-  padding: clamp(24px, 4vw, 48px) 0 0;
+  padding: clamp(16px, 3vw, 32px) 0 0;
 }
 
 .portfolio-section__heading {
@@ -1519,7 +1519,7 @@ a {
   align-items: end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: clamp(20px, 3vw, 32px);
+  margin-bottom: clamp(16px, 2.2vw, 24px);
 }
 
 .portfolio-section__heading h2 {
@@ -1535,7 +1535,7 @@ a {
 .portfolio-app-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: clamp(16px, 2.3vw, 26px);
+  gap: clamp(14px, 1.9vw, 20px);
   align-items: stretch;
 }
 
@@ -1549,7 +1549,7 @@ a {
   overflow: hidden;
   border: 1px solid rgba(var(--portfolio-accent-rgb), 0.28);
   border-radius: 24px;
-  padding: clamp(20px, 2.4vw, 26px);
+  padding: clamp(16px, 1.9vw, 21px);
   background:
     radial-gradient(420px 280px at 90% -8%, rgba(var(--portfolio-accent-rgb), 0.28), transparent 72%),
     radial-gradient(340px 240px at -8% 108%, rgba(var(--portfolio-accent-rgb), 0.13), transparent 74%),
@@ -1671,7 +1671,7 @@ a {
 }
 
 .portfolio-app-card__description {
-  margin: 24px 0 0;
+  margin: 18px 0 0;
   color: rgba(238, 242, 255, 0.75);
   font-size: 15px;
   line-height: 1.6;
@@ -1681,7 +1681,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 .portfolio-store-links .store-badge-link img {
@@ -1838,7 +1838,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: clamp(18px, 3vw, 30px) clamp(20px, 5vw, 72px);
+  padding: clamp(14px, 2.2vw, 22px) clamp(20px, 5vw, 72px);
 }
 
 .app-product-nav {
@@ -1877,9 +1877,9 @@ a {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(280px, 0.74fr);
-  gap: clamp(22px, 4vw, 48px);
+  gap: clamp(18px, 3vw, 36px);
   align-items: center;
-  padding: clamp(32px, 5vw, 64px) 0 clamp(32px, 5vw, 56px);
+  padding: clamp(24px, 3.8vw, 44px) 0 clamp(24px, 3.8vw, 40px);
 }
 
 .app-product-hero__copy {
@@ -1890,7 +1890,7 @@ a {
 .app-product-mark {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   width: fit-content;
   margin: 0 0 16px;
   border: 1px solid var(--app-border);
@@ -1928,7 +1928,7 @@ a {
   max-width: 680px;
   margin: 0;
   color: #fff;
-  font-size: clamp(28px, 4.2vw, 46px);
+  font-size: clamp(26px, 3.6vw, 40px);
   font-weight: 900;
   line-height: 0.98;
   letter-spacing: -0.03em;
@@ -1945,14 +1945,14 @@ a {
 .app-product-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-top: 22px;
 }
 
 .app-product-store-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-top: 18px;
 }
 
@@ -1963,7 +1963,7 @@ a {
 .app-product-visual {
   position: relative;
   display: grid;
-  min-height: clamp(220px, 26vw, 320px);
+  min-height: clamp(190px, 22vw, 270px);
   place-items: center;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1990,12 +1990,12 @@ a {
 }
 
 .app-product-section {
-  padding: clamp(32px, 5vw, 56px) 0;
+  padding: clamp(24px, 3.8vw, 40px) 0;
 }
 
 .app-product-section__heading {
   max-width: 780px;
-  margin-bottom: clamp(18px, 2.5vw, 26px);
+  margin-bottom: clamp(14px, 2vw, 20px);
 }
 
 .app-product-section__heading h2 {
@@ -2022,7 +2022,7 @@ a {
   align-items: center;
   border: 1px solid var(--app-border);
   border-radius: 24px;
-  padding: clamp(22px, 3vw, 32px);
+  padding: clamp(17px, 2.3vw, 24px);
   background:
     radial-gradient(520px 320px at 100% 0%, rgba(var(--app-accent-rgb), 0.1), transparent 72%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.032));
@@ -2032,7 +2032,7 @@ a {
 .app-product-intro h2 {
   margin: 0;
   color: #fff;
-  font-size: clamp(26px, 3.8vw, 38px);
+  font-size: clamp(24px, 3.2vw, 34px);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -2054,7 +2054,7 @@ a {
   overflow: hidden;
   border: 1px solid var(--app-border);
   border-radius: 18px;
-  padding: 18px;
+  padding: 14px;
   background:
     radial-gradient(220px 160px at 92% 0%, rgba(var(--app-accent-rgb), 0.16), transparent 72%),
     rgba(255, 255, 255, 0.05);
@@ -2127,10 +2127,10 @@ a {
 }
 
 .app-product-download {
-  margin: clamp(16px, 3vw, 32px) 0 clamp(36px, 5vw, 56px);
+  margin: clamp(10px, 2vw, 22px) 0 clamp(26px, 3.8vw, 40px);
   border: 1px solid var(--app-border);
   border-radius: 26px;
-  padding: clamp(24px, 3.5vw, 40px);
+  padding: clamp(18px, 2.6vw, 28px);
   background:
     radial-gradient(520px 300px at 76% 0%, rgba(var(--app-accent-rgb), 0.24), transparent 70%),
     rgba(255, 255, 255, 0.055);
