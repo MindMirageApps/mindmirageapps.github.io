@@ -1857,10 +1857,6 @@ button:focus-visible {
   --portfolio-accent-rgb: 136, 201, 255;
 }
 
-.portfolio-app-card--beat {
-  --portfolio-accent: #c78cff;
-  --portfolio-accent-rgb: 199, 140, 255;
-}
 
 .portfolio-app-card__shine {
   position: absolute;
@@ -2180,14 +2176,6 @@ button:focus-visible {
   --app-muted: #c9a8b8;
 }
 
-.app-product-page--relics,
-.app-product-page--beat {
-  --app-accent: #c78cff;
-  --app-accent-rgb: 199, 140, 255;
-  --app-accent-soft: rgba(199, 140, 255, 0.13);
-  --app-border: rgba(199, 140, 255, 0.24);
-  --app-muted: #c9bbd8;
-}
 
 .app-product-page::before {
   content: "";
