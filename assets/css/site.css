@@ -3419,3 +3419,122 @@ button:focus-visible {
     border-radius: 20px;
   }
 }
+
+/* Final premium audit cohesion pass */
+.content-page,
+.legal-page {
+  font-family: var(--font) !important;
+  background:
+    radial-gradient(860px 520px at 16% 0%, rgba(159, 140, 255, 0.18), transparent 66%),
+    radial-gradient(720px 420px at 88% 10%, rgba(136, 201, 255, 0.1), transparent 70%),
+    linear-gradient(180deg, #05060d 0%, #03040a 100%) !important;
+  color: var(--color-text) !important;
+}
+
+.content-page .container,
+.legal-page .container {
+  width: min(900px, calc(100% - clamp(32px, 8vw, 96px))) !important;
+  padding: clamp(28px, 4vw, 52px) 0 clamp(36px, 5vw, 64px) !important;
+}
+
+.content-page .card,
+.legal-page .card {
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-xl) !important;
+  padding: clamp(24px, 4vw, 42px) !important;
+  background:
+    radial-gradient(520px 320px at 96% 0%, rgba(159, 140, 255, 0.12), transparent 72%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.032)) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.content-page .back,
+.legal-page .back {
+  color: var(--color-text-muted) !important;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.content-page .back:hover,
+.legal-page .back:hover {
+  border-color: var(--color-border-strong);
+  background: rgba(255, 255, 255, 0.075);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.content-page h1,
+.legal-page h1 {
+  color: #fff !important;
+  font-size: clamp(34px, 5.4vw, 56px) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.05em !important;
+}
+
+.content-page h2,
+.legal-page h2 {
+  color: #fff !important;
+  font-size: clamp(20px, 2.2vw, 24px) !important;
+}
+
+.content-page p,
+.legal-page p,
+.legal-page li {
+  color: var(--color-text-body) !important;
+  font-size: 16px !important;
+  line-height: 1.68 !important;
+}
+
+.content-page .footer,
+.legal-page .footer,
+.site-footer {
+  margin-top: 0 !important;
+  padding: 0 20px clamp(28px, 4vw, 42px) !important;
+  color: var(--color-text-subtle) !important;
+}
+
+.content-page .footer a,
+.legal-page .footer a,
+.site-footer a {
+  color: var(--color-text-muted) !important;
+  text-decoration: none;
+}
+
+.content-page .footer a:hover,
+.legal-page .footer a:hover,
+.site-footer a:hover {
+  color: #fff !important;
+}
+
+.portfolio-detail-link,
+.world-card__link {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
+.app-screenshot-showcase,
+.app-product-intro,
+.app-product-download,
+.app-feature-card,
+.world-card,
+.portfolio-app-card {
+  backdrop-filter: blur(18px);
+}
+
+.app-product-section__heading p,
+.app-product-split p,
+.app-product-intro p,
+.app-product-download p {
+  max-width: 68ch;
+}
+
+@media (max-width: 640px) {
+  .content-page .container,
+  .legal-page .container {
+    width: calc(100% - 28px) !important;
+    padding-top: 24px !important;
+  }
+
+  .content-page .card,
+  .legal-page .card {
+    padding: 22px !important;
+  }
+}
