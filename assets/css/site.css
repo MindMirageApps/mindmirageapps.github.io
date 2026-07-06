@@ -460,10 +460,14 @@ button:focus-visible {
   border-radius: 22%;
 }
 
-.hero-device:nth-child(1) {
+.hero-device--secondary-left,
+.hero-device--secondary-right {
   z-index: 1;
   width: var(--hero-phone-secondary);
   opacity: 0.9;
+}
+
+.hero-device--secondary-left {
   transform: translate(14px, 18px) rotate(-6deg);
 }
 
@@ -477,10 +481,7 @@ button:focus-visible {
   box-shadow: 0 24px 56px rgba(0, 0, 0, 0.42);
 }
 
-.hero-device:nth-child(3) {
-  z-index: 1;
-  width: var(--hero-phone-secondary);
-  opacity: 0.9;
+.hero-device--secondary-right {
   transform: translate(-14px, 18px) rotate(6deg);
 }
 
@@ -1270,11 +1271,11 @@ button:focus-visible {
     margin-inline: auto;
   }
 
-  .hero-device:nth-child(1) {
+  .hero-device--secondary-left {
     transform: translate(8px, 12px) rotate(-5deg);
   }
 
-  .hero-device:nth-child(3) {
+  .hero-device--secondary-right {
     transform: translate(-8px, 12px) rotate(5deg);
   }
 
