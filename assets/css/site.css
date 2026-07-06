@@ -373,20 +373,31 @@ button:focus-visible {
 }
 
 .hero-showcase {
-  --hero-phone-primary: clamp(150px, 18vw, 198px);
-  --hero-phone-secondary: clamp(96px, 12vw, 128px);
+  --hero-phone-primary: clamp(168px, 20vw, 214px);
+  --hero-phone-secondary: clamp(88px, 10.5vw, 116px);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(300px, 36vw, 440px);
+  min-height: clamp(320px, 38vw, 460px);
+}
+
+.hero-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 12% 0 0;
+  background: radial-gradient(ellipse 72% 58% at 50% 70%, rgba(255, 255, 255, 0.03), transparent 74%);
+  pointer-events: none;
 }
 
 .hero-showcase__devices {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   width: 100%;
-  padding: 12px 0;
+  padding: 18px 0 10px;
 }
 
 .hero-device {
@@ -411,11 +422,11 @@ button:focus-visible {
   position: relative;
   overflow: hidden;
   aspect-ratio: 9 / 19.5;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
   padding: 8px;
   background: #0c0d14;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
 }
 
 .hero-device__frame::before {
@@ -464,25 +475,42 @@ button:focus-visible {
 .hero-device--secondary-right {
   z-index: 1;
   width: var(--hero-phone-secondary);
-  opacity: 0.9;
+  opacity: 0.82;
+  filter: saturate(0.94);
 }
 
 .hero-device--secondary-left {
-  transform: translate(14px, 18px) rotate(-6deg);
+  transform: translate(20px, 24px) rotate(-7deg);
+}
+
+.hero-device--secondary-left .hero-device__frame,
+.hero-device--secondary-right .hero-device__frame {
+  border-color: rgba(255, 255, 255, 0.07);
+  background: #0a0b11;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
+}
+
+.hero-device--secondary-left .hero-device__screen,
+.hero-device--secondary-right .hero-device__screen {
+  background: #090a0f;
 }
 
 .hero-device--primary {
-  z-index: 2;
+  z-index: 3;
   width: var(--hero-phone-primary);
-  transform: translateY(-4px);
+  transform: translateY(-10px);
 }
 
 .hero-device--primary .hero-device__frame {
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.42);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: #0d0e16;
+  box-shadow:
+    0 28px 64px rgba(0, 0, 0, 0.46),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .hero-device--secondary-right {
-  transform: translate(-14px, 18px) rotate(6deg);
+  transform: translate(-20px, 24px) rotate(7deg);
 }
 
 
@@ -1264,19 +1292,29 @@ button:focus-visible {
 
   .hero-showcase {
     order: -1;
-    --hero-phone-primary: clamp(120px, 32vw, 160px);
-    --hero-phone-secondary: clamp(84px, 22vw, 108px);
+    --hero-phone-primary: clamp(132px, 36vw, 176px);
+    --hero-phone-secondary: clamp(76px, 20vw, 96px);
     width: min(100%, 360px);
-    min-height: clamp(200px, 58vw, 280px);
+    min-height: clamp(210px, 60vw, 290px);
     margin-inline: auto;
   }
 
+  .hero-device--primary {
+    z-index: 3;
+    transform: translateY(-8px);
+  }
+
+  .hero-device--secondary-left,
+  .hero-device--secondary-right {
+    opacity: 0.8;
+  }
+
   .hero-device--secondary-left {
-    transform: translate(8px, 12px) rotate(-5deg);
+    transform: translate(10px, 14px) rotate(-5deg);
   }
 
   .hero-device--secondary-right {
-    transform: translate(-8px, 12px) rotate(5deg);
+    transform: translate(-10px, 14px) rotate(5deg);
   }
 
   .worlds-section__inner {
