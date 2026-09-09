@@ -4496,7 +4496,7 @@ button:focus-visible {
 
 .home-page--publisher .home-footer {
   border-top: 1px solid var(--pub-border);
-  background: var(--pub-bg-subtle);
+  background: #070708;
 }
 
 .home-page--publisher .home-footer__identity,
