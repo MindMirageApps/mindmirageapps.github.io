@@ -4531,3 +4531,339 @@ button:focus-visible {
 .app-product-page .home-footer__nav a:hover {
   color: #a78bfa;
 }
+
+/* ===== Home v2 — editorial product studio ===== */
+
+.home-v2 {
+  --hv2-bg: #0a0a0a;
+  --hv2-surface: #111111;
+  --hv2-text: #f5f5f5;
+  --hv2-muted: #8a8a8a;
+  --hv2-line: rgba(255, 255, 255, 0.09);
+  --hv2-font: "Outfit", system-ui, sans-serif;
+  margin: 0;
+  background: var(--hv2-bg);
+  color: var(--hv2-text);
+  font-family: var(--hv2-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.home-v2::before {
+  display: none;
+}
+
+.hv2-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px clamp(20px, 4vw, 48px);
+  border-bottom: 1px solid var(--hv2-line);
+}
+
+.hv2-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--hv2-text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hv2-brand img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.hv2-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+
+.hv2-nav a {
+  color: var(--hv2-muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.hv2-nav a:hover,
+.hv2-nav a[aria-current="page"] {
+  color: var(--hv2-text);
+}
+
+.hv2-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 1.08fr);
+  min-height: min(86vh, 820px);
+  border-bottom: 1px solid var(--hv2-line);
+}
+
+.hv2-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 7vw, 88px) clamp(20px, 4vw, 48px);
+  animation: hv2-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hv2-hero__copy h1 {
+  margin: 0;
+  max-width: 9ch;
+  font-size: clamp(48px, 7.2vw, 84px);
+  font-weight: 650;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.hv2-hero__copy p {
+  margin: 22px 0 0;
+  max-width: 28rem;
+  color: var(--hv2-muted);
+  font-size: clamp(17px, 1.7vw, 19px);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.hv2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 32px;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  color: #0a0a0a;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.hv2-btn:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.hv2-hero__visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  background: #050505;
+  animation: hv2-in 900ms cubic-bezier(0.22, 1, 0.36, 1) 80ms both;
+}
+
+.hv2-hero__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(10, 10, 10, 0.55), transparent 28%);
+  pointer-events: none;
+}
+
+.hv2-hero__visual img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.hv2-apps {
+  width: min(920px, calc(100% - clamp(40px, 8vw, 96px)));
+  margin: 0 auto;
+  padding: clamp(56px, 8vw, 96px) 0;
+}
+
+.hv2-apps__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.hv2-apps__head h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hv2-muted);
+}
+
+.hv2-apps__head a {
+  color: var(--hv2-muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.hv2-apps__head a:hover {
+  color: var(--hv2-text);
+}
+
+.hv2-apps__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--hv2-line);
+}
+
+.hv2-apps__list li {
+  border-bottom: 1px solid var(--hv2-line);
+}
+
+.hv2-apps__list a {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 4px;
+  color: inherit;
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.hv2-apps__list a:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.hv2-apps__list img {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.hv2-apps__list strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hv2-apps__list span {
+  display: block;
+  margin-top: 4px;
+  color: var(--hv2-muted);
+  font-size: 14px;
+}
+
+.hv2-apps__list em {
+  color: var(--hv2-muted);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.hv2-apps__list a:hover em {
+  color: var(--hv2-text);
+}
+
+.hv2-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding: 28px clamp(20px, 4vw, 48px) 40px;
+  border-top: 1px solid var(--hv2-line);
+}
+
+.hv2-footer p {
+  margin: 0;
+  color: var(--hv2-muted);
+  font-size: 13px;
+}
+
+.hv2-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+
+.hv2-footer a {
+  color: var(--hv2-muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.hv2-footer a:hover {
+  color: var(--hv2-text);
+}
+
+@keyframes hv2-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hv2-hero__copy,
+  .hv2-hero__visual {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .hv2-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hv2-hero__visual {
+    order: -1;
+    min-height: 0;
+    height: min(52vh, 420px);
+  }
+
+  .hv2-hero__visual::after {
+    background: linear-gradient(180deg, transparent 55%, rgba(10, 10, 10, 0.92));
+  }
+
+  .hv2-hero__copy {
+    padding-top: 28px;
+  }
+
+  .hv2-hero__copy h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .hv2-brand span {
+    display: none;
+  }
+
+  .hv2-apps__list a {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .hv2-apps__list img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .hv2-apps__list em {
+    display: none;
+  }
+}

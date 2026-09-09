@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mind Mirage Apps — Independent app studio</title>
+  <title>Mind Mirage Apps</title>
   <meta
     name="description"
-    content="Mind Mirage Apps designs, builds, and publishes its own mobile and web products. Original apps only — no client work."
+    content="Mind Mirage Apps designs, builds, and publishes its own mobile and web products."
   />
-  <meta property="og:title" content="Mind Mirage Apps — Independent app studio" />
-  <meta property="og:description" content="We design, build, and publish our own apps. Original products only." />
+  <meta property="og:title" content="Mind Mirage Apps" />
+  <meta property="og:description" content="We design, build, and publish our own apps." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mindmirageapps.com/" />
   <meta property="og:image" content="https://mindmirageapps.com/assets/images/mindmirageapps-logo.png" />
@@ -17,16 +17,17 @@
   <link rel="canonical" href="https://mindmirageapps.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260909-home-rhythm" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260909-studio-v2b" />
 </head>
 
-<body class="home-page home-page--publisher page-shell">
-  <header class="home-header" aria-label="Site header">
-    <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
-      <img class="site-logo" src="/assets/images/mindmirageapps-logo.png" alt="" width="54" height="54" />
+<body class="home-v2 page-shell">
+  <header class="hv2-header" aria-label="Site header">
+    <a class="hv2-brand" href="/" aria-label="Mind Mirage Apps home">
+      <img src="/assets/images/mindmirageapps-logo.png" alt="" width="40" height="40" />
+      <span>Mind Mirage Apps</span>
     </a>
-    <nav class="home-nav" aria-label="Main navigation">
+    <nav class="hv2-nav" aria-label="Main navigation">
       <a href="/" aria-current="page">Home</a>
       <a href="/apps/">Apps</a>
       <a href="/about/">About</a>
@@ -34,179 +35,77 @@
     </nav>
   </header>
 
-  <main id="top">
-    <section class="home-hero home-hero--premium" aria-labelledby="hero-title">
-      <div class="home-hero__inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Independent studio</p>
-          <h1 id="hero-title">Mind Mirage Apps</h1>
-          <p class="hero-text">
-            We design, build, and publish our own apps — original products for iOS, Android, and the web.
-          </p>
-          <div class="hero-actions">
-            <a href="/apps/" class="site-button site-button--primary">View our apps</a>
-            <a href="/about/" class="site-button site-button--secondary">About the studio</a>
-          </div>
-        </div>
+  <main>
+    <section class="hv2-hero" aria-labelledby="hero-title">
+      <div class="hv2-hero__copy">
+        <h1 id="hero-title">Mind Mirage Apps</h1>
+        <p>
+          An independent studio. We design, build, and publish our own apps —
+          not software for other companies.
+        </p>
+        <a class="hv2-btn" href="/apps/">View apps</a>
+      </div>
+      <div class="hv2-hero__visual" aria-hidden="true">
+        <img
+          src="/assets/images/illusio-home-hero.jpg"
+          alt=""
+          width="1025"
+          height="2200"
+          loading="eager"
+        />
+      </div>
+    </section>
 
-        <div class="hero-showcase hero-showcase--single" aria-hidden="true">
-          <figure class="hero-device hero-device--primary hero-device--solo">
-            <div class="hero-device__frame">
-              <div class="hero-device__screen hero-device__screen--image">
-                <img
-                  src="/assets/images/illusio-home-hero.jpg"
-                  alt=""
-                  width="390"
-                  height="844"
-                  loading="eager"
-                />
-              </div>
+    <section class="hv2-apps" aria-labelledby="apps-title">
+      <div class="hv2-apps__head">
+        <h2 id="apps-title">Products</h2>
+        <a href="/apps/">All apps</a>
+      </div>
+
+      <ul class="hv2-apps__list">
+        <li>
+          <a href="/apps/illusio/">
+            <img src="/assets/images/app-icons/illusio-icon.jpg" alt="" width="56" height="56" loading="lazy" />
+            <div>
+              <strong>Illusio</strong>
+              <span>Magic learning · iOS &amp; Android</span>
             </div>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-collection" id="app-collection" aria-labelledby="collection-title">
-      <div class="home-collection__inner">
-        <header class="home-section-header">
-          <p class="section-kicker">Featured products</p>
-          <h2 id="collection-title">Apps we ship</h2>
-          <p class="home-section-header__body">
-            A selection from our in-house portfolio. The full catalog includes every product we publish.
-          </p>
-        </header>
-
-        <div class="home-collection__grid">
-          <article class="home-app-card home-app-card--illusio">
-            <a class="home-app-card__link" href="/apps/illusio/" aria-labelledby="card-illusio-title">
-              <div class="home-app-card__visual" aria-hidden="true">
-                <div class="home-app-card__screenshot">
-                  <img
-                    src="/assets/images/illusio-home-hero.jpg"
-                    alt=""
-                    width="390"
-                    height="844"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div class="home-app-card__body">
-                <div class="home-app-card__meta">
-                  <img
-                    class="home-app-card__icon"
-                    src="/assets/images/app-icons/illusio-icon.jpg"
-                    alt=""
-                    width="48"
-                    height="48"
-                    loading="lazy"
-                  />
-                  <div>
-                    <p class="home-app-card__category">Learning</p>
-                    <h3 id="card-illusio-title">Illusio</h3>
-                  </div>
-                </div>
-                <p class="home-app-card__description">Structured magic lessons with guided practice.</p>
-                <span class="home-app-card__cta">View app</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="home-app-card home-app-card--couple">
-            <a class="home-app-card__link" href="/apps/couple-questions-games/" aria-labelledby="card-couple-title">
-              <div class="home-app-card__visual home-app-card__visual--icon" aria-hidden="true">
-                <img
-                  class="home-app-card__icon-large"
-                  src="/assets/images/app-icons/couple-questions-games-icon.png"
-                  alt=""
-                  width="80"
-                  height="80"
-                  loading="lazy"
-                />
-              </div>
-              <div class="home-app-card__body">
-                <div class="home-app-card__meta">
-                  <img
-                    class="home-app-card__icon"
-                    src="/assets/images/app-icons/couple-questions-games-icon.png"
-                    alt=""
-                    width="48"
-                    height="48"
-                    loading="lazy"
-                  />
-                  <div>
-                    <p class="home-app-card__category">Connection</p>
-                    <h3 id="card-couple-title">Couple Questions &amp; Games</h3>
-                  </div>
-                </div>
-                <p class="home-app-card__description">Playful prompts and games for two.</p>
-                <span class="home-app-card__cta">View app</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="home-app-card home-app-card--arithon">
-            <a class="home-app-card__link" href="/apps/arithon/" aria-labelledby="card-arithon-title">
-              <div class="home-app-card__visual home-app-card__visual--mock" aria-hidden="true">
-                <div class="home-app-card__mock-ui">
-                  <span class="home-app-card__mock-display">128</span>
-                  <span class="home-app-card__mock-keys" aria-hidden="true"></span>
-                </div>
-              </div>
-              <div class="home-app-card__body">
-                <div class="home-app-card__meta">
-                  <img
-                    class="home-app-card__icon"
-                    src="/assets/images/app-icons/arithon-icon.jpg"
-                    alt=""
-                    width="48"
-                    height="48"
-                    loading="lazy"
-                  />
-                  <div>
-                    <p class="home-app-card__category">Utility</p>
-                    <h3 id="card-arithon-title">Arithon Calculator</h3>
-                  </div>
-                </div>
-                <p class="home-app-card__description">A focused calculator for everyday use.</p>
-                <span class="home-app-card__cta">View app</span>
-              </div>
-            </a>
-          </article>
-        </div>
-
-        <p class="home-collection__cta">
-          <a href="/apps/" class="site-button site-button--secondary">Browse full app catalog</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="home-final-cta" aria-labelledby="final-cta-title">
-      <div class="home-final-cta__inner">
-        <p class="section-kicker">The studio</p>
-        <h2 id="final-cta-title">Our products. Built in-house.</h2>
-        <p class="home-final-cta__body">
-          Not an agency — every app here is designed, developed, and published by Mind Mirage Apps.
-        </p>
-        <a href="/apps/" class="site-button site-button--primary site-button--large">All apps</a>
-      </div>
+            <em>Open</em>
+          </a>
+        </li>
+        <li>
+          <a href="/apps/couple-questions-games/">
+            <img src="/assets/images/app-icons/couple-questions-games-icon.png" alt="" width="56" height="56" loading="lazy" />
+            <div>
+              <strong>Couple Questions &amp; Games</strong>
+              <span>Connection · iOS &amp; Android</span>
+            </div>
+            <em>Open</em>
+          </a>
+        </li>
+        <li>
+          <a href="/apps/arithon/">
+            <img src="/assets/images/app-icons/arithon-icon.jpg" alt="" width="56" height="56" loading="lazy" />
+            <div>
+              <strong>Arithon Calculator</strong>
+              <span>Utility · iOS</span>
+            </div>
+            <em>Open</em>
+          </a>
+        </li>
+      </ul>
     </section>
   </main>
 
-  <footer class="home-footer" aria-label="Site footer">
-    <div class="home-footer__inner">
-      <a class="home-footer__brand" href="/" aria-label="Mind Mirage Apps home">
-        <img class="site-logo" src="/assets/images/mindmirageapps-logo.png" alt="" width="54" height="54" />
-      </a>
-      <p class="home-footer__identity">Independent studio · Original products only</p>
-      <nav class="home-footer__nav" aria-label="Footer navigation">
-        <a href="/apps/">Apps</a>
-        <a href="/about/">About</a>
-        <a href="mailto:support@mindmirageapps.com">Contact</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-      </nav>
-    </div>
+  <footer class="hv2-footer" aria-label="Site footer">
+    <p>Independent studio · Original products only</p>
+    <nav aria-label="Footer navigation">
+      <a href="/apps/">Apps</a>
+      <a href="/about/">About</a>
+      <a href="mailto:support@mindmirageapps.com">Contact</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </nav>
   </footer>
 </body>
 </html>
