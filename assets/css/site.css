@@ -2289,6 +2289,35 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.app-product-page--walkround .wr-brand-title {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.app-product-page--walkround .wr-logo-visual {
+  display: grid;
+  place-items: center;
+  padding: clamp(12px, 2vw, 20px);
+}
+
+.app-product-page--walkround .wr-hero-logo {
+  width: min(100%, 420px);
+  height: auto;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 24px 56px rgba(15, 61, 92, 0.22);
+}
+
+.hv2-apps__list img.hv2-app-logo--contain {
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+}
+
 .app-product-page--walkround .wr-signup-section {
   scroll-margin-top: 88px;
 }
