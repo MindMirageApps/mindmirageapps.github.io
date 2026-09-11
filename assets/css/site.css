@@ -2021,17 +2021,257 @@ button:focus-visible {
   --app-muted: #c9a8b8;
 }
 
+/* WalkRound — matches Flutter AppColors (sky blue shell + white cards) */
 .app-product-page--walkround {
-  --app-accent: #4ade80;
-  --app-accent-rgb: 74, 222, 128;
-  --app-accent-soft: rgba(74, 222, 128, 0.12);
-  --app-border: rgba(74, 222, 128, 0.22);
-  --app-muted: #9eb8a8;
+  --wr-brand: #52b1e1;
+  --wr-brand-rgb: 82, 177, 225;
+  --wr-primary: #1e88c7;
+  --wr-primary-rgb: 30, 136, 199;
+  --wr-bg-soft: #eaf6fc;
+  --wr-card: #ffffff;
+  --wr-border: #d6eaf2;
+  --wr-text: #1f2937;
+  --wr-muted: #6b7280;
+  --wr-success: #16a34a;
+  --app-accent: var(--wr-primary);
+  --app-accent-rgb: var(--wr-primary-rgb);
+  --app-accent-soft: rgba(30, 136, 199, 0.1);
+  --app-border: rgba(30, 136, 199, 0.28);
+  --app-muted: var(--wr-muted);
+  background:
+    radial-gradient(720px 420px at 88% -10%, rgba(255, 255, 255, 0.28), transparent 62%),
+    radial-gradient(640px 380px at 8% 12%, rgba(30, 136, 199, 0.18), transparent 68%),
+    linear-gradient(180deg, #52b1e1 0%, #3fa0d4 48%, #2f91c8 100%);
+  color: var(--wr-text);
+}
+
+.app-product-page--walkround::before {
+  display: none;
+}
+
+.app-product-page--walkround .home-header,
+.app-product-page--walkround .home-nav a {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.app-product-page--walkround .home-nav a:hover,
+.app-product-page--walkround .home-nav a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  box-shadow: none;
+}
+
+.app-product-page--walkround .home-nav a[aria-current="page"]::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+}
+
+.app-product-page--walkround .app-product-mark,
+.app-product-page--walkround .app-product-hero h2,
+.app-product-page--walkround .app-product-description,
+.app-product-page--walkround .app-product-section h2,
+.app-product-page--walkround .app-product-section h3,
+.app-product-page--walkround .app-product-intro p,
+.app-product-page--walkround .app-product-section__heading p,
+.app-product-page--walkround .app-product-split p,
+.app-product-page--walkround .app-product-list li,
+.app-product-page--walkround .app-feature-card p,
+.app-product-page--walkround .app-product-download h2,
+.app-product-page--walkround .app-product-download p {
+  color: inherit;
+}
+
+.app-product-page--walkround .app-product-mark,
+.app-product-page--walkround .app-product-hero h2,
+.app-product-page--walkround .app-product-section h2,
+.app-product-page--walkround .app-product-download h2 {
+  color: #fff;
+}
+
+.app-product-page--walkround .app-product-description,
+.app-product-page--walkround .app-product-section__heading p,
+.app-product-page--walkround .app-product-download p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.app-product-page--walkround .app-product-mark__glyph {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(15, 61, 92, 0.18);
+}
+
+.app-product-page--walkround .platform-status-badge {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.app-product-page--walkround .platform-status-badge--available {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--wr-primary);
+}
+
+.app-product-page--walkround .site-button--primary {
+  border-color: transparent;
+  background: #fff;
+  color: var(--wr-primary);
+  box-shadow: 0 14px 32px rgba(15, 61, 92, 0.18);
+}
+
+.app-product-page--walkround .site-button--primary:hover {
+  background: #f7fbfe;
+  color: #176fa3;
+  box-shadow: 0 18px 40px rgba(15, 61, 92, 0.22);
+}
+
+.app-product-page--walkround .site-button--secondary {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.app-product-page--walkround .site-button--secondary:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.app-product-page--walkround .app-product-section,
+.app-product-page--walkround .app-product-download {
+  color: var(--wr-text);
+}
+
+.app-product-page--walkround .app-product-intro,
+.app-product-page--walkround .app-feature-card,
+.app-product-page--walkround .app-product-split,
+.app-product-page--walkround .app-product-download {
+  border: 1px solid var(--wr-border);
+  border-radius: 22px;
+  background: var(--wr-card);
+  box-shadow: 0 16px 40px rgba(15, 61, 92, 0.1);
+}
+
+.app-product-page--walkround .app-product-intro,
+.app-product-page--walkround .app-product-split,
+.app-product-page--walkround .app-product-download {
+  padding: clamp(22px, 3vw, 32px);
+}
+
+.app-product-page--walkround .app-product-intro h2,
+.app-product-page--walkround .app-product-section__heading h2,
+.app-product-page--walkround .app-product-split h2,
+.app-product-page--walkround .app-feature-card h3,
+.app-product-page--walkround .app-product-download h2 {
+  color: var(--wr-text);
+}
+
+.app-product-page--walkround .app-product-intro p,
+.app-product-page--walkround .app-product-section__heading p,
+.app-product-page--walkround .app-product-split p,
+.app-product-page--walkround .app-feature-card p,
+.app-product-page--walkround .app-product-download p,
+.app-product-page--walkround .app-product-list li {
+  color: var(--wr-muted);
+}
+
+.app-product-page--walkround .app-product-section__heading {
+  margin-bottom: 18px;
+}
+
+.app-product-page--walkround .app-product-section__heading h2,
+.app-product-page--walkround .app-product-section__heading p {
+  color: #fff;
+}
+
+.app-product-page--walkround .app-product-section__heading p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.app-product-page--walkround .app-feature-card {
+  padding: 20px;
+}
+
+.app-product-page--walkround .app-product-list li::marker {
+  color: var(--wr-primary);
+}
+
+.app-product-page--walkround .app-product-download .site-button--primary {
+  background: var(--wr-primary);
+  color: #fff;
+}
+
+.app-product-page--walkround .app-product-download .site-button--primary:hover {
+  background: #176fa3;
+  color: #fff;
+}
+
+.app-product-page--walkround .app-product-download .site-button--secondary {
+  border-color: var(--wr-border);
+  background: var(--wr-bg-soft);
+  color: var(--wr-primary);
+}
+
+.app-product-page--walkround .app-fleet-preview {
+  border: 1px solid var(--wr-border);
+  background: var(--wr-card);
+  box-shadow: 0 24px 56px rgba(15, 61, 92, 0.22);
+}
+
+.app-product-page--walkround .app-fleet-preview__header span {
+  color: var(--wr-muted);
+}
+
+.app-product-page--walkround .app-fleet-preview__header strong {
+  color: var(--wr-success);
+}
+
+.app-product-page--walkround .app-fleet-preview__shift {
+  border-color: rgba(var(--wr-primary-rgb), 0.2);
+  background: var(--wr-bg-soft);
+}
+
+.app-product-page--walkround .app-fleet-preview__shift p {
+  color: var(--wr-muted);
+}
+
+.app-product-page--walkround .app-fleet-preview__shift strong {
+  color: var(--wr-text);
+}
+
+.app-product-page--walkround .app-fleet-preview__check {
+  border-color: var(--wr-border);
+  background: #f8fcfe;
+  color: var(--wr-text);
+}
+
+.app-product-page--walkround .app-fleet-preview__check em {
+  background: rgba(var(--wr-primary-rgb), 0.12);
+  color: var(--wr-primary);
+}
+
+.app-product-page--walkround .app-fleet-preview__check.is-done em {
+  background: var(--wr-success);
+  color: #fff;
+}
+
+.app-product-page--walkround .home-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(15, 61, 92, 0.18);
+}
+
+.app-product-page--walkround .home-footer__identity,
+.app-product-page--walkround .home-footer__nav a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.app-product-page--walkround .home-footer__nav a:hover {
+  color: #fff;
 }
 
 .portfolio-app-card--walkround {
-  --portfolio-accent: #4ade80;
-  --portfolio-accent-rgb: 74, 222, 128;
+  --portfolio-accent: #1e88c7;
+  --portfolio-accent-rgb: 30, 136, 199;
 }
 
 
@@ -4374,8 +4614,8 @@ button:focus-visible {
   width: 40px;
   height: 40px;
   border-radius: 20%;
-  background: rgba(74, 222, 128, 0.14);
-  color: #4ade80;
+  background: rgba(30, 136, 199, 0.14);
+  color: #1e88c7;
   font-size: 13px;
   font-weight: 800;
   flex-shrink: 0;
@@ -4424,7 +4664,7 @@ button:focus-visible {
 .home-app-card__fleet-mock strong {
   display: block;
   margin-top: 6px;
-  color: #4ade80;
+  color: #1e88c7;
   font-size: 13px;
   font-weight: 700;
 }
@@ -4899,8 +5139,8 @@ button:focus-visible {
 }
 
 .hv2-app-icon--initials {
-  background: #151515;
-  color: #f5f5f5;
+  background: #52b1e1;
+  color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
