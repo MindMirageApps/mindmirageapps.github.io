@@ -9,114 +9,36 @@
     content="Privacy Policy for WalkRound, the fleet walkaround and attendance app from Mind Mirage Apps."
   />
   <link rel="canonical" href="https://mindmirageapps.com/apps/walkround/privacy/" />
-
-  <link rel="stylesheet" href="/assets/css/site.css" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-      line-height: 1.7;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .back {
-      display: inline-block;
-      margin-bottom: 30px;
-      color: #888;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .back:hover {
-      color: #fff;
-    }
-
-    .card {
-      background: #161616;
-      border: 1px solid #222;
-      border-radius: 24px;
-      padding: 36px;
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: 36px;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      margin-top: 34px;
-      font-size: 22px;
-    }
-
-    p,
-    li {
-      color: #c9c9c9;
-      font-size: 16px;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    .updated {
-      color: #777;
-      margin-bottom: 30px;
-      font-size: 14px;
-    }
-
-    a {
-      color: #ffffff;
-    }
-
-    .footer {
-      margin-top: 70px;
-      text-align: center;
-      font-size: 13px;
-      color: #666;
-    }
-
-    .footer a {
-      color: #888;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .footer a:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 640px) {
-      .container {
-        padding: 26px 14px 36px;
-      }
-
-      .card {
-        padding: 24px;
-      }
-
-      h1 {
-        font-size: clamp(30px, 10vw, 36px);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260912-wr-docs" />
 </head>
 
-<body class="legal-page page-shell">
-  <div class="container">
-    <a class="back" href="/apps/walkround/">← Back to WalkRound</a>
+<body class="app-product-page app-product-page--walkround wr-doc-page page-shell">
+  <header class="home-header" aria-label="Site header">
+    <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
+      <img
+        class="site-logo"
+        src="/assets/images/mindmirageapps-logo.png"
+        alt=""
+        width="54"
+        height="54"
+      />
+    </a>
 
-    <div class="card">
+    <nav class="home-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/apps/">Apps</a>
+      <a href="/apps/walkround/">WalkRound</a>
+      <a href="/apps/walkround/privacy/" aria-current="page">Privacy policy</a>
+      <a href="mailto:support@mindmirageapps.com">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wr-doc">
+    <a class="wr-doc__back" href="/apps/walkround/">← Back to WalkRound</a>
+
+    <article class="wr-doc__card">
       <h1>WalkRound Privacy Policy</h1>
-      <p class="updated">Last updated: 8 September 2026</p>
+      <p class="wr-doc__updated">Last updated: 8 September 2026</p>
 
       <p>
         This Privacy Policy explains how Mind Mirage Apps (“we”, “us”, “our”)
@@ -232,14 +154,29 @@
         Email: <a href="mailto:support@mindmirageapps.com">support@mindmirageapps.com</a><br />
         Website: <a href="https://mindmirageapps.com/apps/walkround/">mindmirageapps.com/apps/walkround</a>
       </p>
-    </div>
-  </div>
+    </article>
+  </main>
 
-  <footer class="footer site-footer" aria-label="Site footer">
-    <a href="/apps/walkround/">WalkRound</a>
-    <a href="/apps/walkround/support/">Support</a>
-    <a href="/apps/walkround/privacy/">Privacy Policy</a>
-    <a href="/privacy/">Mind Mirage Apps Privacy</a>
+  <footer class="home-footer" aria-label="Site footer">
+    <div class="home-footer__inner">
+      <a class="home-footer__brand" href="/" aria-label="Mind Mirage Apps home">
+        <img
+          class="site-logo"
+          src="/assets/images/mindmirageapps-logo.png"
+          alt=""
+          width="54"
+          height="54"
+        />
+      </a>
+      <p class="home-footer__identity">Independent studio · Original products only</p>
+      <nav class="home-footer__nav" aria-label="Footer navigation">
+        <a href="/apps/walkround/">WalkRound</a>
+        <a href="/apps/walkround/support/">Support</a>
+        <a href="/apps/walkround/privacy/">WalkRound Privacy Policy</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>

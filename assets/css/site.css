@@ -2379,6 +2379,90 @@ button:focus-visible {
   }
 }
 
+/* WalkRound privacy / support docs — same brand shell as product page */
+.app-product-page--walkround.wr-doc-page .wr-doc {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 64px;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__back {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__back:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__card {
+  border: 1px solid var(--wr-border);
+  border-radius: 22px;
+  background: var(--wr-card);
+  box-shadow: 0 16px 40px rgba(15, 61, 92, 0.1);
+  padding: clamp(24px, 4vw, 40px);
+  color: var(--wr-text);
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__card h1 {
+  margin: 0 0 8px;
+  color: var(--wr-text);
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  letter-spacing: -0.03em;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__card h2 {
+  margin: 28px 0 10px;
+  color: var(--wr-text);
+  font-size: 1.2rem;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__updated {
+  margin: 0 0 22px;
+  color: var(--wr-muted);
+  font-size: 0.92rem;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__card p,
+.app-product-page--walkround.wr-doc-page .wr-doc__card li {
+  color: var(--wr-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__card ul {
+  padding-left: 1.2rem;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__card strong {
+  color: var(--wr-text);
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__card a {
+  color: var(--wr-primary);
+  font-weight: 600;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__contact {
+  margin-top: 20px;
+  border: 1px solid var(--wr-border);
+  border-radius: 16px;
+  background: var(--wr-bg-soft);
+  padding: 18px 20px;
+}
+
+.app-product-page--walkround.wr-doc-page .wr-doc__contact strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--wr-text);
+}
+
 
 .app-product-page::before {
   content: "";
