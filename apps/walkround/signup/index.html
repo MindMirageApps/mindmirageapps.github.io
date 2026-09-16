@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register company | WalkRound</title>
+  <meta
+    name="description"
+    content="Register your company for WalkRound. Office signup is web-only; then sign in on the Office app and create driver logins from there."
+  />
+
+  <meta property="og:title" content="Register company | WalkRound" />
+  <meta property="og:description" content="Create your WalkRound company account on the web." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mindmirageapps.com/apps/walkround/signup" />
+  <meta property="og:image" content="https://mindmirageapps.com/assets/images/app-icons/walkround-logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Register company | WalkRound" />
+  <meta name="twitter:description" content="Create your WalkRound company account on the web." />
+  <link rel="canonical" href="https://mindmirageapps.com/apps/walkround/signup" />
+
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260916-walkround-signup" />
+</head>
+
+<body class="app-product-page app-product-page--walkround page-shell">
+  <header class="home-header" aria-label="Site header">
+    <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
+      <img
+        class="site-logo"
+        src="/assets/images/mindmirageapps-logo.png"
+        alt=""
+        width="54"
+        height="54"
+      />
+    </a>
+
+    <nav class="home-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/apps/">Apps</a>
+      <a href="/apps/walkround/">WalkRound</a>
+      <a href="/apps/walkround/privacy/">Privacy policy</a>
+      <a href="mailto:support@mindmirageapps.com">Contact</a>
+    </nav>
+  </header>
+
+  <main class="app-product-main">
+    <section class="app-product-section wr-signup-section" aria-labelledby="signup-title">
+      <div class="wr-signup-panel">
+        <p class="wr-signup-panel__label">WalkRound · Office signup</p>
+        <h1 id="signup-title">Register your company</h1>
+        <p class="wr-signup-panel__intro">
+          Company registration is web-only. After signup, open the WalkRound
+          Office app on web or desktop and sign in with the same email and
+          password. Drivers get usernames created by your office — not from this page.
+        </p>
+
+        <div
+          id="wr-signup-status"
+          class="wr-signup-status"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
+
+        <form id="wr-office-signup" class="wr-signup-form" novalidate>
+          <label class="wr-field">
+            <span>Company name</span>
+            <input
+              id="wr-company-name"
+              name="company_name"
+              type="text"
+              autocomplete="organization"
+              required
+              maxlength="120"
+              placeholder="Acme Coaches"
+            />
+          </label>
+
+          <label class="wr-field">
+            <span>Your name</span>
+            <input
+              id="wr-display-name"
+              name="display_name"
+              type="text"
+              autocomplete="name"
+              required
+              maxlength="120"
+              placeholder="Alex Manager"
+            />
+          </label>
+
+          <label class="wr-field">
+            <span>Work email</span>
+            <input
+              id="wr-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              maxlength="254"
+              placeholder="you@company.com"
+            />
+          </label>
+
+          <label class="wr-field">
+            <span>Password</span>
+            <input
+              id="wr-password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              required
+              minlength="8"
+              maxlength="128"
+              placeholder="At least 8 characters"
+            />
+          </label>
+
+          <button
+            id="wr-signup-submit"
+            class="site-button site-button--primary wr-signup-submit"
+            type="submit"
+          >
+            Create company account
+          </button>
+        </form>
+
+        <p class="wr-signup-panel__note">
+          By registering you agree to our
+          <a href="/apps/walkround/privacy/">WalkRound Privacy Policy</a>.
+          Need help?
+          <a href="/apps/walkround/support/">Support</a>
+          or
+          <a href="mailto:support@mindmirageapps.com?subject=WalkRound%20office%20signup">email us</a>.
+          <br />
+          <a href="/apps/walkround/">← Back to WalkRound</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer" aria-label="Site footer">
+    <div class="home-footer__inner">
+      <a class="home-footer__brand" href="/" aria-label="Mind Mirage Apps home">
+        <img
+          class="site-logo"
+          src="/assets/images/mindmirageapps-logo.png"
+          alt=""
+          width="54"
+          height="54"
+        />
+      </a>
+
+      <p class="home-footer__identity">Independent studio · Original products only</p>
+
+      <nav class="home-footer__nav" aria-label="Footer navigation">
+        <a href="/apps/">Apps</a>
+        <a href="/apps/walkround/">WalkRound</a>
+        <a href="mailto:support@mindmirageapps.com">Contact</a>
+        <a href="/apps/walkround/privacy/">WalkRound Privacy Policy</a>
+        <a href="/apps/walkround/support/">WalkRound Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
+
+    const SUPABASE_URL = "https://riayvatfbviyozlrwzvp.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY =
+      "sb_publishable_Jf4LTQn0TzmpUmWe98dppQ_oQuGyNWO";
+    const MIN_PASSWORD_LENGTH = 8;
+    const DEFAULT_TIMEZONE = "Europe/London";
+    const SIGNUP_URL = "https://mindmirageapps.com/apps/walkround/signup";
+
+    const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+        detectSessionInUrl: false,
+      },
+    });
+
+    const form = document.getElementById("wr-office-signup");
+    const statusEl = document.getElementById("wr-signup-status");
+    const submitBtn = document.getElementById("wr-signup-submit");
+
+    function setStatus(kind, message) {
+      statusEl.hidden = false;
+      statusEl.dataset.kind = kind;
+      statusEl.textContent = message;
+    }
+
+    function clearStatus() {
+      statusEl.hidden = true;
+      statusEl.dataset.kind = "";
+      statusEl.textContent = "";
+    }
+
+    function mapAuthError(error) {
+      const message = (error?.message || "").toLowerCase();
+      if (
+        message.includes("already registered") ||
+        message.includes("already been registered") ||
+        message.includes("user already")
+      ) {
+        return "An account with that email already exists. Sign in with the Office app instead.";
+      }
+      if (message.includes("password") && message.includes("least")) {
+        return `Password must be at least ${MIN_PASSWORD_LENGTH} characters.`;
+      }
+      if (message.includes("invalid") && message.includes("email")) {
+        return "Enter a valid work email address.";
+      }
+      if (message.includes("failed to fetch") || message.includes("network")) {
+        return "Unable to reach WalkRound. Check your connection and try again.";
+      }
+      return error?.message || "Unable to create the company account. Try again.";
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      clearStatus();
+
+      const companyName = document.getElementById("wr-company-name").value.trim();
+      const displayName = document.getElementById("wr-display-name").value.trim();
+      const email = document.getElementById("wr-email").value.trim();
+      const password = document.getElementById("wr-password").value;
+
+      if (!companyName || !displayName || !email || !password) {
+        setStatus("error", "Fill in every field to continue.");
+        return;
+      }
+      if (password.length < MIN_PASSWORD_LENGTH) {
+        setStatus(
+          "error",
+          `Password must be at least ${MIN_PASSWORD_LENGTH} characters.`
+        );
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Creating account…";
+
+      try {
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: { display_name: displayName },
+            emailRedirectTo: SIGNUP_URL,
+          },
+        });
+
+        if (error) {
+          throw error;
+        }
+
+        const session = data.session;
+        if (!session) {
+          setStatus(
+            "info",
+            "Check your email to confirm the account, then open the WalkRound Office app and sign in to finish company setup."
+          );
+          form.reset();
+          return;
+        }
+
+        const { error: bootstrapError } = await supabase.rpc(
+          "bootstrap_office_company",
+          {
+            p_company_name: companyName,
+            p_display_name: displayName,
+            p_timezone: DEFAULT_TIMEZONE,
+          }
+        );
+
+        if (bootstrapError) {
+          await supabase.auth.signOut();
+          throw new Error(
+            "Account was created but company setup failed. Sign in with the Office app to finish setup. (" +
+              (bootstrapError.message || "unknown error") +
+              ")"
+          );
+        }
+
+        await supabase.auth.signOut();
+        setStatus(
+          "success",
+          "Company created. Open the WalkRound Office app on web or desktop and sign in with this email and password."
+        );
+        form.reset();
+      } catch (error) {
+        setStatus("error", mapAuthError(error));
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Create company account";
+      }
+    });
+  </script>
+</body>
+</html>
