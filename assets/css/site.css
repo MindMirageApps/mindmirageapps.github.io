@@ -2451,6 +2451,102 @@ button:focus-visible {
   text-underline-offset: 2px;
 }
 
+.app-product-page--walkround .wr-pricing-panel {
+  max-width: 520px;
+}
+
+.app-product-page--walkround .wr-pricing-benefits {
+  display: grid;
+  gap: 6px;
+  margin: 0 auto 22px;
+  max-width: 22rem;
+  text-align: left;
+}
+
+.app-product-page--walkround .wr-pricing-benefits p {
+  margin: 0;
+  color: var(--wr-text);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.app-product-page--walkround .wr-pricing-benefits p::before {
+  content: "✓ ";
+  color: var(--wr-primary);
+  font-weight: 700;
+}
+
+.app-product-page--walkround .wr-pricing-question {
+  display: block;
+  margin: 0 0 12px;
+  color: var(--wr-text);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.app-product-page--walkround .wr-driver-stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 18px;
+  padding: 8px;
+  border: 1px solid var(--wr-border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.app-product-page--walkround .wr-driver-stepper__btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--wr-border);
+  border-radius: 12px;
+  background: #f7fbfe;
+  color: var(--wr-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.app-product-page--walkround .wr-driver-stepper__btn:hover {
+  background: #eaf4fb;
+}
+
+.app-product-page--walkround .wr-driver-stepper__input {
+  width: 5.5rem;
+  border: none;
+  background: transparent;
+  color: var(--wr-text);
+  font: inherit;
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.app-product-page--walkround .wr-driver-stepper__input::-webkit-outer-spin-button,
+.app-product-page--walkround .wr-driver-stepper__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.app-product-page--walkround .wr-pricing-total {
+  margin: 0 0 18px;
+  color: var(--wr-text);
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.app-product-page--walkround .wr-pricing-total__period {
+  color: var(--wr-muted);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 .app-product-page--walkround .wr-role-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }

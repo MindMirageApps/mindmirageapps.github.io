@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | WalkRound</title>
+  <meta
+    name="description"
+    content="WalkRound pricing: pay monthly for the drivers you actually have. Every feature included — no unused driver packages."
+  />
+  <meta property="og:title" content="Pricing | WalkRound" />
+  <meta property="og:description" content="Pay only for the drivers you actually have. Every feature included." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mindmirageapps.com/apps/walkround/pricing" />
+  <meta property="og:image" content="https://mindmirageapps.com/assets/images/app-icons/walkround-logo.png" />
+  <link rel="canonical" href="https://mindmirageapps.com/apps/walkround/pricing" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260916-walkround-pricing" />
+</head>
+
+<body class="app-product-page app-product-page--walkround page-shell">
+  <header class="home-header" aria-label="Site header">
+    <a class="home-brand" href="/" aria-label="Mind Mirage Apps home">
+      <img
+        class="site-logo"
+        src="/assets/images/mindmirageapps-logo.png"
+        alt=""
+        width="54"
+        height="54"
+      />
+    </a>
+    <nav class="home-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/apps/">Apps</a>
+      <a href="/apps/walkround/">WalkRound</a>
+      <a href="/apps/walkround/pricing/" aria-current="page">Pricing</a>
+      <a href="/apps/walkround/privacy/">Privacy policy</a>
+      <a href="mailto:support@mindmirageapps.com">Contact</a>
+    </nav>
+  </header>
+
+  <main class="app-product-main">
+    <section class="app-product-section wr-signup-section" aria-labelledby="pricing-title">
+      <div class="wr-signup-panel wr-pricing-panel">
+        <p class="wr-signup-panel__label">WalkRound · Pricing</p>
+        <h1 id="pricing-title">Pay for the drivers you have</h1>
+        <p class="wr-signup-panel__intro">
+          One monthly subscription. Every feature included. No feature
+          restrictions. No unused driver slots — you only pay for your actual
+          driver count.
+        </p>
+
+        <div class="wr-pricing-benefits" aria-label="Included">
+          <p>Every feature included</p>
+          <p>No feature restrictions</p>
+          <p>No unused driver packages</p>
+        </div>
+
+        <label class="wr-pricing-question" for="wr-driver-count">
+          How many drivers do you have?
+        </label>
+
+        <div class="wr-driver-stepper" role="group" aria-label="Driver count">
+          <button
+            type="button"
+            id="wr-driver-minus"
+            class="wr-driver-stepper__btn"
+            aria-label="Fewer drivers"
+          >
+            −
+          </button>
+          <input
+            id="wr-driver-count"
+            class="wr-driver-stepper__input"
+            type="number"
+            inputmode="numeric"
+            min="1"
+            max="2000"
+            value="10"
+            aria-live="polite"
+          />
+          <button
+            type="button"
+            id="wr-driver-plus"
+            class="wr-driver-stepper__btn"
+            aria-label="More drivers"
+          >
+            +
+          </button>
+        </div>
+
+        <p class="wr-pricing-total" aria-live="polite">
+          <span id="wr-price-amount">£100.00</span>
+          <span class="wr-pricing-total__period"> / month</span>
+        </p>
+
+        <div
+          id="wr-pricing-status"
+          class="wr-signup-status"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
+
+        <button
+          id="wr-start-checkout"
+          class="site-button site-button--primary wr-signup-submit"
+          type="button"
+        >
+          Start WalkRound
+        </button>
+
+        <p class="wr-signup-panel__note">
+          You will complete payment securely with Stripe (test mode). After
+          checkout, create your company account on the
+          <a href="/apps/walkround/signup">signup page</a>.
+          <br />
+          <a href="/apps/walkround/">← Back to WalkRound</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer" aria-label="Site footer">
+    <div class="home-footer__inner">
+      <a class="home-footer__brand" href="/" aria-label="Mind Mirage Apps home">
+        <img
+          class="site-logo"
+          src="/assets/images/mindmirageapps-logo.png"
+          alt=""
+          width="54"
+          height="54"
+        />
+      </a>
+      <p class="home-footer__identity">Independent studio · Original products only</p>
+      <nav class="home-footer__nav" aria-label="Footer navigation">
+        <a href="/apps/">Apps</a>
+        <a href="/apps/walkround/">WalkRound</a>
+        <a href="/apps/walkround/pricing/">Pricing</a>
+        <a href="mailto:support@mindmirageapps.com">Contact</a>
+        <a href="/apps/walkround/privacy/">WalkRound Privacy Policy</a>
+        <a href="/apps/walkround/support/">WalkRound Support</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/js/walkround-pricing.js"></script>
+  <script>
+    (function () {
+      // Public Supabase project URL + publishable (anon) key only — never Stripe secrets.
+      var CHECKOUT_URL =
+        "https://riayvatfbviyozlrwzvp.supabase.co/functions/v1/create-checkout-session";
+      var SUPABASE_ANON_KEY =
+        "sb_publishable_Jf4LTQn0TzmpUmWe98dppQ_oQuGyNWO";
+
+      var pricing = window.WalkRoundPricing;
+      var input = document.getElementById("wr-driver-count");
+      var amountEl = document.getElementById("wr-price-amount");
+      var statusEl = document.getElementById("wr-pricing-status");
+      var startBtn = document.getElementById("wr-start-checkout");
+      var minusBtn = document.getElementById("wr-driver-minus");
+      var plusBtn = document.getElementById("wr-driver-plus");
+
+      function clampDrivers(value) {
+        var n = Math.floor(Number(value) || 0);
+        if (n < pricing.MIN_DRIVERS) return pricing.MIN_DRIVERS;
+        if (n > pricing.MAX_DRIVERS) return pricing.MAX_DRIVERS;
+        return n;
+      }
+
+      function syncDisplay() {
+        var n = clampDrivers(input.value);
+        input.value = String(n);
+        amountEl.textContent = pricing.formatMonthlyPrice(n);
+      }
+
+      function setStatus(kind, message) {
+        statusEl.hidden = false;
+        statusEl.dataset.kind = kind;
+        statusEl.textContent = message;
+      }
+
+      function clearStatus() {
+        statusEl.hidden = true;
+        statusEl.dataset.kind = "";
+        statusEl.textContent = "";
+      }
+
+      minusBtn.addEventListener("click", function () {
+        input.value = String(clampDrivers(Number(input.value) - 1));
+        syncDisplay();
+      });
+
+      plusBtn.addEventListener("click", function () {
+        input.value = String(clampDrivers(Number(input.value) + 1));
+        syncDisplay();
+      });
+
+      input.addEventListener("input", syncDisplay);
+      input.addEventListener("change", syncDisplay);
+
+      startBtn.addEventListener("click", async function () {
+        clearStatus();
+        var quantity = clampDrivers(input.value);
+        input.value = String(quantity);
+        syncDisplay();
+
+        startBtn.disabled = true;
+        startBtn.textContent = "Starting checkout…";
+
+        try {
+          var response = await fetch(CHECKOUT_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + SUPABASE_ANON_KEY,
+              apikey: SUPABASE_ANON_KEY,
+            },
+            body: JSON.stringify({ driver_quantity: quantity }),
+          });
+
+          var payload = {};
+          try {
+            payload = await response.json();
+          } catch (_) {
+            payload = {};
+          }
+
+          if (!response.ok || !payload.checkout_url) {
+            throw new Error(
+              payload.error ||
+                "Unable to start checkout. Please try again in a moment."
+            );
+          }
+
+          window.location.href = payload.checkout_url;
+        } catch (error) {
+          setStatus(
+            "error",
+            (error && error.message) ||
+              "Unable to start checkout. Please try again."
+          );
+          startBtn.disabled = false;
+          startBtn.textContent = "Start WalkRound";
+        }
+      });
+
+      syncDisplay();
+    })();
+  </script>
+</body>
+</html>
