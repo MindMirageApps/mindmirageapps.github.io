@@ -1,16 +1,12 @@
 # WalkRound desktop installers
 
-Drop signed public installers here (GitHub Pages hosts this folder as static files):
+Hosted as static files on GitHub Pages:
 
 | File | Button id | Public URL |
 | --- | --- | --- |
-| `WalkRound.dmg` | `download-mac` | `/apps/walkround/downloads/WalkRound.dmg` |
-| `WalkRound-Setup.exe` | `download-windows` | `/apps/walkround/downloads/WalkRound-Setup.exe` |
+| `WalkRound.dmg` | `download-mac` | https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg |
+| `WalkRound-Setup.exe` | `download-windows` | https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe |
 
-Product page section: `/apps/walkround/#download`
+Product page: https://mindmirageapps.com/apps/walkround/#download
 
-When files are uploaded, on `apps/walkround/index.html`:
-
-1. Remove `site-button--coming-soon` from both download anchors.
-2. Remove `aria-disabled="true"` and `tabindex="-1"`.
-3. Update or remove the `#download-status` coming-soon note.
+**Signing notes (2026-10-03):** Mac is Apple Development–signed, not Developer ID / notarized. Windows Setup is unsigned. Expect Gatekeeper / SmartScreen warnings on first open.
