@@ -2212,6 +2212,42 @@ button:focus-visible {
   color: var(--wr-primary);
 }
 
+.app-product-page--walkround .app-product-download {
+  scroll-margin-top: 88px;
+}
+
+.app-product-page--walkround .app-product-download h2 {
+  max-width: 18ch;
+}
+
+.app-product-page--walkround .app-product-download .site-button--coming-soon,
+.app-product-page--walkround .app-product-download .site-button[aria-disabled="true"] {
+  opacity: 0.55;
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.app-product-page--walkround .app-product-download .site-button--coming-soon:hover,
+.app-product-page--walkround .app-product-download .site-button[aria-disabled="true"]:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.app-product-page--walkround .wr-download-note {
+  margin: 14px auto 0;
+  max-width: 36rem;
+  color: var(--wr-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.app-product-page--walkround .wr-download-note code {
+  font-size: 0.88em;
+  color: var(--wr-primary);
+}
+
 .app-product-page--walkround .app-fleet-preview {
   border: 1px solid var(--wr-border);
   background: var(--wr-card);
