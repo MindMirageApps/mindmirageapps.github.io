@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "build": 17,
+  "build": 19,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Walkround downloads and reports list every tyre tread depth. Desktop downloads save with a file dialog. Office desktop 1.0.0+17."
+  "notes": "Fleet opens on the vehicle list. Drivers opens on the active driver list. Office section titles are centred. Office desktop 1.0.0+19."
 }
