@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "build": 15,
+  "build": 16,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Walkround downloads, job type colours on the rota and calendar, and Windows/macOS office desktop 1.0.0+15."
+  "notes": "Desktop downloads save with a file dialog. Walkround downloads, job type colours, and Windows/macOS office desktop 1.0.0+16."
 }
