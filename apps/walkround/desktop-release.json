@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "build": 14,
+  "build": 15,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Maintenance mode fixes, hard-delete for cancelled shifts, announcement detail fixes, and Windows/macOS office desktop 1.0.0+14."
+  "notes": "Walkround downloads, job type colours on the rota and calendar, and Windows/macOS office desktop 1.0.0+15."
 }
