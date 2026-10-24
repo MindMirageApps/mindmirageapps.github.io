@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "build": 19,
+  "build": 20,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Fleet opens on the vehicle list. Drivers opens on the active driver list. Office section titles are centred. Office desktop 1.0.0+19."
+  "notes": "Driver rota weeks run Monday to Sunday. Standby shows as Standby, not a clock time. Missing check-out ignores drivers still on shift. Office desktop 1.0.0+20."
 }
