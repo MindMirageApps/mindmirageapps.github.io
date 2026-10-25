@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "build": 21,
+  "build": 22,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Clock-out zones, overtime, rota spreadsheet import, non-working windows, and driver-only cleaning jobs. Office desktop 1.0.0+21."
+  "notes": "Mark defects as rectified. Defect screens hide internal record ids. Office desktop 1.0.0+22."
 }
