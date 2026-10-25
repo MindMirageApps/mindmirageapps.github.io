@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "build": 20,
+  "build": 21,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Driver rota weeks run Monday to Sunday. Standby shows as Standby, not a clock time. Missing check-out ignores drivers still on shift. Office desktop 1.0.0+20."
+  "notes": "Clock-out zones, overtime, rota spreadsheet import, non-working windows, and driver-only cleaning jobs. Office desktop 1.0.0+21."
 }
