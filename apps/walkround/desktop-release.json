@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "build": 22,
+  "build": 23,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Mark defects as rectified. Defect screens hide internal record ids. Office desktop 1.0.0+22."
+  "notes": "Office can sign off a stuck End of use. Next walkround can copy mileage, fuel and AdBlue onto that session. Office desktop 1.0.0+23."
 }
