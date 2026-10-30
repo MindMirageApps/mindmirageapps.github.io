@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "build": 23,
+  "version": "1.0.1",
+  "build": 25,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Office can sign off a stuck End of use. Next walkround can copy mileage, fuel and AdBlue onto that session. Office desktop 1.0.0+23."
+  "notes": "Office Sign off for use is one click. Exact rota times, drag shifts across drivers/days, unrestricted manual End shift. Office desktop 1.0.1+25."
 }

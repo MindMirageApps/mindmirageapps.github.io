@@ -11,4 +11,4 @@ In-app update manifest: https://mindmirageapps.com/apps/walkround/desktop-releas
 
 Product page: https://mindmirageapps.com/apps/walkround/#download
 
-**Signing notes (2026-10-26):** Mac `1.0.0+23` is Developer ID–signed and notarized. Windows Setup is the `1.0.0+23` office installer from Windows CI (unsigned).
+**Signing notes (2026-10-30):** Mac `1.0.1+25` is Developer ID–signed and notarized. Windows Setup is the `1.0.1+25` office installer from Windows CI (unsigned).
