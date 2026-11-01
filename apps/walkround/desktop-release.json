@@ -1,7 +1,7 @@
 {
-  "version": "1.0.1",
-  "build": 25,
+  "version": "1.0.3",
+  "build": 29,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Office Sign off for use is one click. Exact rota times, drag shifts across drivers/days, unrestricted manual End shift. Office desktop 1.0.1+25."
+  "notes": "Zero-hours available/unavailable for the office, dual-rear tyre setup on vehicles, clearer tyre tread logging. Office desktop 1.0.3+29."
 }
