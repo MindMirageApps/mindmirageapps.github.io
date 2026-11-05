@@ -1,7 +1,7 @@
 {
   "version": "1.0.3",
-  "build": 29,
+  "build": 32,
   "macosUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound.dmg",
   "windowsUrl": "https://mindmirageapps.com/apps/walkround/downloads/WalkRound-Setup.exe",
-  "notes": "Zero-hours available/unavailable for the office, dual-rear tyre setup on vehicles, clearer tyre tread logging. Office desktop 1.0.3+29."
+  "notes": "Temporary passwords force a change on next login, deferred end of use for drivers, and cleaner office chrome. Office desktop 1.0.3+32."
 }
